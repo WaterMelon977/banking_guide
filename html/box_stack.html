@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Stack — SBI PO Prep</title>
+  <meta name="description" content="Box stack puzzle solving guide for SBI PO and IBPS PO Prelims reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <a class="site-title" href="index.html">SBI PO Prep</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="english.html" class="nav-link">English</a>
+    <div class="dropdown" id="dd-quant">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-quant">
+        Quantitative Aptitude <span class="arrow" aria-hidden="true">&#9660;</span>
+      </button>
+      <ul class="dd-menu" id="menu-quant" role="menu">
+        <li><a href="quant.html" role="menuitem">Quant Home</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="arithmetic.html" role="menuitem">Arithmetic</a></li>
+        <li><a href="di.html" role="menuitem">Data Interpretation</a></li>
+        <li><a href="quadratic.html" role="menuitem">Quadratic Equations</a></li>
+        <li><a href="series.html" role="menuitem">Number Series</a></li>
+        <li><a href="simplifiation.html" role="menuitem">Simplification</a></li>
+      </ul>
+    </div>
+    <div class="dropdown" id="dd-reasoning">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-reasoning">
+        Reasoning <span class="arrow" aria-hidden="true">&#9660;</span>
+      </button>
+      <ul class="dd-menu" id="menu-reasoning" role="menu">
+        <li><a href="reasoning.html" role="menuitem">Reasoning Home</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="box_stack.html" role="menuitem">Box Stack</a></li>
+        <li><a href="floors.html" role="menuitem">Floor Puzzle</a></li>
+        <li><a href="seating.html" role="menuitem">Seating Arrangement</a></li>
+        <li><a href="hierarchy.html" role="menuitem">Hierarchy</a></li>
+        <li><a href="calendar_puzzles.html" role="menuitem">Calendar Puzzles</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content" class="page-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="bc-sep">&#8250;</span>
+    <a href="reasoning.html">Reasoning</a>
+    <span class="bc-sep">&#8250;</span>
+    <span class="bc-current">Box Stack</span>
+  </nav>
+<h1 class="code-line has-line-data" data-line-start="0" data-line-end="1"><a id="Box_Stack_Matrix_Puzzles_Complete_Solving_Guide_0"></a>Box / Stack / Matrix Puzzles - Complete Solving Guide</h1>
+<h2 class="code-line has-line-data" data-line-start="2" data-line-end="3"><a id="1_Model_Overview_2"></a>1. Model Overview</h2>
+<ul>
+<li class="has-line-data" data-line-start="4" data-line-end="5"><strong>What it is:</strong> In a box puzzle, boxes are arranged vertically or in a row and contain names, colors or items. In a matrix puzzle, several categories such as people, cities, professions and days must be matched one-to-one.</li>
+<li class="has-line-data" data-line-start="5" data-line-end="6"><strong>Why it appears in exams:</strong> These models test ordering, attribute matching, elimination and the ability to combine direct and indirect clues. They are often compact but produce many questions from one arrangement.</li>
+<li class="has-line-data" data-line-start="6" data-line-end="7"><strong>Key challenges:</strong> Solvers may confuse top-to-bottom order, treat a row or column as an arrangement rather than a category, or mark an uncertain match as confirmed too early.</li>
+<li class="has-line-data" data-line-start="7" data-line-end="9"><strong>Exam frequency:</strong> Usually 1 set (5-10 questions); matrix sets are often mixed with dates, cities, departments or professions.</li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="9" data-line-end="10"><a id="2_Core_Components_Terminology_9"></a>2. Core Components &amp; Terminology</h2>
+<ul>
+<li class="has-line-data" data-line-start="11" data-line-end="12"><strong>Primary variable:</strong> Box position, row, column, person or day.</li>
+<li class="has-line-data" data-line-start="12" data-line-end="13"><strong>Secondary variables:</strong> Color, item, city, profession, department, age or month.</li>
+<li class="has-line-data" data-line-start="13" data-line-end="14"><strong>Spatial elements:</strong> Top, bottom, middle, above, below, left, right, adjacent and between.</li>
+<li class="has-line-data" data-line-start="14" data-line-end="16"><strong>Relationship types:</strong> Direct match, order, fixed gap, same row, different row, conditional, negative and one-to-one exclusion.</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="16" data-line-end="17"><a id="Miniglossary_16"></a>Mini-glossary</h3>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Top box</td>
+<td>Highest position in a vertical stack</td>
+</tr>
+<tr>
+<td>Bottom box</td>
+<td>Lowest position in a vertical stack</td>
+</tr>
+<tr>
+<td>Middle box</td>
+<td>Central position; for an odd number of boxes, there is one middle</td>
+</tr>
+<tr>
+<td>Immediately above/below</td>
+<td>Exactly one position away vertically</td>
+</tr>
+<tr>
+<td>Between X and Y</td>
+<td>X and Y are on opposite sides of the stated position</td>
+</tr>
+<tr>
+<td>One box between</td>
+<td>Exactly one position separates the two boxes</td>
+</tr>
+<tr>
+<td>Same row</td>
+<td>Two entries share a row in a matrix or grid</td>
+</tr>
+<tr>
+<td>One-to-one</td>
+<td>Each person, city or profession is used exactly once</td>
+</tr>
+<tr>
+<td>Cannot be same</td>
+<td>Cross out the pair, but do not eliminate either item completely</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>A table used to record possible and impossible matches</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="31" data-line-end="32"><strong>Important:</strong> A matrix cell marked <code>X</code> is impossible. A blank cell is still undecided. Use a check mark only when the match is certain.</p>
+<h2 class="code-line has-line-data" data-line-start="33" data-line-end="34"><a id="3_Prerequisite_Checks_Before_Solving_33"></a>3. Prerequisite Checks (Before Solving)</h2>
+<ul>
+<li class="has-line-data" data-line-start="35" data-line-end="36"><input type="checkbox" id="checkbox8"><label for="checkbox8">Count the boxes, rows, columns and attribute categories.</label></li>
+<li class="has-line-data" data-line-start="36" data-line-end="37"><input type="checkbox" id="checkbox9"><label for="checkbox9">Confirm whether the stack is vertical, horizontal or both.</label></li>
+<li class="has-line-data" data-line-start="37" data-line-end="38"><input type="checkbox" id="checkbox10"><label for="checkbox10">Check whether the number of people equals the number of cities, professions or days.</label></li>
+<li class="has-line-data" data-line-start="38" data-line-end="39"><input type="checkbox" id="checkbox11"><label for="checkbox11">Identify all unique categories and repeated categories, if any.</label></li>
+<li class="has-line-data" data-line-start="39" data-line-end="40"><input type="checkbox" id="checkbox12"><label for="checkbox12">Determine whether the middle position is unique.</label></li>
+<li class="has-line-data" data-line-start="40" data-line-end="41"><input type="checkbox" id="checkbox13"><label for="checkbox13">Note whether order is top-to-bottom, left-to-right or chronological.</label></li>
+<li class="has-line-data" data-line-start="41" data-line-end="42"><input type="checkbox" id="checkbox14"><label for="checkbox14">Check for vacant boxes or unused attributes.</label></li>
+<li class="has-line-data" data-line-start="42" data-line-end="44"><input type="checkbox" id="checkbox15"><label for="checkbox15">Separate direct matches from comparative and conditional clues.</label></li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="44" data-line-end="45"><a id="4_StepbyStep_Solving_Methodology_44"></a>4. Step-by-Step Solving Methodology</h2>
+<h3 class="code-line has-line-data" data-line-start="46" data-line-end="47"><a id="Phase_1_Diagram_Preparation_46"></a>Phase 1: Diagram Preparation</h3>
+<h4 class="code-line has-line-data" data-line-start="48" data-line-end="49"><a id="Vertical_box_stack_48"></a>Vertical box stack</h4>
+<pre><code class="has-line-data language-text" data-line-start="51" data-line-end="57">Box 1 - Top       [       ]
+Box 2             [       ]
+Box 3 - Middle    [       ]
+Box 4             [       ]
+Box 5 - Bottom    [       ]
+</code></pre>
+<p class="has-line-data" data-line-start="58" data-line-end="59">For a horizontal stack:</p>
+<pre><code class="has-line-data language-text" data-line-start="61" data-line-end="63">Left       [1] [2] [3] [4] [5]       Right
+</code></pre>
+<p class="has-line-data" data-line-start="64" data-line-end="65">For a matrix, create a row for the primary entities and columns for attributes:</p>
+<pre><code class="has-line-data language-text" data-line-start="67" data-line-end="74">Person     City       Profession    Day
+------     --------   ------------   -----
+A          ?          ?              ?
+B          ?          ?              ?
+C          ?          ?              ?
+D          ?          ?              ?
+</code></pre>
+<p class="has-line-data" data-line-start="75" data-line-end="76">For difficult matching sets, create possibility grids:</p>
+<pre><code class="has-line-data language-text" data-line-start="78" data-line-end="84">             Delhi  Pune  Jaipur  Kochi
+A              ?      X      ?       ?
+B              ?      ?      X       ?
+C              X      ?      ?       ?
+D              ?      ?      ?       X
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="85" data-line-end="86"><a id="Phase_2_Constraint_Extraction_Prioritization_85"></a>Phase 2: Constraint Extraction &amp; Prioritization</h3>
+<p class="has-line-data" data-line-start="87" data-line-end="88">Classify clues before solving:</p>
+<ol>
+<li class="has-line-data" data-line-start="89" data-line-end="90"><strong>Direct:</strong> “The red box contains the watch.” Place the match.</li>
+<li class="has-line-data" data-line-start="90" data-line-end="91"><strong>Position:</strong> “The blue box is third from the top.” Fix its location.</li>
+<li class="has-line-data" data-line-start="91" data-line-end="92"><strong>Immediate:</strong> “A is immediately above B.” Use adjacent positions.</li>
+<li class="has-line-data" data-line-start="92" data-line-end="93"><strong>Order:</strong> “C is above D.” Record <code>C &gt; D</code>.</li>
+<li class="has-line-data" data-line-start="93" data-line-end="94"><strong>Attribute relation:</strong> “The person from Pune is a doctor.” Link two categories.</li>
+<li class="has-line-data" data-line-start="94" data-line-end="95"><strong>Negative:</strong> “E did not visit Delhi.” Mark the pair as <code>X</code>.</li>
+<li class="has-line-data" data-line-start="95" data-line-end="97"><strong>Conditional:</strong> “If F is on Monday, G is in Mumbai.” Test only in a relevant case.</li>
+</ol>
+<p class="has-line-data" data-line-start="97" data-line-end="98">Start with fixed positions, direct matches and the longest order chain. Apply negative clues after the main structure has been established.</p>
+<h3 class="code-line has-line-data" data-line-start="99" data-line-end="100"><a id="Phase_3_Iterative_Placement_99"></a>Phase 3: Iterative Placement</h3>
+<ol>
+<li class="has-line-data" data-line-start="101" data-line-end="102">Number the boxes or list the primary rows in a fixed order.</li>
+<li class="has-line-data" data-line-start="102" data-line-end="103">Place direct positions and extreme positions first.</li>
+<li class="has-line-data" data-line-start="103" data-line-end="104">Combine order clues into chains, such as <code>A &gt; B &gt; C</code>.</li>
+<li class="has-line-data" data-line-start="104" data-line-end="105">Use one-to-one elimination after every confirmed match.</li>
+<li class="has-line-data" data-line-start="105" data-line-end="106">For a matrix, mark impossible pairs immediately, then look for a row or column with one remaining possibility.</li>
+<li class="has-line-data" data-line-start="106" data-line-end="107">If a clue links two attributes indirectly, use an intermediate table rather than guessing.</li>
+<li class="has-line-data" data-line-start="107" data-line-end="109">Create cases only when both possibilities remain logically valid; prune a case at the first contradiction.</li>
+</ol>
+<p class="has-line-data" data-line-start="109" data-line-end="110">Useful notation:</p>
+<pre><code class="has-line-data language-text" data-line-start="112" data-line-end="118">A &gt; B       A is above or before B
+A &gt;&gt; B      A is immediately above or before B
+A _ B       exactly one position lies between A and B
+A = Delhi   confirmed match
+A != Delhi  impossible match
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="119" data-line-end="120"><a id="Phase_4_Verification_CrossCheck_119"></a>Phase 4: Verification &amp; Cross-Check</h3>
+<ul>
+<li class="has-line-data" data-line-start="121" data-line-end="122">Verify every box has the correct occupant and attribute.</li>
+<li class="has-line-data" data-line-start="122" data-line-end="123">Check the direction of every positional clue.</li>
+<li class="has-line-data" data-line-start="123" data-line-end="124">Confirm that each category is used exactly once when the puzzle is one-to-one.</li>
+<li class="has-line-data" data-line-start="124" data-line-end="125">Re-read indirect clues through the completed matches.</li>
+<li class="has-line-data" data-line-start="125" data-line-end="126">For a matrix, inspect every row and every column for duplicate assignments.</li>
+<li class="has-line-data" data-line-start="126" data-line-end="128">For a “could be true” question, check at least one valid case; for a “must be true” question, compare every surviving case.</li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="128" data-line-end="129"><a id="5_Common_Pitfalls_How_to_Avoid_Them_128"></a>5. Common Pitfalls &amp; How to Avoid Them</h2>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Pitfall</th>
+<th>Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reversing top and bottom</td>
+<td>Label the stack before placing any box.</td>
+</tr>
+<tr>
+<td>Treating above as immediately above</td>
+<td>Use adjacency only when the clue says immediately or directly.</td>
+</tr>
+<tr>
+<td>Filling a matrix from a weak assumption</td>
+<td>Keep uncertain cells blank and use <code>X</code> for only proven exclusions.</td>
+</tr>
+<tr>
+<td>Forgetting one-to-one elimination</td>
+<td>Once a match is confirmed, cross it out in every other row.</td>
+</tr>
+<tr>
+<td>Confusing category names with people</td>
+<td>Use separate headings for each parameter.</td>
+</tr>
+<tr>
+<td>Missing a fixed gap</td>
+<td>Count positions explicitly rather than estimating visually.</td>
+</tr>
+<tr>
+<td>Stopping after one valid case</td>
+<td>For must-be-true questions, test all remaining cases.</td>
+</tr>
+</tbody>
+</table>
+<h2 class="code-line has-line-data" data-line-start="140" data-line-end="141"><a id="6_Shortcut_Techniques_Pattern_Recognition_140"></a>6. Shortcut Techniques &amp; Pattern Recognition</h2>
+<ul>
+<li class="has-line-data" data-line-start="142" data-line-end="143"><strong>Middle-position rule:</strong> In an odd stack, a clue placing an item above two and below two fixes the middle box immediately.</li>
+<li class="has-line-data" data-line-start="143" data-line-end="144"><strong>Block sliding:</strong> Treat <code>A/B/C</code> as a single order block when clues make the sequence consecutive.</li>
+<li class="has-line-data" data-line-start="144" data-line-end="145"><strong>Extreme elimination:</strong> If A is above B and A cannot be top, eliminate the highest possible placements for B as well.</li>
+<li class="has-line-data" data-line-start="145" data-line-end="146"><strong>Single-cell rule:</strong> In a possibility grid, one remaining blank in a row or column is a confirmed match.</li>
+<li class="has-line-data" data-line-start="146" data-line-end="147"><strong>Pair closure:</strong> If a person is ruled out of every city except one, assign that city without needing another clue.</li>
+<li class="has-line-data" data-line-start="147" data-line-end="148"><strong>Chain transfer:</strong> If A is from Delhi, Delhi is on Tuesday and the Tuesday person is a doctor, A is the doctor.</li>
+<li class="has-line-data" data-line-start="148" data-line-end="149"><strong>Case comparison:</strong> Facts common to all valid arrangements are strong candidates for definite-answer questions.</li>
+<li class="has-line-data" data-line-start="149" data-line-end="151"><strong>Question-led solving:</strong> If the question concerns one box only, stop once that box’s position is forced.</li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="151" data-line-end="152"><a id="7_ASCII_Diagram_Examples_151"></a>7. ASCII Diagram Examples</h2>
+<h3 class="code-line has-line-data" data-line-start="153" data-line-end="154"><a id="Example_1_Box_Stack_Puzzle_153"></a>Example 1: Box Stack Puzzle</h3>
+<p class="has-line-data" data-line-start="155" data-line-end="156"><strong>Puzzle Statement:</strong> Five boxes contain a book, camera, pen, watch and vase, one item per box. The boxes are stacked from top to bottom.</p>
+<ol>
+<li class="has-line-data" data-line-start="157" data-line-end="158">The watch is in the top box.</li>
+<li class="has-line-data" data-line-start="158" data-line-end="159">The camera is immediately above the pen.</li>
+<li class="has-line-data" data-line-start="159" data-line-end="160">The book is below the pen but above the vase.</li>
+<li class="has-line-data" data-line-start="160" data-line-end="162">The vase is in the bottom box.</li>
+</ol>
+<p class="has-line-data" data-line-start="162" data-line-end="163"><strong>Solution Walkthrough</strong></p>
+<h4 class="code-line has-line-data" data-line-start="164" data-line-end="165"><a id="Setup_164"></a>Setup</h4>
+<pre><code class="has-line-data language-text" data-line-start="167" data-line-end="173">1 Top       [       ]
+2           [       ]
+3 Middle    [       ]
+4           [       ]
+5 Bottom    [       ]
+</code></pre>
+<h4 class="code-line has-line-data" data-line-start="174" data-line-end="175"><a id="Step_1_Place_the_fixed_item_174"></a>Step 1: Place the fixed item</h4>
+<pre><code class="has-line-data language-text" data-line-start="177" data-line-end="183">1 Top       [Watch  ]
+2           [       ]
+3 Middle    [       ]
+4           [       ]
+5 Bottom    [       ]
+</code></pre>
+<h4 class="code-line has-line-data" data-line-start="184" data-line-end="185"><a id="Step_2_Build_the_order_184"></a>Step 2: Build the order</h4>
+<p class="has-line-data" data-line-start="186" data-line-end="187"><code>Camera &gt; Pen &gt; Book &gt; Vase</code>. Four items must appear in that order. Since Watch is already at the top, the chain occupies boxes 2-5. The vase is therefore at the bottom, which agrees with clue 4.</p>
+<pre><code class="has-line-data language-text" data-line-start="189" data-line-end="195">1 Top       [Watch  ]
+2           [Camera ]
+3 Middle    [Pen    ]
+4           [Vase   ]
+5 Bottom    [Book   ]
+</code></pre>
+<p class="has-line-data" data-line-start="196" data-line-end="197">This example demonstrates an essential habit: verify the final stack against every clue. The camera is immediately above the pen, and the book is below the pen but above the vase.</p>
+<pre><code class="has-line-data language-text" data-line-start="199" data-line-end="205">1 Top       [Watch  ]
+2           [Camera ]
+3 Middle    [Pen    ]
+4           [Book   ]
+5 Bottom    [Vase   ]
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="208" data-line-end="209"><a id="Example_2_Tabular_Matrix_Arrangement_208"></a>Example 2: Tabular / Matrix Arrangement</h3>
+<p class="has-line-data" data-line-start="210" data-line-end="211"><strong>Puzzle Statement:</strong> Asha, Bharat, Charu and Dev visited Delhi, Pune, Jaipur and Kochi on Monday, Tuesday, Wednesday and Thursday. Each person visited one city on one day and had a different profession: Doctor, Engineer, Lawyer and Teacher.</p>
+<ol>
+<li class="has-line-data" data-line-start="212" data-line-end="213">Asha visited Pune.</li>
+<li class="has-line-data" data-line-start="213" data-line-end="214">The person visiting Kochi was an Engineer.</li>
+<li class="has-line-data" data-line-start="214" data-line-end="215">Bharat visited on Monday.</li>
+<li class="has-line-data" data-line-start="215" data-line-end="216">Charu is a Lawyer and did not visit Delhi.</li>
+<li class="has-line-data" data-line-start="216" data-line-end="217">Dev visited Kochi on Thursday.</li>
+<li class="has-line-data" data-line-start="217" data-line-end="219">The Doctor visited on Tuesday.</li>
+</ol>
+<p class="has-line-data" data-line-start="219" data-line-end="220"><strong>Solution Walkthrough</strong></p>
+<h4 class="code-line has-line-data" data-line-start="221" data-line-end="222"><a id="Initial_matrix_221"></a>Initial matrix</h4>
+<pre><code class="has-line-data language-text" data-line-start="224" data-line-end="231">Person     City       Day        Profession
+------     --------   --------   ----------
+Asha       Pune       ?          ?
+Bharat     ?          Monday     ?
+Charu      ?          ?          Lawyer
+Dev        Kochi      Thursday   ?
+</code></pre>
+<h4 class="code-line has-line-data" data-line-start="232" data-line-end="233"><a id="Step_1_Use_direct_links_232"></a>Step 1: Use direct links</h4>
+<p class="has-line-data" data-line-start="234" data-line-end="235">Dev is Kochi/Thursday. Asha is Pune. Charu is Lawyer and not Delhi, so Charu cannot be the Delhi visitor.</p>
+<h4 class="code-line has-line-data" data-line-start="236" data-line-end="237"><a id="Step_2_Use_the_day_and_profession_clues_236"></a>Step 2: Use the day and profession clues</h4>
+<p class="has-line-data" data-line-start="238" data-line-end="239">The Doctor is on Tuesday. Jaipur is Engineer. The remaining city and day combinations must be assigned without duplication. A valid completed table is:</p>
+<pre><code class="has-line-data language-text" data-line-start="241" data-line-end="248">Person     City       Day        Profession
+------     --------   --------   ----------
+Asha       Pune       Tuesday    Doctor
+Bharat     Delhi      Monday     Teacher
+Charu      Jaipur     Wednesday  Lawyer
+Dev        Kochi      Thursday   Engineer
+</code></pre>
+<h4 class="code-line has-line-data" data-line-start="249" data-line-end="250"><a id="Step_3_Verify_249"></a>Step 3: Verify</h4>
+<ul>
+<li class="has-line-data" data-line-start="251" data-line-end="252">Asha is in Pune.</li>
+<li class="has-line-data" data-line-start="252" data-line-end="254">The Kochi visitor, Dev, is the Engineer according to clue 2.</li>
+</ul>
+<p class="has-line-data" data-line-start="254" data-line-end="255">All clues now agree, so the table is valid. This demonstrates why the matrix should be used as a proof table: every direct, indirect and negative clue must agree before the arrangement is accepted.</p>
+<p class="has-line-data" data-line-start="256" data-line-end="257">The lesson is to use a matrix as a proof table: every direct, indirect and negative clue must agree. Do not accept a table merely because every row is filled.</p>
+<h2 class="code-line has-line-data" data-line-start="258" data-line-end="259"><a id="8_Decision_Tree_Quick_Reference_258"></a>8. Decision Tree / Quick Reference</h2>
+<pre><code class="has-line-data language-text" data-line-start="261" data-line-end="277">Is the puzzle mainly about positions?
+â”œâ”€ Yes, vertical or horizontal â†’ Draw numbered boxes.
+â””â”€ No, several attributes      â†’ Draw a person/attribute matrix.
+
+Is there a fixed position or direct match?
+â”œâ”€ Yes â†’ Place it first and eliminate duplicates.
+â””â”€ No  â†’ Start with the longest order chain or most restricted row.
+
+Does an immediate clue appear?
+â”œâ”€ Yes â†’ Treat the entries as a consecutive block.
+â””â”€ No  â†’ Use relative order and gap elimination.
+
+Does a row or column have one option left?
+â”œâ”€ Yes â†’ Confirm the match and propagate elimination.
+â””â”€ No  â†’ Continue with indirect clues or controlled cases.
+</code></pre>
+<h2 class="code-line has-line-data" data-line-start="278" data-line-end="279"><a id="9_SelfCheck_Checklist_for_This_Model_278"></a>9. Self-Check Checklist for This Model</h2>
+<ul>
+<li class="has-line-data" data-line-start="280" data-line-end="281"><input type="checkbox" id="checkbox16"><label for="checkbox16">Stack direction and box numbering are clear.</label></li>
+<li class="has-line-data" data-line-start="281" data-line-end="282"><input type="checkbox" id="checkbox17"><label for="checkbox17">Every box or primary row is assigned exactly once.</label></li>
+<li class="has-line-data" data-line-start="282" data-line-end="283"><input type="checkbox" id="checkbox18"><label for="checkbox18">Every attribute is used exactly once when required.</label></li>
+<li class="has-line-data" data-line-start="283" data-line-end="284"><input type="checkbox" id="checkbox19"><label for="checkbox19">Immediate and fixed-gap clues have been counted correctly.</label></li>
+<li class="has-line-data" data-line-start="284" data-line-end="285"><input type="checkbox" id="checkbox20"><label for="checkbox20">All </label><code>X</code> entries are based on actual clues, not guesses.</li>
+<li class="has-line-data" data-line-start="285" data-line-end="286"><input type="checkbox" id="checkbox21"><label for="checkbox21">Every confirmed match has been eliminated elsewhere.</label></li>
+<li class="has-line-data" data-line-start="286" data-line-end="287"><input type="checkbox" id="checkbox22"><label for="checkbox22">Indirect links have been followed through the correct intermediate category.</label></li>
+<li class="has-line-data" data-line-start="287" data-line-end="289"><input type="checkbox" id="checkbox23"><label for="checkbox23">All surviving cases agree before answering a must-be-true question.</label></li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="289" data-line-end="290"><a id="10_Practice_Strategy_Time_Management_289"></a>10. Practice Strategy &amp; Time Management</h2>
+<ul>
+<li class="has-line-data" data-line-start="291" data-line-end="292"><strong>Ideal time:</strong> 4-6 minutes for a box stack; 6-9 minutes for a medium matrix; 8-10 minutes for a dense multi-attribute table.</li>
+<li class="has-line-data" data-line-start="292" data-line-end="293"><strong>First read:</strong> Count positions and categories, then mark direct clues and fixed positions.</li>
+<li class="has-line-data" data-line-start="293" data-line-end="294"><strong>Best starting clue:</strong> A top/bottom/middle placement, a direct person-attribute match or a row with very few possibilities.</li>
+<li class="has-line-data" data-line-start="294" data-line-end="295"><strong>Skip rule:</strong> If no row, column or position becomes restricted after 2-3 minutes, move to another set and return later.</li>
+<li class="has-line-data" data-line-start="295" data-line-end="296"><strong>Difficulty scaling:</strong> Easy sets use one stack and direct clues; medium sets add attributes; hard sets use four or more categories, conditions and multiple cases.</li>
+<li class="has-line-data" data-line-start="296" data-line-end="300"><strong>Drill method:</strong> Practise box ordering separately from matrix matching, then combine them. Use a timer and spend the final minute checking every clue rather than rushing to the questions.</li>
+</ul>
+<hr>
+<p class="has-line-data" data-line-start="302" data-line-end="311">Nine boxes - A, B, C, D, E, F, G, H and I are kept one above<br>
+another in a single stack, but not necessarily in the same<br>
+order. Only one box is kept between box E and box G. Box I<br>
+is kept three boxes above box G. Box E is kept four boxes<br>
+below box H. As many boxes are kept between box H and<br>
+box I as between box D and box E. Box E is kept above box<br>
+D. Box F is kept immediately below box C. Only two boxes<br>
+are kept between box A and box F. Box B is kept above box<br>
+A</p>
+<p class="has-line-data" data-line-start="312" data-line-end="313">Let <strong>Position 1 = Top</strong> and <strong>Position 9 = Bottom</strong>.</p>
+<h2 class="code-line has-line-data" data-line-start="314" data-line-end="315"><a id="Step_1_314"></a>Step 1</h2>
+<p class="has-line-data" data-line-start="316" data-line-end="317"><strong>Only one box is between E and G.</strong></p>
+<pre><code class="has-line-data language-text" data-line-start="319" data-line-end="323">E _ G
+or
+G _ E
+</code></pre>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="326" data-line-end="327"><a id="Step_2_326"></a>Step 2</h2>
+<p class="has-line-data" data-line-start="328" data-line-end="329"><strong>I is three boxes above G.</strong></p>
+<pre><code class="has-line-data language-text" data-line-start="331" data-line-end="336">I
+_
+_
+G
+</code></pre>
+<p class="has-line-data" data-line-start="337" data-line-end="338">(distance = 3)</p>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="341" data-line-end="342"><a id="Step_3_341"></a>Step 3</h2>
+<p class="has-line-data" data-line-start="343" data-line-end="344"><strong>E is four boxes below H.</strong></p>
+<pre><code class="has-line-data language-text" data-line-start="346" data-line-end="352">H
+_
+_
+_
+E
+</code></pre>
+<p class="has-line-data" data-line-start="353" data-line-end="354">(distance = 4)</p>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="357" data-line-end="358"><a id="Step_4_357"></a>Step 4</h2>
+<p class="has-line-data" data-line-start="359" data-line-end="361"><strong>Boxes between H &amp; I = Boxes between D &amp; E.</strong><br>
+Also, <strong>E is above D.</strong></p>
+<p class="has-line-data" data-line-start="362" data-line-end="363">These clues together determine the relative positions of <strong>H, I, E, D</strong>.</p>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="366" data-line-end="367"><a id="Step_5_366"></a>Step 5</h2>
+<p class="has-line-data" data-line-start="368" data-line-end="369"><strong>F is immediately below C.</strong></p>
+<pre><code class="has-line-data language-text" data-line-start="371" data-line-end="374">C
+F
+</code></pre>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="377" data-line-end="378"><a id="Step_6_377"></a>Step 6</h2>
+<p class="has-line-data" data-line-start="379" data-line-end="380"><strong>Two boxes are between A and F.</strong></p>
+<pre><code class="has-line-data language-text" data-line-start="382" data-line-end="386">A _ _ F
+or
+F _ _ A
+</code></pre>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="389" data-line-end="390"><a id="Step_7_389"></a>Step 7</h2>
+<p class="has-line-data" data-line-start="391" data-line-end="392"><strong>B is above A.</strong></p>
+<p class="has-line-data" data-line-start="393" data-line-end="394">This fixes the remaining positions uniquely.</p>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="397" data-line-end="398"><a id="Final_Stack_Top_Bottom_397"></a>Final Stack (Top → Bottom)</h1>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:center">Position</th>
+<th style="text-align:center">Box</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><strong>B</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><strong>H</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center"><strong>C</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center"><strong>I</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center"><strong>E</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center"><strong>A</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center"><strong>G</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center"><strong>D</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="413" data-line-end="414"><a id="Verification_413"></a>Verification</h2>
+<ul>
+<li class="has-line-data" data-line-start="415" data-line-end="416">✓ One box between <strong>E</strong> and <strong>G</strong></li>
+<li class="has-line-data" data-line-start="416" data-line-end="417">✓ <strong>I</strong> is three boxes above <strong>G</strong></li>
+<li class="has-line-data" data-line-start="417" data-line-end="418">✓ <strong>E</strong> is four boxes below <strong>H</strong></li>
+<li class="has-line-data" data-line-start="418" data-line-end="419">✓ Boxes between <strong>H &amp; I</strong> = Boxes between <strong>D &amp; E</strong> (2 each)</li>
+<li class="has-line-data" data-line-start="419" data-line-end="420">✓ <strong>E</strong> is above <strong>D</strong></li>
+<li class="has-line-data" data-line-start="420" data-line-end="421">✓ <strong>F</strong> immediately below <strong>C</strong></li>
+<li class="has-line-data" data-line-start="421" data-line-end="422">✓ Two boxes between <strong>A</strong> and <strong>F</strong></li>
+<li class="has-line-data" data-line-start="422" data-line-end="424">✓ <strong>B</strong> is above <strong>A</strong></li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="424" data-line-end="425"><a id="Final_Answer_424"></a>Final Answer</h3>
+<pre><code class="has-line-data language-text" data-line-start="427" data-line-end="441">TOP
+
+B
+H
+C
+F
+I
+E
+A
+G
+D
+
+BOTTOM
+</code></pre>
+<hr>
+
+</main>
+
+<footer class="site-footer">
+  <hr>
+  <p>Last Updated: 23 July 2026</p>
+  <p><a href="index.html">&#8592; Back to Home</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

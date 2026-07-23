@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seating Arrangement — SBI PO Prep</title>
+  <meta name="description" content="Linear seating arrangement complete solving guide for SBI PO and IBPS PO Prelims.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <a class="site-title" href="index.html">SBI PO Prep</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="english.html" class="nav-link">English</a>
+    <div class="dropdown" id="dd-quant">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-quant">
+        Quantitative Aptitude <span class="arrow" aria-hidden="true">&#9660;</span>
+      </button>
+      <ul class="dd-menu" id="menu-quant" role="menu">
+        <li><a href="quant.html" role="menuitem">Quant Home</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="arithmetic.html" role="menuitem">Arithmetic</a></li>
+        <li><a href="di.html" role="menuitem">Data Interpretation</a></li>
+        <li><a href="quadratic.html" role="menuitem">Quadratic Equations</a></li>
+        <li><a href="series.html" role="menuitem">Number Series</a></li>
+        <li><a href="simplifiation.html" role="menuitem">Simplification</a></li>
+      </ul>
+    </div>
+    <div class="dropdown" id="dd-reasoning">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-reasoning">
+        Reasoning <span class="arrow" aria-hidden="true">&#9660;</span>
+      </button>
+      <ul class="dd-menu" id="menu-reasoning" role="menu">
+        <li><a href="reasoning.html" role="menuitem">Reasoning Home</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="box_stack.html" role="menuitem">Box Stack</a></li>
+        <li><a href="floors.html" role="menuitem">Floor Puzzle</a></li>
+        <li><a href="seating.html" role="menuitem">Seating Arrangement</a></li>
+        <li><a href="hierarchy.html" role="menuitem">Hierarchy</a></li>
+        <li><a href="calendar_puzzles.html" role="menuitem">Calendar Puzzles</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content" class="page-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="bc-sep">&#8250;</span>
+    <a href="reasoning.html">Reasoning</a>
+    <span class="bc-sep">&#8250;</span>
+    <span class="bc-current">Seating Arrangement</span>
+  </nav>
+<h1 class="code-line has-line-data" data-line-start="0" data-line-end="1"><a id="Linear_Seating_Arrangement_Complete_Solving_Guide_0"></a>Linear Seating Arrangement â€“ Complete Solving Guide</h1>
+<h2 class="code-line has-line-data" data-line-start="2" data-line-end="3"><a id="1_Model_Overview_2"></a>1. Model Overview</h2>
+<ul>
+<li class="has-line-data" data-line-start="4" data-line-end="6">
+<p class="has-line-data" data-line-start="4" data-line-end="5"><strong>What it is:</strong> Persons arranged in a straight line (single row or parallel rows facing each other). Each person occupies a fixed position and has attributes like colors, ages, professions, or hobbies.</p>
+</li>
+<li class="has-line-data" data-line-start="6" data-line-end="8">
+<p class="has-line-data" data-line-start="6" data-line-end="7"><strong>Why it appears in exams:</strong> Tests logical deduction, spatial reasoning, constraint satisfaction, and multi-variable tracking. High-frequency model with consistent exam presence.</p>
+</li>
+<li class="has-line-data" data-line-start="8" data-line-end="14">
+<p class="has-line-data" data-line-start="8" data-line-end="9"><strong>Key challenges:</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="9" data-line-end="10">Confusing left/right orientation when two rows face each other</li>
+<li class="has-line-data" data-line-start="10" data-line-end="11">Misinterpreting “adjacent” in parallel rows (does it mean same row or opposite rows?)</li>
+<li class="has-line-data" data-line-start="11" data-line-end="12">Losing track of attribute combinations as complexity increases</li>
+<li class="has-line-data" data-line-start="12" data-line-end="14">Rushing placement without validating all clues</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="14" data-line-end="16">
+<p class="has-line-data" data-line-start="14" data-line-end="15"><strong>Exam frequency:</strong> <strong>1-2 sets (8-10 questions) per prelim paper</strong>. Often carries 8-10 marks. Often seen in Main exams too.</p>
+</li>
+</ul>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="18" data-line-end="19"><a id="2_Core_Components_Terminology_18"></a>2. Core Components &amp; Terminology</h2>
+<h3 class="code-line has-line-data" data-line-start="20" data-line-end="21"><a id="Key_Terms_You_Must_Know_20"></a>Key Terms You Must Know:</h3>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adjacent</strong></td>
+<td>Next to each other in the same row OR on the same seat in opposite rows (needs clarification from puzzle)</td>
+<td>A is adjacent to B: A-B or B-A</td>
+</tr>
+<tr>
+<td><strong>Immediate Left</strong></td>
+<td>One position to the left (direction depends on puzzle frame)</td>
+<td>If A is at position 3, immediate left is position 2</td>
+</tr>
+<tr>
+<td><strong>Immediate Right</strong></td>
+<td>One position to the right</td>
+<td>If A is at position 3, immediate right is position 4</td>
+</tr>
+<tr>
+<td><strong>Between</strong></td>
+<td>Exactly in the middle of two persons</td>
+<td>A at pos 2, B at pos 4 â†’ pos 3 is between them</td>
+</tr>
+<tr>
+<td><strong>Facing</strong></td>
+<td>Direction orientation (North/South or towards center/away)</td>
+<td>Row 1 faces North, Row 2 faces South</td>
+</tr>
+<tr>
+<td><strong>Opposite</strong></td>
+<td>Persons sitting directly across in parallel rows</td>
+<td>Row 1 pos 3 is opposite to Row 2 pos 3</td>
+</tr>
+<tr>
+<td><strong>Alternate</strong></td>
+<td>Every second position (pattern of gaps)</td>
+<td>Positions 1, 3, 5, 7… OR 2, 4, 6…</td>
+</tr>
+<tr>
+<td><strong>End</strong></td>
+<td>Extreme positions (1st or Last)</td>
+<td>Leftmost or Rightmost person</td>
+</tr>
+</tbody>
+</table>
+<h3 class="code-line has-line-data" data-line-start="33" data-line-end="34"><a id="Variables_in_Linear_Seating_33"></a>Variables in Linear Seating:</h3>
+<ul>
+<li class="has-line-data" data-line-start="35" data-line-end="36"><strong>Primary:</strong> Person/Name</li>
+<li class="has-line-data" data-line-start="36" data-line-end="37"><strong>Secondary:</strong> Age, Profession, Hobby, Color, City, Height</li>
+<li class="has-line-data" data-line-start="37" data-line-end="38"><strong>Positional:</strong> Row number, Position number, Direction faced</li>
+<li class="has-line-data" data-line-start="38" data-line-end="40"><strong>Relational:</strong> Adjacency, Distance, Gaps</li>
+</ul>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="42" data-line-end="43"><a id="3_Prerequisite_Checks_Before_Solving_42"></a>3. Prerequisite Checks (Before Solving)</h2>
+<p class="has-line-data" data-line-start="44" data-line-end="45">Before reading a single clue, extract this metadata:</p>
+<ul>
+<li class="has-line-data" data-line-start="46" data-line-end="47"><input type="checkbox" id="checkbox0"><label for="checkbox0"></label><strong>How many persons total?</strong> (Fixed or variable?)</li>
+<li class="has-line-data" data-line-start="47" data-line-end="48"><input type="checkbox" id="checkbox1"><label for="checkbox1"></label><strong>How many rows?</strong> (1 row, 2 rows, 3+ rows?)</li>
+<li class="has-line-data" data-line-start="48" data-line-end="49"><input type="checkbox" id="checkbox2"><label for="checkbox2"></label><strong>Sitting in which direction?</strong> (All North? Facing each other? Mixed?)</li>
+<li class="has-line-data" data-line-start="49" data-line-end="50"><input type="checkbox" id="checkbox3"><label for="checkbox3"></label><strong>Are there gaps?</strong> (All seats filled or vacant seats exist?)</li>
+<li class="has-line-data" data-line-start="50" data-line-end="51"><input type="checkbox" id="checkbox4"><label for="checkbox4"></label><strong>How many attributes?</strong> (Ages: 1 per person? Professions: same count as persons?)</li>
+<li class="has-line-data" data-line-start="51" data-line-end="52"><input type="checkbox" id="checkbox5"><label for="checkbox5"></label><strong>Is left/right absolute or relative to person?</strong> (Puzzle should clarify; if not, <strong>assume absolute</strong>: person 1 is leftmost)</li>
+<li class="has-line-data" data-line-start="52" data-line-end="54"><input type="checkbox" id="checkbox6"><label for="checkbox6"></label><strong>Are names, numbers, or letters used?</strong> (A, B, C or Aman, Brijesh, Chetan?)</li>
+</ul>
+<p class="has-line-data" data-line-start="54" data-line-end="55"><strong>Example Metadata Check:</strong></p>
+<pre><code class="has-line-data" data-line-start="56" data-line-end="67">Puzzle: 5 persons (A, B, C, D, E) sit in a row, all facing North. 
+Each has a different color: Red, Blue, Green, Yellow, Orange.
+
+Metadata:
+âœ“ Persons: 5 (fixed)
+âœ“ Rows: 1 (single row)
+âœ“ Direction: All face North
+âœ“ Gaps: No (all seats filled)
+âœ“ Attributes: 5 colors for 5 persons
+âœ“ Left/Right: Absolute (1st = leftmost)
+</code></pre>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="70" data-line-end="71"><a id="4_StepbyStep_Solving_Methodology_70"></a>4. Step-by-Step Solving Methodology</h2>
+<h3 class="code-line has-line-data" data-line-start="72" data-line-end="73"><a id="Phase_1_Diagram_Preparation_72"></a>Phase 1: Diagram Preparation</h3>
+<p class="has-line-data" data-line-start="74" data-line-end="75"><strong>Goal:</strong> Create a visual template before reading clues.</p>
+<p class="has-line-data" data-line-start="76" data-line-end="77"><strong>For Single Row (5 persons example):</strong></p>
+<pre><code class="has-line-data" data-line-start="78" data-line-end="86">Position:   1      2      3      4      5
+          +-----+-----+-----+-----+-----+
+          |     |     |     |     |     |
+          +-----+-----+-----+-----+-----+
+Person:   ?     ?     ?     ?     ?
+Attr1:    ?     ?     ?     ?     ?
+Attr2:    ?     ?     ?     ?     ?
+</code></pre>
+<p class="has-line-data" data-line-start="87" data-line-end="88"><strong>For Double Row (Facing Each Other):</strong></p>
+<pre><code class="has-line-data" data-line-start="89" data-line-end="99">Row 1:  Position   1      2      3      4      5
+                 +-----+-----+-----+-----+-----+
+                 |     |     |     |     |     |  (Facing South)
+                 +-----+-----+-----+-----+-----+
+
+Row 2:  Position   1      2      3      4      5
+                 +-----+-----+-----+-----+-----+
+                 |     |     |     |     |     |  (Facing North)
+                 +-----+-----+-----+-----+-----+
+</code></pre>
+<p class="has-line-data" data-line-start="100" data-line-end="101"><strong>For Double Row (Same Direction):</strong></p>
+<pre><code class="has-line-data" data-line-start="102" data-line-end="110">Row 1:  +-----+-----+-----+-----+-----+
+        |     |     |     |     |     |  (Facing North)
+        +-----+-----+-----+-----+-----+
+
+Row 2:  +-----+-----+-----+-----+-----+
+        |     |     |     |     |     |  (Facing North)
+        +-----+-----+-----+-----+-----+
+</code></pre>
+<p class="has-line-data" data-line-start="111" data-line-end="112"><strong>Action:</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="112" data-line-end="113">Draw the grid with position numbers clearly marked</li>
+<li class="has-line-data" data-line-start="113" data-line-end="114">Label rows if multiple</li>
+<li class="has-line-data" data-line-start="114" data-line-end="116">Leave columns for each attribute (Person, Profession, Age, Color, etc.)</li>
+</ul>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="118" data-line-end="119"><a id="Phase_2_Constraint_Extraction_Prioritization_118"></a>Phase 2: Constraint Extraction &amp; Prioritization</h3>
+<p class="has-line-data" data-line-start="120" data-line-end="121"><strong>Goal:</strong> Categorize clues by strength and interdependence.</p>
+<p class="has-line-data" data-line-start="122" data-line-end="123"><strong>Clue Types:</strong></p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Direct</strong></td>
+<td>“A sits at position 3”</td>
+<td>â­â­â­ Start here</td>
+</tr>
+<tr>
+<td><strong>Comparative</strong></td>
+<td>“A sits to the left of B”</td>
+<td>â­â­â­ High impact</td>
+</tr>
+<tr>
+<td><strong>Adjacent</strong></td>
+<td>“X and Y are adjacent”</td>
+<td>â­â­ Medium</td>
+</tr>
+<tr>
+<td><strong>Gap-based</strong></td>
+<td>“There are 2 persons between A and C”</td>
+<td>â­â­ Medium</td>
+</tr>
+<tr>
+<td><strong>Negative</strong></td>
+<td>“X is NOT next to Y”</td>
+<td>â­ Eliminates later</td>
+</tr>
+<tr>
+<td><strong>Conditional</strong></td>
+<td>“If X is at 2, then Y is at 4”</td>
+<td>â­â­ Context-dependent</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="133" data-line-end="134"><strong>Extraction Process:</strong></p>
+<ol>
+<li class="has-line-data" data-line-start="135" data-line-end="136"><strong>List all clues</strong> with their type.</li>
+<li class="has-line-data" data-line-start="136" data-line-end="137"><strong>Identify anchor clues</strong> (direct positioning, “A is at position X”).</li>
+<li class="has-line-data" data-line-start="137" data-line-end="138"><strong>Chain clues</strong> (clues that reference anchor clues).</li>
+<li class="has-line-data" data-line-start="138" data-line-end="140"><strong>Flag ambiguous clues</strong> (unclear phrasing; make a note to revisit).</li>
+</ol>
+<p class="has-line-data" data-line-start="140" data-line-end="141"><strong>Example:</strong></p>
+<pre><code class="has-line-data" data-line-start="142" data-line-end="152">Puzzle Clues:
+1. A sits at position 3. [Direct] â­â­â­
+2. B sits to the left of C. [Comparative] â­â­â­
+3. D is adjacent to A. [Adjacent] â­â­
+4. E is at one of the ends. [Direct] â­â­â­
+5. There are 2 persons between E and B. [Gap-based] â­â­
+6. C is NOT adjacent to A. [Negative] â­
+
+Solving Order: 1 â†’ 4 â†’ 2 â†’ 3 â†’ 5 â†’ 6
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="155" data-line-end="156"><a id="Phase_3_Iterative_Placement_155"></a>Phase 3: Iterative Placement</h3>
+<p class="has-line-data" data-line-start="157" data-line-end="158"><strong>Goal:</strong> Place persons step-by-step, testing feasibility after each clue.</p>
+<p class="has-line-data" data-line-start="159" data-line-end="160"><strong>Algorithm:</strong></p>
+<pre><code class="has-line-data" data-line-start="162" data-line-end="172">1. Apply the highest-priority clue â†’ place person(s) in diagram
+2. Update &quot;possible positions&quot; for remaining persons
+3. Read next clue â†’ apply constraints
+4. Check for contradictions:
+   - Does clue contradict previous placements?
+   - Is there still at least one valid position for each person?
+5. If contradition found â†’ BACKTRACK (undo last few steps)
+6. If no contradiction â†’ move to next clue
+7. Repeat until all persons are placed or only one arrangement fits
+</code></pre>
+<p class="has-line-data" data-line-start="173" data-line-end="174"><strong>Example Walkthrough (detailed in Section 7).</strong></p>
+<p class="has-line-data" data-line-start="175" data-line-end="176"><strong>Key Principle:</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="176" data-line-end="177"><strong>Don’t rush.</strong> After each clue, ask: “Is this consistent with previous clues?”</li>
+<li class="has-line-data" data-line-start="177" data-line-end="179"><strong>Eliminate impossible combinations early.</strong> If person A must be at 2, 3, or 5 but clue X says A is left of B, eliminate invalid combinations now.</li>
+</ul>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="181" data-line-end="182"><a id="Phase_4_Verification_CrossCheck_181"></a>Phase 4: Verification &amp; Cross-Check</h3>
+<p class="has-line-data" data-line-start="183" data-line-end="184"><strong>Before finalizing:</strong></p>
+<ol>
+<li class="has-line-data" data-line-start="185" data-line-end="186"><strong>Re-read every clue</strong> against your final diagram. âœ“ All clues satisfied?</li>
+<li class="has-line-data" data-line-start="186" data-line-end="187"><strong>Check attribute counts.</strong> Do all persons have all attributes? Are attributes unique (if puzzle requires)?</li>
+<li class="has-line-data" data-line-start="187" data-line-end="188"><strong>Spatial logic double-check.</strong> If A is adjacent to B, confirm they are exactly 1 position apart in the final diagram.</li>
+<li class="has-line-data" data-line-start="188" data-line-end="190"><strong>Negative constraints.</strong> Verify that all “X is NOT next to Y” clues are satisfied.</li>
+</ol>
+<p class="has-line-data" data-line-start="190" data-line-end="191"><strong>Validation Checklist (for this model):</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="191" data-line-end="192"><input type="checkbox" id="checkbox7"><label for="checkbox7">All 5 (or N) persons placed in unique positions?</label></li>
+<li class="has-line-data" data-line-start="192" data-line-end="193"><input type="checkbox" id="checkbox8"><label for="checkbox8">All attributes assigned to exactly one person?</label></li>
+<li class="has-line-data" data-line-start="193" data-line-end="194"><input type="checkbox" id="checkbox9"><label for="checkbox9">No two persons in the same position?</label></li>
+<li class="has-line-data" data-line-start="194" data-line-end="195"><input type="checkbox" id="checkbox10"><label for="checkbox10">Every clue verified against final diagram?</label></li>
+<li class="has-line-data" data-line-start="195" data-line-end="196"><input type="checkbox" id="checkbox11"><label for="checkbox11">Left/right orientation consistent throughout?</label></li>
+<li class="has-line-data" data-line-start="196" data-line-end="198"><input type="checkbox" id="checkbox12"><label for="checkbox12">If two rows: adjacency definition clear (same-row or opposite-row)?</label></li>
+</ul>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="200" data-line-end="201"><a id="5_Common_Pitfalls_How_to_Avoid_Them_200"></a>5. Common Pitfalls &amp; How to Avoid Them</h2>
+<h3 class="code-line has-line-data" data-line-start="202" data-line-end="203"><a id="Pitfall_1_Confusing_LeftRight_in_OppositeFacing_Rows_202"></a>Pitfall 1: Confusing Left/Right in Opposite-Facing Rows</h3>
+<p class="has-line-data" data-line-start="204" data-line-end="205"><strong>Problem:</strong></p>
+<pre><code class="has-line-data" data-line-start="206" data-line-end="212">Row 1 (Facing South):  A  |  B  |  C
+Row 2 (Facing North):  D  |  E  |  F
+
+&quot;B is to the left of E&quot; â€” But LEFT from whose perspective? 
+From the puzzle creator's absolute view? Or from B's perspective as they face South?
+</code></pre>
+<p class="has-line-data" data-line-start="213" data-line-end="214"><strong>Solution:</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="214" data-line-end="215"><strong>Always clarify at the start:</strong> The puzzle should state “from the reader’s perspective” or “from each person’s perspective.”</li>
+<li class="has-line-data" data-line-start="215" data-line-end="216">If unclear, <strong>assume absolute perspective</strong> (A is at position 1, which is leftmost globally).</li>
+<li class="has-line-data" data-line-start="216" data-line-end="218">Note: This is a common source of confusion; re-read the puzzle statement if clues don’t make sense.</li>
+</ul>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="220" data-line-end="221"><a id="Pitfall_2_Mishandling_Adjacent_in_Parallel_Rows_220"></a>Pitfall 2: Mishandling “Adjacent” in Parallel Rows</h3>
+<p class="has-line-data" data-line-start="222" data-line-end="223"><strong>Problem:</strong></p>
+<pre><code class="has-line-data" data-line-start="224" data-line-end="228">Does &quot;A and B are adjacent&quot; mean:
+(a) Same row, next to each other? OR
+(b) Opposite rows, directly across?
+</code></pre>
+<p class="has-line-data" data-line-start="229" data-line-end="230"><strong>Solution:</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="230" data-line-end="231">Puzzle should clarify. If it says “A and B sit adjacent,” typically means <strong>same row</strong>.</li>
+<li class="has-line-data" data-line-start="231" data-line-end="232">If it means opposite rows, it usually says “A sits directly opposite to B” or “A and B are across from each other.”</li>
+<li class="has-line-data" data-line-start="232" data-line-end="234">When in doubt, <strong>test both interpretations</strong> against all clues and pick the one that satisfies all.</li>
+</ul>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="236" data-line-end="237"><a id="Pitfall_3_Losing_Track_of_Attribute_Combinations_236"></a>Pitfall 3: Losing Track of Attribute Combinations</h3>
+<p class="has-line-data" data-line-start="238" data-line-end="239"><strong>Problem:</strong></p>
+<pre><code class="has-line-data" data-line-start="240" data-line-end="243">5 persons, 3 attributes each (Age, Color, Profession).
+After reading 10 clues, you're unsure which person has which profession.
+</code></pre>
+<p class="has-line-data" data-line-start="244" data-line-end="245"><strong>Solution:</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="245" data-line-end="246"><strong>Maintain a detailed grid.</strong> Don’t just place persons; simultaneously update attributes.</li>
+<li class="has-line-data" data-line-start="246" data-line-end="247">Use a <strong>process of elimination:</strong> If A is not Red and not Blue, and we have Red, Blue, Green, then A is Green.</li>
+<li class="has-line-data" data-line-start="247" data-line-end="249"><strong>Color-code or mark</strong> your diagram as you deduce attributes (even on paper, use shortcuts like “A:Red, B:?”).</li>
+</ul>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="251" data-line-end="252"><a id="Pitfall_4_Rushing_Placement_Without_Validating_All_Clues_First_251"></a>Pitfall 4: Rushing Placement Without Validating All Clues First</h3>
+<p class="has-line-data" data-line-start="253" data-line-end="255"><strong>Problem:</strong><br>
+You place A at position 3 based on clue 1. Then clue 5 contradicts it, but you’ve already built solutions on top of that placement.</p>
+<p class="has-line-data" data-line-start="256" data-line-end="257"><strong>Solution:</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="257" data-line-end="258"><strong>Read all clues first.</strong> Don’t start solving after clue 2.</li>
+<li class="has-line-data" data-line-start="258" data-line-end="259"><strong>Extract all clues,</strong> categorize by priority, then START placement.</li>
+<li class="has-line-data" data-line-start="259" data-line-end="261"><strong>When you hit a contradiction,</strong> backtrack only as far as needed, not restarting from scratch (unless necessary).</li>
+</ul>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="263" data-line-end="264"><a id="Pitfall_5_Misinterpreting_Between_and_Distance_Clues_263"></a>Pitfall 5: Misinterpreting “Between” and Distance Clues</h3>
+<p class="has-line-data" data-line-start="265" data-line-end="266"><strong>Problem:</strong></p>
+<pre><code class="has-line-data" data-line-start="267" data-line-end="272">&quot;There are 2 persons between A and C.&quot;
+Does this mean:
+(a) A is at 1, C is at 4 (positions 2 and 3 are &quot;between&quot;)? OR
+(b) A is at 1, C is at 3 (position 2 is &quot;between&quot;)?
+</code></pre>
+<p class="has-line-data" data-line-start="273" data-line-end="274"><strong>Solution:</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="274" data-line-end="278">
+<p class="has-line-data" data-line-start="274" data-line-end="275"><strong>“2 persons between” = 2 people in the gap.</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="275" data-line-end="276">A at 1, C at 4: positions 2 and 3 are occupied (2 persons between). âœ“</li>
+<li class="has-line-data" data-line-start="276" data-line-end="278">A at 1, C at 3: position 2 is occupied (1 person between). âœ—</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="278" data-line-end="280">
+<p class="has-line-data" data-line-start="278" data-line-end="279"><strong>Confirm:</strong> If puzzle says “2 gaps,” interpret as “1 person” or count explicitly.</p>
+</li>
+</ul>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="282" data-line-end="283"><a id="6_Shortcut_Techniques_Pattern_Recognition_282"></a>6. Shortcut Techniques &amp; Pattern Recognition</h2>
+<h3 class="code-line has-line-data" data-line-start="284" data-line-end="285"><a id="Shortcut_1_Anchor_Expand_284"></a>Shortcut 1: “Anchor &amp; Expand”</h3>
+<p class="has-line-data" data-line-start="286" data-line-end="287">If you find a direct clue (e.g., “A is at position 3”), place it immediately and check what clues reference it.</p>
+<pre><code class="has-line-data" data-line-start="289" data-line-end="301">Clue: A at position 3.
+Diagram:
+Position:  1    2    3    4    5
+         +----+----+----+----+----+
+         | ?  | ?  | A  | ?  | ?  |
+         +----+----+----+----+----+
+
+Check: Which clues reference A?
+- &quot;B is to the left of A&quot; â†’ B is at 1 or 2.
+- &quot;D is adjacent to A&quot; â†’ D is at 2 or 4.
+(Already narrowed 2 of 4 remaining positions!)
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="304" data-line-end="305"><a id="Shortcut_2_Ends_First_304"></a>Shortcut 2: “Ends First”</h3>
+<p class="has-line-data" data-line-start="306" data-line-end="307">If a clue mentions an “end” (position 1 or 5 in a 5-person row), lock it in immediately.</p>
+<pre><code class="has-line-data" data-line-start="309" data-line-end="315">Clue: &quot;E is at one of the ends, and there are 2 persons between E and B.&quot;
+â†’ E is at 1 or 5.
+â†’ If E at 1, then B at 4 (2 between: 2, 3).
+â†’ If E at 5, then B at 2 (2 between: 3, 4).
+(Only 2 scenarios to test instead of 5Ã—5=25!)
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="318" data-line-end="319"><a id="Shortcut_3_Negative_Constraint_Elimination_318"></a>Shortcut 3: “Negative Constraint Elimination”</h3>
+<p class="has-line-data" data-line-start="320" data-line-end="321">Collect all “X is NOT next to Y” clues. Use them to <strong>eliminate impossible pairings</strong> once you’ve narrowed positions.</p>
+<pre><code class="has-line-data" data-line-start="323" data-line-end="329">- &quot;A is NOT adjacent to B&quot;
+- &quot;A is NOT adjacent to C&quot;
+
+If A is at position 3, then positions 2 and 4 are ruled out for B and C.
+B and C must be at positions 1 or 5. (Instant narrowing!)
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="332" data-line-end="333"><a id="Shortcut_4_Comparative_Chains_332"></a>Shortcut 4: “Comparative Chains”</h3>
+<p class="has-line-data" data-line-start="334" data-line-end="335">If multiple clues state relative order (A left of B, B left of C), create a <strong>chain</strong> immediately.</p>
+<pre><code class="has-line-data" data-line-start="337" data-line-end="352">- &quot;A is to the left of B&quot;
+- &quot;B is to the left of C&quot;
+- &quot;D is to the left of A&quot;
+
+Chain: D â€” A â€” B â€” C (Left to Right order locked!)
+
+In a 5-person row, possible positions:
+- D=1, A=2, B=3, C=4 (E at 5)
+- D=1, A=2, B=3, C=5 (E at 4)
+- D=1, A=2, B=4, C=5 (E at 3)
+- D=1, A=3, B=4, C=5 (E at 2)
+- D=2, A=3, B=4, C=5 (E at 1)
+
+(5 scenarios, far fewer than 5! = 120!)
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="355" data-line-end="356"><a id="Shortcut_5_Attribute_Pairing_355"></a>Shortcut 5: “Attribute Pairing”</h3>
+<p class="has-line-data" data-line-start="357" data-line-end="358">If a clue links two attributes (e.g., “The person at position 2 is a Doctor and likes Tennis”), mark both simultaneously in your grid.</p>
+<pre><code class="has-line-data" data-line-start="360" data-line-end="370">Clue: &quot;The person at position 2 is a Doctor and likes Tennis.&quot;
+
+Grid Update:
+Position:  1    2      3    4    5
+Person:    ?    ?      ?    ?    ?
+Prof:      ?    Doctor ?    ?    ?
+Hobby:     ?    Tennis ?    ?    ?
+
+This reduces search space: Any clue about &quot;Doctor&quot; or &quot;Tennis&quot; now points to position 2!
+</code></pre>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="373" data-line-end="374"><a id="7_ASCII_Diagram_Examples_Worked_Solutions_373"></a>7. ASCII Diagram Examples (Worked Solutions)</h2>
+<h3 class="code-line has-line-data" data-line-start="375" data-line-end="376"><a id="Example_1_Single_Row_5_Persons_2_Attributes_375"></a>Example 1: Single Row, 5 Persons, 2 Attributes</h3>
+<p class="has-line-data" data-line-start="377" data-line-end="378"><strong>Puzzle Statement:</strong></p>
+<p class="has-line-data" data-line-start="379" data-line-end="380">Five persons A, B, C, D, and E sit in a row facing North, each having a different profession: Doctor, Engineer, Lawyer, Teacher, and Chef.</p>
+<ol>
+<li class="has-line-data" data-line-start="381" data-line-end="382">A sits at position 3.</li>
+<li class="has-line-data" data-line-start="382" data-line-end="383">B sits to the left of C.</li>
+<li class="has-line-data" data-line-start="383" data-line-end="384">D is adjacent to A.</li>
+<li class="has-line-data" data-line-start="384" data-line-end="385">E sits at one of the ends.</li>
+<li class="has-line-data" data-line-start="385" data-line-end="386">There are 2 persons between E and B.</li>
+<li class="has-line-data" data-line-start="386" data-line-end="388">C is NOT adjacent to A.</li>
+</ol>
+<p class="has-line-data" data-line-start="388" data-line-end="389">Determine the seating arrangement and answer the following:</p>
+<ul>
+<li class="has-line-data" data-line-start="389" data-line-end="390">Who sits at position 4?</li>
+<li class="has-line-data" data-line-start="390" data-line-end="392">Which profession does B have?</li>
+</ul>
+<hr>
+<p class="has-line-data" data-line-start="394" data-line-end="395"><strong>Solution Walkthrough:</strong></p>
+<h4 class="code-line has-line-data" data-line-start="396" data-line-end="397"><a id="Setup_Initial_Structure_396"></a>Setup (Initial Structure):</h4>
+<pre><code class="has-line-data" data-line-start="398" data-line-end="404">Position:   1      2      3      4      5
+          +-----+-----+-----+-----+-----+
+          |     |     |     |     |     |  (Facing North)
+          +-----+-----+-----+-----+-----+
+Person:   ?     ?     ?     ?     ?
+</code></pre>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="407" data-line-end="408"><a id="Step_1_Apply_Clue_1_A_sits_at_position_3_407"></a>Step 1: Apply Clue 1 (“A sits at position 3”)</h4>
+<pre><code class="has-line-data" data-line-start="410" data-line-end="419">Position:   1      2      3      4      5
+          +-----+-----+-----+-----+-----+
+          |     |     | A   |     |     |
+          +-----+-----+-----+-----+-----+
+Person:   ?     ?     A     ?     ?
+
+Analysis: A is now fixed at position 3.
+Remaining: B, C, D, E at positions 1, 2, 4, 5.
+</code></pre>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="422" data-line-end="423"><a id="Step_2_Apply_Clue_4_E_sits_at_one_of_the_ends_422"></a>Step 2: Apply Clue 4 (“E sits at one of the ends”)</h4>
+<pre><code class="has-line-data" data-line-start="425" data-line-end="440">Position:   1      2      3      4      5
+          +-----+-----+-----+-----+-----+
+          | E   |     | A   |     |  E  |  (E at 1 or 5)
+          +-----+-----+-----+-----+-----+
+Person:   E/?   ?     A     ?     E/?
+
+Analysis: E is at position 1 OR position 5 (two scenarios to test).
+Remaining: B, C, D at the other 4 positions.
+
+**Scenario A: E at position 1**
+Remaining: B, C, D at positions 2, 4, 5.
+
+**Scenario B: E at position 5**
+Remaining: B, C, D at positions 1, 2, 4.
+</code></pre>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="443" data-line-end="444"><a id="Step_3_Apply_Clue_5_There_are_2_persons_between_E_and_B_443"></a>Step 3: Apply Clue 5 (“There are 2 persons between E and B”)</h4>
+<p class="has-line-data" data-line-start="445" data-line-end="446"><strong>Testing Scenario A (E at 1):</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="446" data-line-end="457">E at 1, then 2 persons between E and B means B is at 4.<pre><code class="has-line-data" data-line-start="448" data-line-end="456">Position:   1      2      3      4      5
+          +-----+-----+-----+-----+-----+
+          | E   |     | A   | B   |     |
+          +-----+-----+-----+-----+-----+
+Person:   E     ?     A     B     ?
+
+Remaining: C, D at positions 2, 5.
+</code></pre>
+</li>
+</ul>
+<p class="has-line-data" data-line-start="457" data-line-end="458"><strong>Testing Scenario B (E at 5):</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="458" data-line-end="469">E at 5, then 2 persons between E and B means B is at 2.<pre><code class="has-line-data" data-line-start="460" data-line-end="468">Position:   1      2      3      4      5
+          +-----+-----+-----+-----+-----+
+          |     | B   | A   |     | E   |
+          +-----+-----+-----+-----+-----+
+Person:   ?     B     A     ?     E
+
+Remaining: C, D at positions 1, 4.
+</code></pre>
+</li>
+</ul>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="471" data-line-end="472"><a id="Step_4_Apply_Clue_3_D_is_adjacent_to_A_and_Clue_6_C_is_NOT_adjacent_to_A_471"></a>Step 4: Apply Clue 3 (“D is adjacent to A”) and Clue 6 (“C is NOT adjacent to A”)</h4>
+<p class="has-line-data" data-line-start="473" data-line-end="474"><strong>Testing Scenario A (E at 1, B at 4, C/D at 2, 5):</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="474" data-line-end="475">D adjacent to A (at 3) means D at 2 or 4.</li>
+<li class="has-line-data" data-line-start="475" data-line-end="476">But B is at 4, so D must be at 2.</li>
+<li class="has-line-data" data-line-start="476" data-line-end="477">C NOT adjacent to A means C NOT at 2 or 4.</li>
+<li class="has-line-data" data-line-start="477" data-line-end="478">But positions 2 and 4 are taken, and only 5 remains.</li>
+<li class="has-line-data" data-line-start="478" data-line-end="480">âœ“ C at 5.</li>
+</ul>
+<pre><code class="has-line-data" data-line-start="481" data-line-end="495">Position:   1      2      3      4      5
+          +-----+-----+-----+-----+-----+
+          | E   | D   | A   | B   | C   |
+          +-----+-----+-----+-----+-----+
+Person:   E     D     A     B     C
+
+Validation of Scenario A:
+âœ“ Clue 1: A at 3 âœ“
+âœ“ Clue 2: B left of C (4 &lt; 5) âœ“
+âœ“ Clue 3: D adjacent to A (2 and 3) âœ“
+âœ“ Clue 4: E at end (1) âœ“
+âœ“ Clue 5: 2 persons between E (1) and B (4): positions 2, 3 âœ“
+âœ“ Clue 6: C NOT adjacent to A (5 is not 2 or 4) âœ“
+</code></pre>
+<p class="has-line-data" data-line-start="496" data-line-end="497"><strong>Testing Scenario B (E at 5, B at 2, C/D at 1, 4):</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="497" data-line-end="498">D adjacent to A (at 3) means D at 2 or 4.</li>
+<li class="has-line-data" data-line-start="498" data-line-end="499">B is at 2, so D must be at 4.</li>
+<li class="has-line-data" data-line-start="499" data-line-end="500">C NOT adjacent to A means C NOT at 2 or 4.</li>
+<li class="has-line-data" data-line-start="500" data-line-end="502">C must be at 1.</li>
+</ul>
+<pre><code class="has-line-data" data-line-start="503" data-line-end="513">Position:   1      2      3      4      5
+          +-----+-----+-----+-----+-----+
+          | C   | B   | A   | D   | E   |
+          +-----+-----+-----+-----+-----+
+Person:   C     B     A     D     E
+
+Validation of Scenario B:
+âœ“ Clue 1: A at 3 âœ“
+âœ“ Clue 2: B left of C (2 &lt; 1) âœ— FAILS!
+</code></pre>
+<p class="has-line-data" data-line-start="514" data-line-end="515"><strong>Scenario B fails clue 2.</strong> Only Scenario A is valid.</p>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="518" data-line-end="519"><a id="Final_Diagram_518"></a>Final Diagram:</h4>
+<pre><code class="has-line-data" data-line-start="521" data-line-end="527">Position:   1      2      3      4      5
+          +-----+-----+-----+-----+-----+
+          | E   | D   | A   | B   | C   |
+          +-----+-----+-----+-----+-----+
+Person:   E     D     A     B     C
+</code></pre>
+<hr>
+<p class="has-line-data" data-line-start="530" data-line-end="531"><strong>Final Answer:</strong></p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Position</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Person</td>
+<td>E</td>
+<td>D</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="536" data-line-end="538"><strong>Q1: Who sits at position 4?</strong><br>
+â†’ <strong>B</strong></p>
+<p class="has-line-data" data-line-start="539" data-line-end="541"><strong>Q2: Which profession does B have?</strong><br>
+â†’ This puzzle only establishes seating, not professions. (In a real puzzle, additional clues would assign professions. For now, B’s profession is <strong>not determined</strong> from the given clues, but likely asked in the full puzzle set.)</p>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="544" data-line-end="545"><a id="Example_2_Double_Row_4_Persons_Each_1_Attribute_544"></a>Example 2: Double Row, 4 Persons Each, 1 Attribute</h3>
+<p class="has-line-data" data-line-start="546" data-line-end="547"><strong>Puzzle Statement:</strong></p>
+<p class="has-line-data" data-line-start="548" data-line-end="549">Eight persons P, Q, R, S, T, U, V, W sit in two parallel rows of 4 persons each. Row 1 sits above Row 2, facing each other. Each person has a different city: Delhi, Mumbai, Bangalore, Chennai, Pune, Hyderabad, Kolkata, Jaipur.</p>
+<ol>
+<li class="has-line-data" data-line-start="550" data-line-end="551">P sits at position 2 in Row 1.</li>
+<li class="has-line-data" data-line-start="551" data-line-end="552">Q sits at position 4 in Row 2.</li>
+<li class="has-line-data" data-line-start="552" data-line-end="553">R is adjacent to P in the same row.</li>
+<li class="has-line-data" data-line-start="553" data-line-end="554">S sits directly opposite to P.</li>
+<li class="has-line-data" data-line-start="554" data-line-end="555">T is adjacent to S in the same row.</li>
+<li class="has-line-data" data-line-start="555" data-line-end="556">U is at position 1 in Row 2.</li>
+<li class="has-line-data" data-line-start="556" data-line-end="557">V is adjacent to Q in the same row.</li>
+<li class="has-line-data" data-line-start="557" data-line-end="559">W is opposite to V.</li>
+</ol>
+<p class="has-line-data" data-line-start="559" data-line-end="560">Determine the seating arrangement.</p>
+<hr>
+<p class="has-line-data" data-line-start="563" data-line-end="564"><strong>Solution Walkthrough:</strong></p>
+<h4 class="code-line has-line-data" data-line-start="565" data-line-end="566"><a id="Setup_Initial_Structure_565"></a>Setup (Initial Structure):</h4>
+<pre><code class="has-line-data" data-line-start="568" data-line-end="586">Row 1:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 |     |     |     |     |  (Facing South)
+                 +-----+-----+-----+-----+
+Person:        ?     ?     ?     ?
+
+Row 2:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 |     |     |     |     |  (Facing North)
+                 +-----+-----+-----+-----+
+Person:        ?     ?     ?     ?
+
+Opposite Mapping:
+Row 1 pos 1 â†” Row 2 pos 1
+Row 1 pos 2 â†” Row 2 pos 2
+Row 1 pos 3 â†” Row 2 pos 3
+Row 1 pos 4 â†” Row 2 pos 4
+</code></pre>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="589" data-line-end="590"><a id="Step_1_Apply_Clue_1_P_sits_at_position_2_in_Row_1_589"></a>Step 1: Apply Clue 1 (“P sits at position 2 in Row 1”)</h4>
+<pre><code class="has-line-data" data-line-start="592" data-line-end="602">Row 1:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 |     | P   |     |     |
+                 +-----+-----+-----+-----+
+
+Row 2:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 |     |     |     |     |
+                 +-----+-----+-----+-----+
+</code></pre>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="605" data-line-end="606"><a id="Step_2_Apply_Clue_4_S_sits_directly_opposite_to_P_605"></a>Step 2: Apply Clue 4 (“S sits directly opposite to P”)</h4>
+<p class="has-line-data" data-line-start="607" data-line-end="608">Since P is at Row 1 pos 2, S is at Row 2 pos 2.</p>
+<pre><code class="has-line-data" data-line-start="610" data-line-end="620">Row 1:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 |     | P   |     |     |
+                 +-----+-----+-----+-----+
+
+Row 2:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 |     | S   |     |     |
+                 +-----+-----+-----+-----+
+</code></pre>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="623" data-line-end="624"><a id="Step_3_Apply_Clue_6_U_is_at_position_1_in_Row_2_and_Clue_2_Q_sits_at_position_4_in_Row_2_623"></a>Step 3: Apply Clue 6 (“U is at position 1 in Row 2”) and Clue 2 (“Q sits at position 4 in Row 2”)</h4>
+<pre><code class="has-line-data" data-line-start="626" data-line-end="639">Row 1:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 |     | P   |     |     |
+                 +-----+-----+-----+-----+
+
+Row 2:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | U   | S   |     | Q   |
+                 +-----+-----+-----+-----+
+
+Remaining in Row 2: Position 3 (one slot).
+Remaining persons: T, V, W, R.
+</code></pre>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="642" data-line-end="643"><a id="Step_4_Apply_Clue_3_R_is_adjacent_to_P_in_the_same_row_642"></a>Step 4: Apply Clue 3 (“R is adjacent to P in the same row”)</h4>
+<p class="has-line-data" data-line-start="644" data-line-end="646">R is in Row 1 adjacent to P (at pos 2).<br>
+R is at Row 1 pos 1 or pos 3.</p>
+<pre><code class="has-line-data" data-line-start="648" data-line-end="656">Row 1:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | R?  | P   | R?  |     |
+                 +-----+-----+-----+-----+
+
+Remaining in Row 1: Positions 3, 4 (plus 1 if R not there).
+Remaining persons in Row 1: R, and two of {T, V, W}.
+</code></pre>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="659" data-line-end="660"><a id="Step_5_Apply_Clue_5_T_is_adjacent_to_S_in_the_same_row_659"></a>Step 5: Apply Clue 5 (“T is adjacent to S in the same row”)</h4>
+<p class="has-line-data" data-line-start="661" data-line-end="664">T is in Row 2 adjacent to S (at pos 2).<br>
+T is at Row 2 pos 1 or pos 3.<br>
+But pos 1 is U, so <strong>T is at Row 2 pos 3</strong>.</p>
+<pre><code class="has-line-data" data-line-start="666" data-line-end="679">Row 1:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | R?  | P   | R?  |     |
+                 +-----+-----+-----+-----+
+
+Row 2:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | U   | S   | T   | Q   |
+                 +-----+-----+-----+-----+
+
+Row 2 is now complete: U, S, T, Q.
+Remaining in Row 1: R, V, W at positions 1, 3, 4.
+</code></pre>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="682" data-line-end="683"><a id="Step_6_Apply_Clue_7_V_is_adjacent_to_Q_in_the_same_row_and_Clue_8_W_is_opposite_to_V_682"></a>Step 6: Apply Clue 7 (“V is adjacent to Q in the same row”) and Clue 8 (“W is opposite to V”)</h4>
+<p class="has-line-data" data-line-start="684" data-line-end="687">V is in Row 2 adjacent to Q (at pos 4).<br>
+V is at Row 2 pos 3.<br>
+But Row 2 is complete: U, S, T, Q. <strong>Contradiction!</strong></p>
+<p class="has-line-data" data-line-start="688" data-line-end="689"><strong>Re-check:</strong> Clue 7 says V is adjacent to Q. Q is at Row 2 pos 4. V must be at Row 2 pos 3. But T is already at Row 2 pos 3.</p>
+<p class="has-line-data" data-line-start="690" data-line-end="691"><strong>Hmm, this suggests an error in my puzzle design. Let me revise it for correctness…</strong></p>
+<p class="has-line-data" data-line-start="692" data-line-end="693"><em>Actually, let’s simplify: Perhaps V is in Row 1, adjacent to the person opposite Q.</em></p>
+<p class="has-line-data" data-line-start="694" data-line-end="695"><strong>Revised Interpretation:</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="695" data-line-end="696">Q is at Row 2 pos 4.</li>
+<li class="has-line-data" data-line-start="696" data-line-end="697">The person opposite Q is at Row 1 pos 4.</li>
+<li class="has-line-data" data-line-start="697" data-line-end="699">V is adjacent to Q means V is in Row 2 adjacent to Q, OR V is in Row 1 and “adjacent to Q’s opposite” (less clear).</li>
+</ul>
+<p class="has-line-data" data-line-start="699" data-line-end="700"><strong>For clarity, let’s assume the simpler puzzle: V is at Row 1 pos 4 (opposite to Q at Row 2 pos 4), and we have a different adjacency clue.</strong></p>
+<p class="has-line-data" data-line-start="701" data-line-end="702">Let me simplify and revise this example:</p>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="705" data-line-end="706"><a id="Revised_Example_2_Simplified_Double_Row_705"></a><strong>Revised Example 2 (Simplified Double Row):</strong></h4>
+<p class="has-line-data" data-line-start="707" data-line-end="708"><strong>Puzzle Statement (Revised):</strong></p>
+<p class="has-line-data" data-line-start="709" data-line-end="710">Eight persons P, Q, R, S, T, U, V, W sit in two parallel rows of 4 persons each. Row 1 sits above Row 2, facing each other.</p>
+<ol>
+<li class="has-line-data" data-line-start="711" data-line-end="712">P sits at position 2 in Row 1.</li>
+<li class="has-line-data" data-line-start="712" data-line-end="713">Q sits at position 4 in Row 2.</li>
+<li class="has-line-data" data-line-start="713" data-line-end="714">R is adjacent to P in the same row (Row 1).</li>
+<li class="has-line-data" data-line-start="714" data-line-end="715">S sits directly opposite to P.</li>
+<li class="has-line-data" data-line-start="715" data-line-end="716">T is adjacent to S in Row 2.</li>
+<li class="has-line-data" data-line-start="716" data-line-end="717">U is at position 1 in Row 2.</li>
+<li class="has-line-data" data-line-start="717" data-line-end="718">V is at position 1 in Row 1.</li>
+<li class="has-line-data" data-line-start="718" data-line-end="720">W sits opposite to R.</li>
+</ol>
+<hr>
+<h4 class="code-line has-line-data" data-line-start="722" data-line-end="723"><a id="Revised_Solution_Walkthrough_722"></a>Revised Solution Walkthrough:</h4>
+<p class="has-line-data" data-line-start="724" data-line-end="726"><strong>Step 1-3: Place P, S, U, Q</strong><br>
+(Same as before)</p>
+<pre><code class="has-line-data" data-line-start="728" data-line-end="738">Row 1:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 |     | P   |     |     |
+                 +-----+-----+-----+-----+
+
+Row 2:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | U   | S   |     | Q   |
+                 +-----+-----+-----+-----+
+</code></pre>
+<p class="has-line-data" data-line-start="739" data-line-end="740"><strong>Step 4: Apply Clue 7 (“V is at position 1 in Row 1”)</strong></p>
+<pre><code class="has-line-data" data-line-start="742" data-line-end="752">Row 1:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | V   | P   |     |     |
+                 +-----+-----+-----+-----+
+
+Row 2:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | U   | S   |     | Q   |
+                 +-----+-----+-----+-----+
+</code></pre>
+<p class="has-line-data" data-line-start="753" data-line-end="754"><strong>Step 5: Apply Clue 3 (“R is adjacent to P in Row 1”)</strong></p>
+<p class="has-line-data" data-line-start="755" data-line-end="756">R at Row 1 pos 3 (pos 1 is V, pos 2 is P).</p>
+<pre><code class="has-line-data" data-line-start="758" data-line-end="770">Row 1:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | V   | P   | R   |     |
+                 +-----+-----+-----+-----+
+
+Row 2:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | U   | S   |     | Q   |
+                 +-----+-----+-----+-----+
+
+Remaining in Row 1: W at position 4.
+</code></pre>
+<p class="has-line-data" data-line-start="771" data-line-end="772"><strong>Step 6: Apply Clue 8 (“W is opposite to R”)</strong></p>
+<p class="has-line-data" data-line-start="773" data-line-end="774">R is at Row 1 pos 3 â†’ W is at Row 2 pos 3.</p>
+<pre><code class="has-line-data" data-line-start="776" data-line-end="790">Row 1:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | V   | P   | R   |     |
+                 +-----+-----+-----+-----+
+
+Row 2:  Position   1      2      3      4
+                 +-----+-----+-----+-----+
+                 | U   | S   | W   | Q   |
+                 +-----+-----+-----+-----+
+
+Remaining in Row 1: Position 4 (only slot). 
+But all persons are placed: V, P, R, ?, U, S, W, Q.
+We're missing T!
+</code></pre>
+<p class="has-line-data" data-line-start="791" data-line-end="792"><strong>Revised again with T:</strong></p>
+<p class="has-line-data" data-line-start="793" data-line-end="794">Let me re-do this more carefully.</p>
+<p class="has-line-data" data-line-start="795" data-line-end="796"><strong>Simpler Revised Puzzle:</strong></p>
+<p class="has-line-data" data-line-start="797" data-line-end="798">Six persons A, B, C, D, E, F sit in two parallel rows of 3 each.</p>
+<ol>
+<li class="has-line-data" data-line-start="799" data-line-end="800">A sits at position 2 in Row 1.</li>
+<li class="has-line-data" data-line-start="800" data-line-end="801">B is adjacent to A in Row 1.</li>
+<li class="has-line-data" data-line-start="801" data-line-end="802">C is directly opposite A.</li>
+<li class="has-line-data" data-line-start="802" data-line-end="803">D is adjacent to C in Row 2.</li>
+<li class="has-line-data" data-line-start="803" data-line-end="804">E is at position 1 in Row 1.</li>
+<li class="has-line-data" data-line-start="804" data-line-end="806">F is opposite to B.</li>
+</ol>
+<hr>
+<p class="has-line-data" data-line-start="808" data-line-end="809"><strong>Solution:</strong></p>
+<p class="has-line-data" data-line-start="810" data-line-end="811"><strong>Step 1: Place A, E, C, B</strong></p>
+<pre><code class="has-line-data" data-line-start="813" data-line-end="827">Row 1:  Position   1      2      3
+                 +-----+-----+-----+
+                 | E   | A   |     |
+                 +-----+-----+-----+
+
+Row 2:  Position   1      2      3
+                 +-----+-----+-----+
+                 |     | C   |     |
+                 +-----+-----+-----+
+
+Remaining in Row 1: Position 3 (B or F).
+Clue 2: B is adjacent to A (pos 2) â†’ B at pos 1 or 3.
+Pos 1 is E, so B at pos 3.
+</code></pre>
+<pre><code class="has-line-data" data-line-start="829" data-line-end="841">Row 1:  Position   1      2      3
+                 +-----+-----+-----+
+                 | E   | A   | B   |
+                 +-----+-----+-----+
+
+Row 2:  Position   1      2      3
+                 +-----+-----+-----+
+                 |     | C   |     |
+                 +-----+-----+-----+
+
+Clue 6: F is opposite to B (pos 3 in Row 1) â†’ F at pos 3 in Row 2.
+</code></pre>
+<pre><code class="has-line-data" data-line-start="843" data-line-end="857">Row 1:  Position   1      2      3
+                 +-----+-----+-----+
+                 | E   | A   | B   |
+                 +-----+-----+-----+
+
+Row 2:  Position   1      2      3
+                 +-----+-----+-----+
+                 |     | C   | F   |
+                 +-----+-----+-----+
+
+Remaining in Row 2: Position 1 (D).
+Clue 4: D is adjacent to C (pos 2) â†’ D at pos 1 or 3.
+Pos 3 is F, so D at pos 1. âœ“
+</code></pre>
+<p class="has-line-data" data-line-start="858" data-line-end="859"><strong>Final Arrangement:</strong></p>
+<pre><code class="has-line-data" data-line-start="861" data-line-end="879">Row 1:  Position   1      2      3
+                 +-----+-----+-----+
+                 | E   | A   | B   |
+                 +-----+-----+-----+
+
+Row 2:  Position   1      2      3
+                 +-----+-----+-----+
+                 | D   | C   | F   |
+                 +-----+-----+-----+
+
+Validation:
+âœ“ Clue 1: A at pos 2 in Row 1
+âœ“ Clue 2: B adjacent to A (pos 3, next to pos 2)
+âœ“ Clue 3: C opposite A (Row 2 pos 2 â†” Row 1 pos 2)
+âœ“ Clue 4: D adjacent to C (pos 1, next to pos 2)
+âœ“ Clue 5: E at pos 1 in Row 1
+âœ“ Clue 6: F opposite to B (Row 2 pos 3 â†” Row 1 pos 3)
+</code></pre>
+<hr>
+<p class="has-line-data" data-line-start="882" data-line-end="883"><strong>Final Answer:</strong></p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Row</th>
+<th>Pos 1</th>
+<th>Pos 2</th>
+<th>Pos 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>E</td>
+<td>A</td>
+<td>B</td>
+</tr>
+<tr>
+<td>2</td>
+<td>D</td>
+<td>C</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="891" data-line-end="892"><a id="8_Decision_Tree_Quick_Reference_891"></a>8. Decision Tree / Quick Reference</h2>
+<pre><code class="has-line-data" data-line-start="894" data-line-end="928">START: You have a Linear Seating Puzzle
+
+    â†“
+    Are there direct clues? (e.g., &quot;A at position 3&quot;)
+    â”œâ”€ YES â†’ Start with direct placements (Shortcut 1: Anchor &amp; Expand)
+    â””â”€ NO â†’ Check for &quot;ends&quot; or anchors (Shortcut 2: Ends First)
+
+    â†“
+    Are there comparative clues? (e.g., &quot;A left of B&quot;)
+    â”œâ”€ YES â†’ Chain them into order (Shortcut 4: Comparative Chains)
+    â””â”€ NO â†’ Proceed with gap-based clues
+
+    â†“
+    Are there gap/distance clues? (e.g., &quot;2 between A and C&quot;)
+    â”œâ”€ YES â†’ Apply and test scenarios
+    â””â”€ NO â†’ Use negative constraints next (Shortcut 3)
+
+    â†“
+    Two rows or one?
+    â”œâ”€ ONE ROW â†’ Place persons left to right
+    â””â”€ TWO ROWS â†’ Clarify &quot;adjacent&quot; and &quot;opposite&quot;; use dual grids
+
+    â†“
+    Fill grid iteratively, checking for contradictions after each clue.
+
+    â†“
+    Final validation:
+    â”œâ”€ All persons placed? âœ“
+    â”œâ”€ All clues satisfied? âœ“
+    â””â”€ No attribute conflicts? âœ“
+
+    â†“
+    SOLVED!
+</code></pre>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="931" data-line-end="932"><a id="9_SelfCheck_Checklist_Linear_Seating_931"></a>9. Self-Check Checklist (Linear Seating)</h2>
+<p class="has-line-data" data-line-start="933" data-line-end="934">Before submitting answers:</p>
+<ul>
+<li class="has-line-data" data-line-start="935" data-line-end="936"><input type="checkbox" id="checkbox13"><label for="checkbox13">All persons/entities placed in unique positions?</label></li>
+<li class="has-line-data" data-line-start="936" data-line-end="937"><input type="checkbox" id="checkbox14"><label for="checkbox14">All attributes assigned (if puzzle includes them)?</label></li>
+<li class="has-line-data" data-line-start="937" data-line-end="938"><input type="checkbox" id="checkbox15"><label for="checkbox15">Every clue verified against final diagram?</label></li>
+<li class="has-line-data" data-line-start="938" data-line-end="939"><input type="checkbox" id="checkbox16"><label for="checkbox16">No contradictions found (re-read clues)?</label></li>
+<li class="has-line-data" data-line-start="939" data-line-end="940"><input type="checkbox" id="checkbox17"><label for="checkbox17">Left/right orientation consistent and clearly defined?</label></li>
+<li class="has-line-data" data-line-start="940" data-line-end="941"><input type="checkbox" id="checkbox18"><label for="checkbox18">If two rows: opposite positions correctly mapped (1â†”1, 2â†”2, etc.)?</label></li>
+<li class="has-line-data" data-line-start="941" data-line-end="942"><input type="checkbox" id="checkbox19"><label for="checkbox19">“Adjacent” interpreted correctly (same row / opposite row)?</label></li>
+<li class="has-line-data" data-line-start="942" data-line-end="943"><input type="checkbox" id="checkbox20"><label for="checkbox20">“Between” clues interpreted correctly (count persons, not gaps)?</label></li>
+<li class="has-line-data" data-line-start="943" data-line-end="944"><input type="checkbox" id="checkbox21"><label for="checkbox21">Negative constraints all satisfied (X NOT next to Y, etc.)?</label></li>
+<li class="has-line-data" data-line-start="944" data-line-end="946"><input type="checkbox" id="checkbox22"><label for="checkbox22">Final diagram is clean and easy to reference for Q&amp;A?</label></li>
+</ul>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="948" data-line-end="949"><a id="10_Practice_Strategy_Time_Management_948"></a>10. Practice Strategy &amp; Time Management</h2>
+<h3 class="code-line has-line-data" data-line-start="950" data-line-end="951"><a id="Ideal_Time_Allocation_Per_Puzzle_Set_950"></a>Ideal Time Allocation (Per Puzzle Set):</h3>
+<ul>
+<li class="has-line-data" data-line-start="952" data-line-end="953"><strong>Reading &amp; Understanding:</strong> 1-2 minutes</li>
+<li class="has-line-data" data-line-start="953" data-line-end="954"><strong>Diagram Setup &amp; Constraint Extraction:</strong> 1-2 minutes</li>
+<li class="has-line-data" data-line-start="954" data-line-end="955"><strong>Iterative Placement &amp; Testing:</strong> 3-5 minutes</li>
+<li class="has-line-data" data-line-start="955" data-line-end="956"><strong>Verification &amp; Cross-Check:</strong> 1 minute</li>
+<li class="has-line-data" data-line-start="956" data-line-end="957"><strong>Total per 5-person puzzle:</strong> 6-10 minutes</li>
+<li class="has-line-data" data-line-start="957" data-line-end="959"><strong>Total per full set (4-5 puzzles):</strong> 25-50 minutes</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="959" data-line-end="960"><a id="Time_Management_Tips_for_Prelims_959"></a>Time Management Tips for Prelims:</h3>
+<ol>
+<li class="has-line-data" data-line-start="961" data-line-end="962"><strong>Don’t read all clues at once</strong> for complex puzzles. Extract metadata, set up diagram, then read clues in priority order.</li>
+<li class="has-line-data" data-line-start="962" data-line-end="963"><strong>If stuck after 8 minutes, move on.</strong> Come back if time permits.</li>
+<li class="has-line-data" data-line-start="963" data-line-end="964"><strong>Partial points:</strong> If you can lock 2-3 persons confidently, answer those Qs first.</li>
+<li class="has-line-data" data-line-start="964" data-line-end="966"><strong>Difficulty Scaling:</strong> Easy puzzles (single row, 4 persons, direct clues) take ~5 min. Hard puzzles (double rows, uncertain numbers, ambiguous clues) take ~12-15 min.</li>
+</ol>
+<h3 class="code-line has-line-data" data-line-start="966" data-line-end="967"><a id="Practice_Progression_966"></a>Practice Progression:</h3>
+<ul>
+<li class="has-line-data" data-line-start="968" data-line-end="969"><strong>Week 1:</strong> Single row, 4-5 persons, 2-3 attributes. Goal: ~5 min per puzzle.</li>
+<li class="has-line-data" data-line-start="969" data-line-end="970"><strong>Week 2:</strong> Double rows, 3-4 persons each, mixed directions. Goal: ~7-8 min per puzzle.</li>
+<li class="has-line-data" data-line-start="970" data-line-end="971"><strong>Week 3:</strong> Uncertain numbers, gaps, complex constraints. Goal: ~10 min per puzzle.</li>
+<li class="has-line-data" data-line-start="971" data-line-end="973"><strong>Week 4:</strong> Full mock sets (25-30 puzzles). Target: Complete 4 puzzles in 25 min (Prelims pace).</li>
+</ul>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="975" data-line-end="976"><a id="Summary_975"></a>Summary</h2>
+<p class="has-line-data" data-line-start="977" data-line-end="978">Linear Seating Arrangement puzzles are about <strong>methodical placement, constraint satisfaction, and careful validation</strong>. Master the four phases (Diagram Prep â†’ Constraint Extraction â†’ Iterative Placement â†’ Verification), use shortcuts to narrow search space, and maintain a clean diagram throughout. With practice, you’ll spot patterns and solve confidently in 6-10 minutes per puzzle.</p>
+<p class="has-line-data" data-line-start="979" data-line-end="980"><strong>Key Takeaway:</strong> Start with anchors (direct or end positions), chain comparative clues, and eliminate impossible combinations early using negative constraints.</p>
+<p class="has-line-data" data-line-start="981" data-line-end="982">Good luck!</p>
+<h2 class="code-line has-line-data" data-line-start="983" data-line-end="984"><a id="11_How_to_Think_Before_Starting_a_Linear_Seating_Puzzle_983"></a>11. How to Think Before Starting a Linear Seating Puzzle</h2>
+<p class="has-line-data" data-line-start="985" data-line-end="986">Do not place people immediately after reading the first clue. Use this exam sequence:</p>
+<ol>
+<li class="has-line-data" data-line-start="987" data-line-end="988"><strong>Classify the layout:</strong> one row, two rows, mixed directions or unknown length.</li>
+<li class="has-line-data" data-line-start="988" data-line-end="989"><strong>Number positions:</strong> use 1 at the left and increase to the right. For unknown length, leave blank cells but derive the length from extreme/end clues.</li>
+<li class="has-line-data" data-line-start="989" data-line-end="990"><strong>Find the strongest anchor:</strong> extreme position, exact gap, midpoint, immediate pair or fixed distance.</li>
+<li class="has-line-data" data-line-start="990" data-line-end="994"><strong>Build equations:</strong>
+<ul>
+<li class="has-line-data" data-line-start="991" data-line-end="992"><code>A is third left of B</code> -&gt; <code>A = B - 3</code></li>
+<li class="has-line-data" data-line-start="992" data-line-end="993"><code>two people between A and B</code> -&gt; distance 3</li>
+<li class="has-line-data" data-line-start="993" data-line-end="994"><code>A exactly between B and C</code> -&gt; <code>A = (B+C)/2</code></li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="994" data-line-end="995"><strong>Create cases only when needed:</strong> usually an extreme-end clue creates two cases.</li>
+<li class="has-line-data" data-line-start="995" data-line-end="996"><strong>Propagate every placement:</strong> after fixing one person, apply all clues that mention that person.</li>
+<li class="has-line-data" data-line-start="996" data-line-end="997"><strong>Reject contradictions immediately:</strong> do not continue an impossible case.</li>
+<li class="has-line-data" data-line-start="997" data-line-end="999"><strong>Complete the grid, then verify every clue.</strong></li>
+</ol>
+<h3 class="code-line has-line-data" data-line-start="999" data-line-end="1000"><a id="Fast_decision_rule_999"></a>Fast decision rule</h3>
+<pre><code class="has-line-data language-text" data-line-start="1002" data-line-end="1008">Direct position or extreme? -&gt; place it first
+Exact distance?             -&gt; form a block or equation
+Attribute clue?             -&gt; solve position first, attribute second
+Facing direction?           -&gt; fix positions before interpreting left/right
+No progress in 60-90 sec?   -&gt; skip the set and return later
+</code></pre>
+<h2 class="code-line has-line-data" data-line-start="1009" data-line-end="1010"><a id="12_Source_Puzzle_1_AttributeLinked_Single_Row_1009"></a>12. Source Puzzle 1 - Attribute-Linked Single Row</h2>
+<p class="has-line-data" data-line-start="1011" data-line-end="1012"><strong>Source:</strong> <code>Model Test 19.md</code>, Q79-Q82</p>
+<p class="has-line-data" data-line-start="1013" data-line-end="1014"><strong>Question data:</strong> Six people A-F sit in a row facing north. Countries are Australia, Belgium, Canada, Denmark, Egypt and France.</p>
+<ul>
+<li class="has-line-data" data-line-start="1015" data-line-end="1016">B is third right of Denmark.</li>
+<li class="has-line-data" data-line-start="1016" data-line-end="1017">People right of D = people left of A.</li>
+<li class="has-line-data" data-line-start="1017" data-line-end="1018">One person is between F and Egypt.</li>
+<li class="has-line-data" data-line-start="1018" data-line-end="1019">D is immediately right of Australia.</li>
+<li class="has-line-data" data-line-start="1019" data-line-end="1020">E and D are adjacent; E is right of B.</li>
+<li class="has-line-data" data-line-start="1020" data-line-end="1021">France is immediately left of Canada.</li>
+<li class="has-line-data" data-line-start="1021" data-line-end="1022">At least one person is between Canada and C.</li>
+<li class="has-line-data" data-line-start="1022" data-line-end="1024">E and A are not Canada.</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="1024" data-line-end="1025"><a id="Step_1_Build_the_position_grid_1024"></a>Step 1: Build the position grid</h3>
+<pre><code class="has-line-data language-text" data-line-start="1027" data-line-end="1031">Position:  1    2    3    4    5    6
+Person:   [ ]  [ ]  [ ]  [ ]  [ ]  [ ]
+Country:  [ ]  [ ]  [ ]  [ ]  [ ]  [ ]
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1032" data-line-end="1033"><a id="Step_2_Use_the_country_block_1032"></a>Step 2: Use the country block</h3>
+<p class="has-line-data" data-line-start="1034" data-line-end="1035">France is immediately left of Canada, so treat them as <code>[France][Canada]</code>. D is immediately right of Australia, so use <code>[Australia][D]</code>.</p>
+<p class="has-line-data" data-line-start="1036" data-line-end="1037">B is third right of Denmark. E is right of B and adjacent to D. The position equations from the clues give the unique placement:</p>
+<pre><code class="has-line-data language-text" data-line-start="1039" data-line-end="1043">Position:  1       2       3       4       5       6
+Person:    C       A       F       B       D       E
+Country:   Denmark France  Canada  Australia Egypt   Belgium
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1044" data-line-end="1045"><a id="Step_3_Verify_the_main_inferences_1044"></a>Step 3: Verify the main inferences</h3>
+<pre><code class="has-line-data language-text" data-line-start="1047" data-line-end="1053">B at 4 = third right of Denmark at 1
+D at 5 is immediately right of Australia at 4
+France at 2 is immediately left of Canada at 3
+E at 6 is right of B at 4 and adjacent to D at 5
+F at 3 is two positions from Egypt at 5
+</code></pre>
+<p class="has-line-data" data-line-start="1054" data-line-end="1055"><strong>Final arrangement:</strong> <code>C - A - F - B - D - E</code>.</p>
+<p class="has-line-data" data-line-start="1056" data-line-end="1057"><strong>Fast exam comment:</strong> Solve the country blocks before trying all six people. The <code>France-Canada</code> and <code>Australia-D</code> blocks reduce the search far more than the broad left/right clues.</p>
+<h2 class="code-line has-line-data" data-line-start="1058" data-line-end="1059"><a id="13_Source_Puzzle_2_VariableLength_Single_Row_1058"></a>13. Source Puzzle 2 - Variable-Length Single Row</h2>
+<p class="has-line-data" data-line-start="1060" data-line-end="1061"><strong>Source:</strong> <code>Model Test 5.md</code>, Q90-Q92</p>
+<p class="has-line-data" data-line-start="1062" data-line-end="1063"><strong>Question data:</strong> People sit in a straight line facing north.</p>
+<ul>
+<li class="has-line-data" data-line-start="1064" data-line-end="1065">Four people sit between M and W.</li>
+<li class="has-line-data" data-line-start="1065" data-line-end="1066">T is third right of W.</li>
+<li class="has-line-data" data-line-start="1066" data-line-end="1067">The number between S and W equals the number between T and R.</li>
+<li class="has-line-data" data-line-start="1067" data-line-end="1068">R is at an extreme end.</li>
+<li class="has-line-data" data-line-start="1068" data-line-end="1069">Fewer than four people sit to the right of B.</li>
+<li class="has-line-data" data-line-start="1069" data-line-end="1070">One person sits between M and R.</li>
+<li class="has-line-data" data-line-start="1070" data-line-end="1071">K is second left of S.</li>
+<li class="has-line-data" data-line-start="1071" data-line-end="1072">H is exactly between K and W.</li>
+<li class="has-line-data" data-line-start="1072" data-line-end="1074">B is third right of H.</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="1074" data-line-end="1075"><a id="Step_1_Convert_to_equations_1074"></a>Step 1: Convert to equations</h3>
+<pre><code class="has-line-data language-text" data-line-start="1077" data-line-end="1084">|M-W| = 5
+T = W + 3
+|M-R| = 2
+K = S - 2
+H = (K + W)/2
+B = H + 3
+</code></pre>
+<p class="has-line-data" data-line-start="1085" data-line-end="1086">R is at an end. Test the two end cases; the valid case is R at position 1.</p>
+<h3 class="code-line has-line-data" data-line-start="1087" data-line-end="1088"><a id="Step_2_Place_the_end_and_distance_chain_1087"></a>Step 2: Place the end and distance chain</h3>
+<pre><code class="has-line-data language-text" data-line-start="1090" data-line-end="1093">Position:  1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18
+Person:    R    ?    M    ?    ?    ?    ?    W    ?    ?    T    H    ?    ?    B    K    ?    S
+</code></pre>
+<p class="has-line-data" data-line-start="1094" data-line-end="1095">Reasoning:</p>
+<ul>
+<li class="has-line-data" data-line-start="1096" data-line-end="1097">R at 1 and one person between M and R -&gt; M at 3.</li>
+<li class="has-line-data" data-line-start="1097" data-line-end="1098">Four people between M and W -&gt; W at 8.</li>
+<li class="has-line-data" data-line-start="1098" data-line-end="1099">T third right of W -&gt; T at 11.</li>
+<li class="has-line-data" data-line-start="1099" data-line-end="1100">T and R have positions 11 and 1, so there are 9 people between them. Therefore S and W must also have 9 between them -&gt; S at 18.</li>
+<li class="has-line-data" data-line-start="1100" data-line-end="1101">K second left of S -&gt; K at 16.</li>
+<li class="has-line-data" data-line-start="1101" data-line-end="1102">H exactly between K and W -&gt; H at 12.</li>
+<li class="has-line-data" data-line-start="1102" data-line-end="1104">B third right of H -&gt; B at 15.</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="1104" data-line-end="1105"><a id="Step_3_Verify_the_unknown_length_1104"></a>Step 3: Verify the unknown length</h3>
+<p class="has-line-data" data-line-start="1106" data-line-end="1107">B at 15 has only three positions to its right: 16, 17 and 18. This satisfies â€œless than four people to the right of B.â€ The line therefore has 18 positions.</p>
+<p class="has-line-data" data-line-start="1108" data-line-end="1109"><strong>Final arrangement:</strong></p>
+<pre><code class="has-line-data language-text" data-line-start="1111" data-line-end="1113">1 R | 2 ? | 3 M | 4 ? | 5 ? | 6 ? | 7 ? | 8 W | 9 ? | 10 ? | 11 T | 12 H | 13 ? | 14 ? | 15 B | 16 K | 17 ? | 18 S
+</code></pre>
+<p class="has-line-data" data-line-start="1114" data-line-end="1115"><strong>Fast exam comment:</strong> Unknown-length puzzles are solved by deriving the skeleton, not by guessing the total number of seats. Start with the extreme person and propagate fixed distances.</p>
+<h2 class="code-line has-line-data" data-line-start="1116" data-line-end="1117"><a id="14_Source_Puzzle_3_MixedDirection_Single_Row_1116"></a>14. Source Puzzle 3 - Mixed-Direction Single Row</h2>
+<p class="has-line-data" data-line-start="1118" data-line-end="1119"><strong>Source:</strong> <code>Model Test 3.md</code>, Q74-Q78</p>
+<p class="has-line-data" data-line-start="1120" data-line-end="1121"><strong>Question data:</strong> Eight people P, Q, R, S, T, U, V and W sit in a row. Some face north and some south. No adjacent people face the same direction.</p>
+<ul>
+<li class="has-line-data" data-line-start="1122" data-line-end="1123">R is at an extreme end.</li>
+<li class="has-line-data" data-line-start="1123" data-line-end="1124">T is second right of R.</li>
+<li class="has-line-data" data-line-start="1124" data-line-end="1125">U faces south.</li>
+<li class="has-line-data" data-line-start="1125" data-line-end="1126">Three people sit between R and V.</li>
+<li class="has-line-data" data-line-start="1126" data-line-end="1127">S is not at an extreme and is not adjacent to T or R.</li>
+<li class="has-line-data" data-line-start="1127" data-line-end="1128">W and P are adjacent.</li>
+<li class="has-line-data" data-line-start="1128" data-line-end="1130">Two people sit between U and P.</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="1130" data-line-end="1131"><a id="Step_1_Solve_positions_before_directions_1130"></a>Step 1: Solve positions before directions</h3>
+<p class="has-line-data" data-line-start="1132" data-line-end="1133">R must be at the left end because T is second to the right of R. Hence:</p>
+<pre><code class="has-line-data language-text" data-line-start="1135" data-line-end="1138">R = 1, T = 3
+V = 5       (three people between R and V)
+</code></pre>
+<p class="has-line-data" data-line-start="1139" data-line-end="1140">U and P have two people between them, so their distance is 3. Testing remaining positions with <code>W-P</code> adjacent and S not adjacent to R/T gives:</p>
+<pre><code class="has-line-data language-text" data-line-start="1142" data-line-end="1145">Position:  1    2    3    4    5    6    7    8
+Person:    R    Q    T    U    V    S    P    W
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1146" data-line-end="1147"><a id="Step_2_Apply_directions_1146"></a>Step 2: Apply directions</h3>
+<p class="has-line-data" data-line-start="1148" data-line-end="1149">U faces south. No adjacent people face the same direction, so directions must alternate:</p>
+<pre><code class="has-line-data language-text" data-line-start="1151" data-line-end="1155">Position:  1    2    3    4    5    6    7    8
+Person:    R    Q    T    U    V    S    P    W
+Facing:    N    S    N    S    N    S    N    S
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1156" data-line-end="1157"><a id="Step_3_Verify_1156"></a>Step 3: Verify</h3>
+<ul>
+<li class="has-line-data" data-line-start="1158" data-line-end="1159">R is at an extreme: yes.</li>
+<li class="has-line-data" data-line-start="1159" data-line-end="1160">T is second right of R: 1 to 3: yes.</li>
+<li class="has-line-data" data-line-start="1160" data-line-end="1161">Three people are between R and V: positions 2, 3 and 4: yes.</li>
+<li class="has-line-data" data-line-start="1161" data-line-end="1162">S is not adjacent to T or R: S at 6: yes.</li>
+<li class="has-line-data" data-line-start="1162" data-line-end="1163">W and P are adjacent: positions 8 and 7: yes.</li>
+<li class="has-line-data" data-line-start="1163" data-line-end="1164">Two people are between U and P: positions 5 and 6: yes.</li>
+<li class="has-line-data" data-line-start="1164" data-line-end="1166">Directions alternate: yes.</li>
+</ul>
+<p class="has-line-data" data-line-start="1166" data-line-end="1167"><strong>Final arrangement:</strong> <code>R - Q - T - U - V - S - P - W</code>, with alternating <code>N-S-N-S-N-S-N-S</code>.</p>
+<p class="has-line-data" data-line-start="1168" data-line-end="1169"><strong>Fast exam comment:</strong> In mixed-direction rows, solve positions first. Use directions only after the positional skeleton is fixed; otherwise left/right language can create unnecessary cases.</p>
+<h2 class="code-line has-line-data" data-line-start="1170" data-line-end="1171"><a id="15_Source_Puzzle_4_UnknownLength_Row_with_Several_Chains_1170"></a>15. Source Puzzle 4 - Unknown-Length Row with Several Chains</h2>
+<p class="has-line-data" data-line-start="1172" data-line-end="1173"><strong>Source:</strong> <code>Model Test 20.md</code>, Q86-Q88</p>
+<p class="has-line-data" data-line-start="1174" data-line-end="1175"><strong>Question data:</strong> People sit in a straight line facing north.</p>
+<ul>
+<li class="has-line-data" data-line-start="1176" data-line-end="1177">Two people sit between T and V.</li>
+<li class="has-line-data" data-line-start="1177" data-line-end="1178">R is second left of V.</li>
+<li class="has-line-data" data-line-start="1178" data-line-end="1179">S is fifth right of T.</li>
+<li class="has-line-data" data-line-start="1179" data-line-end="1180">F is second left of G.</li>
+<li class="has-line-data" data-line-start="1180" data-line-end="1181">S is at an extreme end.</li>
+<li class="has-line-data" data-line-start="1181" data-line-end="1182">People left of F = people right of U.</li>
+<li class="has-line-data" data-line-start="1182" data-line-end="1183">X is immediately left of T.</li>
+<li class="has-line-data" data-line-start="1183" data-line-end="1184">Three people sit between X and A.</li>
+<li class="has-line-data" data-line-start="1184" data-line-end="1185">People between R and T = people left of A.</li>
+<li class="has-line-data" data-line-start="1185" data-line-end="1187">Three people sit between H and G.</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="1187" data-line-end="1188"><a id="Step_1_Anchor_the_extreme_1187"></a>Step 1: Anchor the extreme</h3>
+<p class="has-line-data" data-line-start="1189" data-line-end="1190">S is fifth right of T, so S cannot be the left end. Set S at the right end. Let the total length be n:</p>
+<pre><code class="has-line-data language-text" data-line-start="1192" data-line-end="1196">S = n
+T = n - 5
+X = n - 6
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1197" data-line-end="1198"><a id="Step_2_Use_the_TVR_chain_1197"></a>Step 2: Use the T-V-R chain</h3>
+<p class="has-line-data" data-line-start="1199" data-line-end="1200">There are two people between T and V, so <code>|T-V|=3</code>. R is second left of V, so <code>R=V-2</code>.</p>
+<p class="has-line-data" data-line-start="1201" data-line-end="1202">The condition involving A gives:</p>
+<pre><code class="has-line-data language-text" data-line-start="1204" data-line-end="1207">people between R and T = people left of A
+|R-T|-1 = A-1
+</code></pre>
+<p class="has-line-data" data-line-start="1208" data-line-end="1209">Testing the feasible end positions gives <code>n=11</code>:</p>
+<pre><code class="has-line-data language-text" data-line-start="1211" data-line-end="1213">S=11, T=6, X=5, V=9, R=7, A=1
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1214" data-line-end="1215"><a id="Step_3_Complete_the_remaining_chains_1214"></a>Step 3: Complete the remaining chains</h3>
+<ul>
+<li class="has-line-data" data-line-start="1216" data-line-end="1217">F is second left of G.</li>
+<li class="has-line-data" data-line-start="1217" data-line-end="1218">Three people are between H and G.</li>
+<li class="has-line-data" data-line-start="1218" data-line-end="1220">People left of F equal people right of U.</li>
+</ul>
+<p class="has-line-data" data-line-start="1220" data-line-end="1221">The only completion is:</p>
+<pre><code class="has-line-data language-text" data-line-start="1223" data-line-end="1226">Position:  1    2    3    4    5    6    7    8    9    10   11
+Person:    A    F    ?    G    X    T    R    H    V    U    S
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1227" data-line-end="1228"><a id="Step_4_Verify_1227"></a>Step 4: Verify</h3>
+<pre><code class="has-line-data language-text" data-line-start="1230" data-line-end="1238">T=6, V=9 -&gt; positions 7 and 8 lie between them
+R=7 is second left of V=9
+S=11 is fifth right of T=6
+F=2 is second left of G=4
+X=5 is immediately left of T=6
+A=1 and X=5 have positions 2,3,4 between them
+H=8 and G=4 have positions 5,6,7 between them
+</code></pre>
+<p class="has-line-data" data-line-start="1239" data-line-end="1240"><strong>Final arrangement:</strong> <code>A - F - ? - G - X - T - R - H - V - U - S</code>.</p>
+<p class="has-line-data" data-line-start="1241" data-line-end="1242"><strong>Fast exam comment:</strong> Introduce <code>n</code> only for the extreme/end relation. Once S is fixed as the right end, every major position becomes an equation and the unknown row length can be derived quickly.</p>
+<h2 class="code-line has-line-data" data-line-start="1243" data-line-end="1244"><a id="17_Source_Puzzle_1_Revisited_How_to_Use_the_Completed_Grid_1243"></a>17. Source Puzzle 1 Revisited - How to Use the Completed Grid</h2>
+<p class="has-line-data" data-line-start="1245" data-line-end="1246"><strong>Source:</strong> <code>Model Test 19.md</code>, Q79-Q82, revisited for question handling.</p>
+<p class="has-line-data" data-line-start="1247" data-line-end="1248">Use the completed grid from Puzzle 1:</p>
+<pre><code class="has-line-data language-text" data-line-start="1250" data-line-end="1254">Position:  1       2       3       4       5       6
+Person:    C       A       F       B       D       E
+Country:   Denmark France  Canada  Australia Egypt   Belgium
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1255" data-line-end="1256"><a id="Questionstyle_deductions_1255"></a>Question-style deductions</h3>
+<ul>
+<li class="has-line-data" data-line-start="1257" data-line-end="1258"><strong>Who belongs to Belgium?</strong> E, because Belgium is position 6.</li>
+<li class="has-line-data" data-line-start="1258" data-line-end="1259"><strong>Who belongs to Canada?</strong> F, because Canada is position 3.</li>
+<li class="has-line-data" data-line-start="1259" data-line-end="1260"><strong>Position of A from Belgium:</strong> A at 2, Belgium at 6 -&gt; fourth to the left.</li>
+<li class="has-line-data" data-line-start="1260" data-line-end="1262"><strong>Which pair does not fit a positional group?</strong> Compare each proposed person-country pair against the grid rather than reconstructing the puzzle.</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="1262" data-line-end="1263"><a id="Fast_exam_comment_1262"></a>Fast exam comment</h3>
+<p class="has-line-data" data-line-start="1264" data-line-end="1265">Once one arrangement is complete, stop solving and answer all questions from the grid. Do not re-read the original clues for every question.</p>
+<h2 class="code-line has-line-data" data-line-start="1266" data-line-end="1267"><a id="18_Final_Verification_Method_for_Any_Source_Puzzle_1266"></a>18. Final Verification Method for Any Source Puzzle</h2>
+<p class="has-line-data" data-line-start="1268" data-line-end="1269">Use this compact check before marking an answer:</p>
+<pre><code class="has-line-data language-text" data-line-start="1271" data-line-end="1279">1. Every named person appears once.
+2. Every position is occupied once, except explicitly vacant cells.
+3. Exact distances are counted as people between, not seat difference.
+4. Immediate clues are exactly one position apart.
+5. Direction clues are applied from the correct person&#x27;s viewpoint.
+6. Attribute blocks are checked against the final row.
+7. Negative clues are verified last.
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1280" data-line-end="1281"><a id="Best_exam_habit_1280"></a>Best exam habit</h3>
+<p class="has-line-data" data-line-start="1282" data-line-end="1283">Do not ask, â€œWhat can I place next?â€ Ask, â€œWhich clue reduces the most positions?â€ That question naturally leads you to anchors, distance blocks, extreme positions and short chains - the fastest route through a linear seating set.</p>
+<h2 class="code-line has-line-data" data-line-start="1286" data-line-end="1287"><a id="16_Source_Puzzle_5_VariableLength_Row_with_an_Exact_Midpoint_1286"></a>16. Source Puzzle 5 - Variable-Length Row with an Exact Midpoint</h2>
+<p class="has-line-data" data-line-start="1288" data-line-end="1289"><strong>Source:</strong> <code>Model Test 5.md</code>, Q90-Q92</p>
+<p class="has-line-data" data-line-start="1290" data-line-end="1291"><strong>Question data:</strong> People sit in a straight line facing north.</p>
+<ul>
+<li class="has-line-data" data-line-start="1292" data-line-end="1293">Four people sit between M and W.</li>
+<li class="has-line-data" data-line-start="1293" data-line-end="1294">T sits third to the right of W.</li>
+<li class="has-line-data" data-line-start="1294" data-line-end="1295">As many people sit between S and W as between T and R.</li>
+<li class="has-line-data" data-line-start="1295" data-line-end="1296">R is at an extreme end.</li>
+<li class="has-line-data" data-line-start="1296" data-line-end="1297">Less than four people sit to the right of B.</li>
+<li class="has-line-data" data-line-start="1297" data-line-end="1298">One person sits between M and R.</li>
+<li class="has-line-data" data-line-start="1298" data-line-end="1299">K sits second to the left of S.</li>
+<li class="has-line-data" data-line-start="1299" data-line-end="1300">H sits exactly between K and W.</li>
+<li class="has-line-data" data-line-start="1300" data-line-end="1302">B sits third to the right of H.</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="1302" data-line-end="1303"><a id="Step_1_Anchor_the_extreme_and_the_first_distance_1302"></a>Step 1: Anchor the extreme and the first distance</h3>
+<p class="has-line-data" data-line-start="1304" data-line-end="1305">S cannot be the left extreme because T is five positions to its left. Therefore S is at the right end. Let the total number of positions be n.</p>
+<pre><code class="has-line-data language-text" data-line-start="1307" data-line-end="1311">S = n
+T = n - 5
+W = T - 3 = n - 8
+</code></pre>
+<p class="has-line-data" data-line-start="1312" data-line-end="1313">R is an extreme. Testing R at the right end conflicts with S, so:</p>
+<pre><code class="has-line-data language-text" data-line-start="1315" data-line-end="1317">R = 1
+</code></pre>
+<p class="has-line-data" data-line-start="1318" data-line-end="1319">One person between M and R gives:</p>
+<pre><code class="has-line-data language-text" data-line-start="1321" data-line-end="1323">M = 3
+</code></pre>
+<p class="has-line-data" data-line-start="1324" data-line-end="1325">Four people between M and W gives:</p>
+<pre><code class="has-line-data language-text" data-line-start="1327" data-line-end="1331">W = 8
+T = 11
+S = 16?  (not yet; use the equal-gap clue before fixing n)
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1332" data-line-end="1333"><a id="Step_2_Use_the_equalgap_clue_1332"></a>Step 2: Use the equal-gap clue</h3>
+<p class="has-line-data" data-line-start="1334" data-line-end="1335">Between T=11 and R=1 there are 9 people. Therefore there must be 9 people between S and W=8. Hence:</p>
+<pre><code class="has-line-data language-text" data-line-start="1337" data-line-end="1339">S = 18
+</code></pre>
+<p class="has-line-data" data-line-start="1340" data-line-end="1341">So the row length is 18.</p>
+<h3 class="code-line has-line-data" data-line-start="1342" data-line-end="1343"><a id="Step_3_Complete_the_midpoint_chain_1342"></a>Step 3: Complete the midpoint chain</h3>
+<pre><code class="has-line-data language-text" data-line-start="1345" data-line-end="1349">K = S - 2 = 16
+H = (K + W)/2 = (16+8)/2 = 12
+B = H + 3 = 15
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1350" data-line-end="1351"><a id="Step_4_Final_arrangement_1350"></a>Step 4: Final arrangement</h3>
+<pre><code class="has-line-data language-text" data-line-start="1353" data-line-end="1356">Position:  1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18
+Person:    R    ?    M    ?    ?    ?    ?    W    ?    ?    T    H    ?    ?    B    K    ?    S
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="1357" data-line-end="1358"><a id="Step_5_Verify_the_highimpact_clues_1357"></a>Step 5: Verify the high-impact clues</h3>
+<ul>
+<li class="has-line-data" data-line-start="1359" data-line-end="1360">M and W: positions 3 and 8 have four people between them.</li>
+<li class="has-line-data" data-line-start="1360" data-line-end="1361">T is third right of W: 8 to 11.</li>
+<li class="has-line-data" data-line-start="1361" data-line-end="1362">T and R: positions 1 and 11 have nine people between them.</li>
+<li class="has-line-data" data-line-start="1362" data-line-end="1363">S and W: positions 8 and 18 have nine people between them.</li>
+<li class="has-line-data" data-line-start="1363" data-line-end="1364">K is second left of S: 16 and 18.</li>
+<li class="has-line-data" data-line-start="1364" data-line-end="1365">H is exactly between K and W: 12 is midpoint of 8 and 16.</li>
+<li class="has-line-data" data-line-start="1365" data-line-end="1366">B is third right of H: 15.</li>
+<li class="has-line-data" data-line-start="1366" data-line-end="1368">B has only three people to its right: positions 16, 17 and 18.</li>
+</ul>
+<p class="has-line-data" data-line-start="1368" data-line-end="1369"><strong>Fast exam comment:</strong> Midpoint clues are powerful. Convert “H is exactly between K and W” into <code>2H = K + W</code>; this is faster and safer than testing seats visually.</p>
+<hr>
+<p class="has-line-data" data-line-start="1371" data-line-end="1372">Using your <strong>Expert Exam Solver v3</strong> format.</p>
+<p class="has-line-data" data-line-start="1373" data-line-end="1374"><em>Note:</em> The clues determine the arrangement <strong>up to rotation</strong> (rotating the whole circle gives equivalent answers). I fix <strong>A at the top</strong> for convenience. Also, since everyone faces the centre, <strong>Right = Anticlockwise</strong>.</p>
+<hr>
+<p class="has-line-data" data-line-start="1376" data-line-end="1377">use above prompt to solve Seven persons - A, B, C, D, E, F and G sit around a circular table and face the centre. Each of them is from different cityJaipur, Meerut, Pune, Agra, Bhopal, Ranchi and Surat. All the information given below is not necessarily in the same order. C sits second to the right of the one who is from Jaipur. Three persons sit between the ones who is from Jaipur and Pune. G sits fifth to the left of the one who is from Pune and is an immediate neighbour of the one who is from Agra. E sits second to the left of the one who is from Agra. D sits fourth to the right A who is from Ranchi. F is not from Jaipur. F and the one who is from Meerut are immediate neighbours. G is not from Bhopal.</p>
+<h1 class="code-line has-line-data" data-line-start="1377" data-line-end="1378"><a id="Initial_Setup_1377"></a>Initial Setup</h1>
+<pre><code class="has-line-data" data-line-start="1380" data-line-end="1388">             (0)
+              ?
+      (6) ?       ? (1)
+
+   (5) ?             ? (2)
+
+      (4) ?       ? (3)
+</code></pre>
+<p class="has-line-data" data-line-start="1389" data-line-end="1390">We need to determine:</p>
+<ul>
+<li class="has-line-data" data-line-start="1391" data-line-end="1392">Person positions</li>
+<li class="has-line-data" data-line-start="1392" data-line-end="1394">City of each person</li>
+</ul>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1396" data-line-end="1397"><a id="Clue_1_1396"></a>Clue 1</h1>
+<p class="has-line-data" data-line-start="1398" data-line-end="1399"><strong>C sits second to the right of the one who is from Jaipur.</strong></p>
+<pre><code class="has-line-data" data-line-start="1401" data-line-end="1403">Jaipur --(2 right)--&gt; C
+</code></pre>
+<p class="has-line-data" data-line-start="1404" data-line-end="1405">Only a relation is obtained.</p>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1408" data-line-end="1409"><a id="Clue_2_1408"></a>Clue 2</h1>
+<p class="has-line-data" data-line-start="1410" data-line-end="1411"><strong>Three persons sit between Jaipur and Pune.</strong></p>
+<p class="has-line-data" data-line-start="1412" data-line-end="1413">With 7 people,</p>
+<pre><code class="has-line-data" data-line-start="1415" data-line-end="1417">Jaipur -----4 seats----- Pune
+</code></pre>
+<p class="has-line-data" data-line-start="1418" data-line-end="1419">Jaipur and Pune are opposite (distance 4).</p>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1422" data-line-end="1423"><a id="Clue_3_1422"></a>Clue 3</h1>
+<p class="has-line-data" data-line-start="1424" data-line-end="1425"><strong>G sits fifth to the left of Pune and is an immediate neighbour of Agra.</strong></p>
+<p class="has-line-data" data-line-start="1426" data-line-end="1427">Since 5 left = 2 right,</p>
+<pre><code class="has-line-data" data-line-start="1429" data-line-end="1431">Pune --2 right--&gt; G
+</code></pre>
+<p class="has-line-data" data-line-start="1432" data-line-end="1433">Also,</p>
+<pre><code class="has-line-data" data-line-start="1435" data-line-end="1437">Agra - G
+</code></pre>
+<p class="has-line-data" data-line-start="1438" data-line-end="1439">(adjacent)</p>
+<p class="has-line-data" data-line-start="1440" data-line-end="1441">Combining Clues 1–3 gives</p>
+<pre><code class="has-line-data" data-line-start="1443" data-line-end="1446">Jaipur --4--&gt; Pune --2R--&gt; G
+Jaipur --2R--&gt; C
+</code></pre>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1449" data-line-end="1450"><a id="Clue_4_1449"></a>Clue 4</h1>
+<p class="has-line-data" data-line-start="1451" data-line-end="1452"><strong>E sits second to the left of Agra.</strong></p>
+<pre><code class="has-line-data" data-line-start="1454" data-line-end="1456">Agra --2 left--&gt; E
+</code></pre>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1459" data-line-end="1460"><a id="Clue_5_1459"></a>Clue 5</h1>
+<p class="has-line-data" data-line-start="1461" data-line-end="1462"><strong>D sits fourth to the right of A who is from Ranchi.</strong></p>
+<p class="has-line-data" data-line-start="1463" data-line-end="1464">Fix A at Position 0.</p>
+<pre><code class="has-line-data" data-line-start="1466" data-line-end="1474">             A(Ranchi)
+
+      ?               ?
+
+   ?                     ?
+
+      ?               D
+</code></pre>
+<p class="has-line-data" data-line-start="1475" data-line-end="1476">So D is fixed opposite-right of A.</p>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1479" data-line-end="1480"><a id="Clue_6_1479"></a>Clue 6</h1>
+<p class="has-line-data" data-line-start="1481" data-line-end="1482"><strong>F is not from Jaipur.</strong></p>
+<p class="has-line-data" data-line-start="1483" data-line-end="1484">Only eliminates Jaipur for F.</p>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1487" data-line-end="1488"><a id="Clue_7_1487"></a>Clue 7</h1>
+<p class="has-line-data" data-line-start="1489" data-line-end="1490"><strong>F and Meerut are immediate neighbours.</strong></p>
+<pre><code class="has-line-data" data-line-start="1492" data-line-end="1494">Meerut - F
+</code></pre>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1497" data-line-end="1498"><a id="Clue_8_1497"></a>Clue 8</h1>
+<p class="has-line-data" data-line-start="1499" data-line-end="1500"><strong>G is not from Bhopal.</strong></p>
+<p class="has-line-data" data-line-start="1501" data-line-end="1502">Eliminates Bhopal for G.</p>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1505" data-line-end="1506"><a id="Combining_all_clues_1505"></a>Combining all clues</h1>
+<p class="has-line-data" data-line-start="1507" data-line-end="1508">Testing the remaining possibilities leaves <strong>one valid arrangement (up to rotation).</strong></p>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1511" data-line-end="1512"><a id="Final_Arrangement_1511"></a>Final Arrangement</h1>
+<h3 class="code-line has-line-data" data-line-start="1513" data-line-end="1514"><a id="Persons_1513"></a>Persons</h3>
+<pre><code class="has-line-data" data-line-start="1516" data-line-end="1523">                A
+          B           G
+
+      C                   D
+
+          E           F
+</code></pre>
+<p class="has-line-data" data-line-start="1524" data-line-end="1525">Clockwise from A:</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Position</th>
+<th>Person</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>4</td>
+<td>D</td>
+</tr>
+<tr>
+<td>5</td>
+<td>F</td>
+</tr>
+<tr>
+<td>6</td>
+<td>E</td>
+</tr>
+<tr>
+<td>7</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="1538" data-line-end="1539"><a id="Cities_1538"></a>Cities</h3>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Person</th>
+<th>City</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Ranchi</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Jaipur</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Bhopal</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Agra</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Meerut</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Pune</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Surat</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1552" data-line-end="1553"><a id="Verification_1552"></a>Verification</h1>
+<p class="has-line-data" data-line-start="1554" data-line-end="1555">✓ C is second right of Jaipur (B → C)</p>
+<p class="has-line-data" data-line-start="1556" data-line-end="1557">✓ Jaipur and Pune have 3 persons between them (B ↔ F)</p>
+<p class="has-line-data" data-line-start="1558" data-line-end="1559">✓ G is fifth left (2 right) of Pune</p>
+<p class="has-line-data" data-line-start="1560" data-line-end="1561">✓ G is neighbour of Agra</p>
+<p class="has-line-data" data-line-start="1562" data-line-end="1563">✓ E is second left of Agra</p>
+<p class="has-line-data" data-line-start="1564" data-line-end="1565">✓ D is fourth right of A</p>
+<p class="has-line-data" data-line-start="1566" data-line-end="1567">✓ F is not Jaipur</p>
+<p class="has-line-data" data-line-start="1568" data-line-end="1569">✓ F and Meerut are neighbours</p>
+<p class="has-line-data" data-line-start="1570" data-line-end="1571">✓ G is not from Bhopal</p>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="1574" data-line-end="1575"><a id="Final_Answer_1574"></a>Final Answer</h2>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Person</th>
+<th>City</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Ranchi</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Jaipur</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Bhopal</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Agra</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Meerut</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Pune</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Surat</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p class="has-line-data" data-line-start="1587" data-line-end="1588">14 persons sit in two parallel rows containing seven persons in each row. A, B, C, D, E, F and G – sit in row 1 and face north while P, Q, R, S, T, U and V – sit in row 2 and face south. But not necessarily in the same order. Persons of row 1 face the persons of row 2 Three persons sit between B and D. D sits at one of the ends. Two persons sit between Q and the one who faces B. One person sits between Q and T. U sits fourth to the right of S but does not sit opposite to D. One person sits between A and the one who faces S. G sits immediate right of C. P does not face C. Number of persons sit to the right of F and V are equal.</p>
+<p class="has-line-data" data-line-start="1590" data-line-end="1591">Let the positions be numbered <strong>1 to 7 from left to right</strong>.</p>
+<ul>
+<li class="has-line-data" data-line-start="1592" data-line-end="1593"><strong>Row 1</strong> faces <strong>North</strong>.</li>
+<li class="has-line-data" data-line-start="1593" data-line-end="1595"><strong>Row 2</strong> faces <strong>South</strong> (so “right” for Row 2 is towards our left).</li>
+</ul>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="1597" data-line-end="1598"><a id="Step_1_Place_D_and_B_1597"></a>Step 1: Place D and B</h3>
+<ul>
+<li class="has-line-data" data-line-start="1599" data-line-end="1600">D sits at one of the ends.</li>
+<li class="has-line-data" data-line-start="1600" data-line-end="1602">Three persons sit between B and D.</li>
+</ul>
+<p class="has-line-data" data-line-start="1602" data-line-end="1603">Only valid placement:</p>
+<pre><code class="has-line-data" data-line-start="1605" data-line-end="1608">1   2   3   4   5   6   7
+C   G   B   E   A   F   D
+</code></pre>
+<p class="has-line-data" data-line-start="1609" data-line-end="1610">(derived after using all remaining clues)</p>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="1613" data-line-end="1614"><a id="Step_2_Use_G_immediately_right_of_C_1613"></a>Step 2: Use G immediately right of C</h3>
+<p class="has-line-data" data-line-start="1615" data-line-end="1616">Since Row 1 faces North,</p>
+<pre><code class="has-line-data" data-line-start="1618" data-line-end="1620">C G
+</code></pre>
+<p class="has-line-data" data-line-start="1621" data-line-end="1622">must be consecutive.</p>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="1625" data-line-end="1626"><a id="Step_3_Use_U_fourth_to_the_right_of_S_1625"></a>Step 3: Use U fourth to the right of S</h3>
+<p class="has-line-data" data-line-start="1627" data-line-end="1628">For Row 2 (faces South), right means <strong>left</strong> from our view.</p>
+<p class="has-line-data" data-line-start="1629" data-line-end="1630">Hence</p>
+<pre><code class="has-line-data" data-line-start="1632" data-line-end="1634">S _ _ _ U
+</code></pre>
+<p class="has-line-data" data-line-start="1635" data-line-end="1636">This fixes</p>
+<pre><code class="has-line-data" data-line-start="1638" data-line-end="1640">U at 3, S at 7
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="1643" data-line-end="1644"><a id="Step_4_One_person_between_A_and_the_person_facing_S_1643"></a>Step 4: One person between A and the person facing S</h3>
+<p class="has-line-data" data-line-start="1645" data-line-end="1646">S is at position 7.</p>
+<p class="has-line-data" data-line-start="1647" data-line-end="1648">The person facing S must be at Row 1 position 7.</p>
+<p class="has-line-data" data-line-start="1649" data-line-end="1650">One person between A and that position gives</p>
+<pre><code class="has-line-data" data-line-start="1652" data-line-end="1654">A at position 5.
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="1657" data-line-end="1658"><a id="Step_5_Q_and_T_1657"></a>Step 5: Q and T</h3>
+<ul>
+<li class="has-line-data" data-line-start="1659" data-line-end="1660">Two persons between Q and the one facing B.</li>
+<li class="has-line-data" data-line-start="1660" data-line-end="1662">One person between Q and T.</li>
+</ul>
+<p class="has-line-data" data-line-start="1662" data-line-end="1663">Since B is at position 3,</p>
+<pre><code class="has-line-data" data-line-start="1665" data-line-end="1668">Q = position 6
+T = position 4
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="1671" data-line-end="1672"><a id="Step_6_Remaining_clues_1671"></a>Step 6: Remaining clues</h3>
+<ul>
+<li class="has-line-data" data-line-start="1673" data-line-end="1674">P does not face C.</li>
+<li class="has-line-data" data-line-start="1674" data-line-end="1676">Persons to the right of F and V are equal.</li>
+</ul>
+<p class="has-line-data" data-line-start="1676" data-line-end="1677">This gives</p>
+<pre><code class="has-line-data" data-line-start="1679" data-line-end="1682">F = position 6
+V = position 2
+</code></pre>
+<p class="has-line-data" data-line-start="1683" data-line-end="1684">Remaining position is occupied by R and P.</p>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="1687" data-line-end="1688"><a id="Final_Arrangement_1687"></a>Final Arrangement</h1>
+<pre><code class="has-line-data" data-line-start="1690" data-line-end="1700">                (Facing North)
+
+Pos →      1    2    3    4    5    6    7
+Row 1 :    C    G    B    E    A    F    D
+            ↑    ↑    ↑    ↑    ↑    ↑    ↑
+            ↓    ↓    ↓    ↓    ↓    ↓    ↓
+Row 2 :    R    V    U    T    P    Q    S
+
+                (Facing South)
+</code></pre>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="1703" data-line-end="1704"><a id="Verification_1703"></a>Verification</h2>
+<ul>
+<li class="has-line-data" data-line-start="1705" data-line-end="1706">✓ Three persons between <strong>B</strong> and <strong>D</strong></li>
+<li class="has-line-data" data-line-start="1706" data-line-end="1707">✓ D at an end</li>
+<li class="has-line-data" data-line-start="1707" data-line-end="1708">✓ Two persons between <strong>Q</strong> and the one facing <strong>B</strong></li>
+<li class="has-line-data" data-line-start="1708" data-line-end="1709">✓ One person between <strong>Q</strong> and <strong>T</strong></li>
+<li class="has-line-data" data-line-start="1709" data-line-end="1710">✓ U is fourth to the right of S (south-facing)</li>
+<li class="has-line-data" data-line-start="1710" data-line-end="1711">✓ U not opposite D</li>
+<li class="has-line-data" data-line-start="1711" data-line-end="1712">✓ One person between A and the one facing S</li>
+<li class="has-line-data" data-line-start="1712" data-line-end="1713">✓ G immediate right of C</li>
+<li class="has-line-data" data-line-start="1713" data-line-end="1714">✓ P does not face C</li>
+<li class="has-line-data" data-line-start="1714" data-line-end="1716">✓ Persons to the right of F and V are equal</li>
+</ul>
+<p class="has-line-data" data-line-start="1716" data-line-end="1717"><strong>Final Answer</strong></p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:center">Position</th>
+<th style="text-align:center">Row 1 (North)</th>
+<th style="text-align:center">Row 2 (South)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">C</td>
+<td style="text-align:center">R</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">G</td>
+<td style="text-align:center">V</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">B</td>
+<td style="text-align:center">U</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">E</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">P</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">Q</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">D</td>
+<td style="text-align:center">S</td>
+</tr>
+</tbody>
+</table>
+
+</main>
+
+<footer class="site-footer">
+  <hr>
+  <p>Last Updated: 23 July 2026</p>
+  <p><a href="index.html">&#8592; Back to Home</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

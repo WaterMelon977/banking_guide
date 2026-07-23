@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadratic Equations — SBI PO Prep</title>
+  <meta name="description" content="Quadratic equations solving guide for SBI PO and IBPS PO Prelims.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <a class="site-title" href="index.html">SBI PO Prep</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="english.html" class="nav-link">English</a>
+    <div class="dropdown" id="dd-quant">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-quant">
+        Quantitative Aptitude <span class="arrow" aria-hidden="true">&#9660;</span>
+      </button>
+      <ul class="dd-menu" id="menu-quant" role="menu">
+        <li><a href="quant.html" role="menuitem">Quant Home</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="arithmetic.html" role="menuitem">Arithmetic</a></li>
+        <li><a href="di.html" role="menuitem">Data Interpretation</a></li>
+        <li><a href="quadratic.html" role="menuitem">Quadratic Equations</a></li>
+        <li><a href="series.html" role="menuitem">Number Series</a></li>
+        <li><a href="simplifiation.html" role="menuitem">Simplification</a></li>
+      </ul>
+    </div>
+    <div class="dropdown" id="dd-reasoning">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-reasoning">
+        Reasoning <span class="arrow" aria-hidden="true">&#9660;</span>
+      </button>
+      <ul class="dd-menu" id="menu-reasoning" role="menu">
+        <li><a href="reasoning.html" role="menuitem">Reasoning Home</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="box_stack.html" role="menuitem">Box Stack</a></li>
+        <li><a href="floors.html" role="menuitem">Floor Puzzle</a></li>
+        <li><a href="seating.html" role="menuitem">Seating Arrangement</a></li>
+        <li><a href="hierarchy.html" role="menuitem">Hierarchy</a></li>
+        <li><a href="calendar_puzzles.html" role="menuitem">Calendar Puzzles</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content" class="page-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="bc-sep">&#8250;</span>
+    <a href="quant.html">Quantitative Aptitude</a>
+    <span class="bc-sep">&#8250;</span>
+    <span class="bc-current">Quadratic Equations</span>
+  </nav>
+<h1 class="code-line has-line-data" data-line-start="0" data-line-end="1"><a id="Quadratic_Equations_FastScoring_Guide_0"></a>Quadratic Equations - Fast-Scoring Guide</h1>
+<h2 class="code-line has-line-data" data-line-start="2" data-line-end="3"><a id="1_Objective_2"></a>1. Objective</h2>
+<p class="has-line-data" data-line-start="4" data-line-end="5">Quadratic equations are high-return questions because the same small set of methods repeats:</p>
+<ul>
+<li class="has-line-data" data-line-start="6" data-line-end="7">Compare roots of two equations.</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Find the roots directly.</li>
+<li class="has-line-data" data-line-start="8" data-line-end="9">Determine whether roots are real, equal or distinct.</li>
+<li class="has-line-data" data-line-start="9" data-line-end="11">Use signs and factorization to compare <code>x</code> and <code>y</code>.</li>
+</ul>
+<pre><code class="has-line-data language-text" data-line-start="12" data-line-end="16">Standard form: ax^2 + bx + c = 0
+Discriminant: D = b^2 - 4ac
+Roots: x = (-b +/- sqrt(D))/(2a)
+</code></pre>
+<h2 class="code-line has-line-data" data-line-start="17" data-line-end="18"><a id="2_Question_Selection_and_Time_Targets_17"></a>2. Question Selection and Time Targets</h2>
+<h3 class="code-line has-line-data" data-line-start="19" data-line-end="20"><a id="Take_immediately_19"></a>Take immediately</h3>
+<ul>
+<li class="has-line-data" data-line-start="21" data-line-end="22">Both equations factor easily.</li>
+<li class="has-line-data" data-line-start="22" data-line-end="23">The roots are small integers.</li>
+<li class="has-line-data" data-line-start="23" data-line-end="24">Signs alone decide the comparison.</li>
+<li class="has-line-data" data-line-start="24" data-line-end="26">The discriminant is a perfect square.</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="26" data-line-end="27"><a id="Return_later_26"></a>Return later</h3>
+<ul>
+<li class="has-line-data" data-line-start="28" data-line-end="29">Large coefficients with no visible factorization.</li>
+<li class="has-line-data" data-line-start="29" data-line-end="30">Irrational roots when answer options require detailed comparison.</li>
+<li class="has-line-data" data-line-start="30" data-line-end="32">A question where each equation has two roots and the comparison depends on which roots are selected.</li>
+</ul>
+<pre><code class="has-line-data language-text" data-line-start="33" data-line-end="37">Easy quadratic:       20-35 seconds
+Moderate quadratic:   35-50 seconds
+No visible method:    skip after about 20 seconds
+</code></pre>
+<h2 class="code-line has-line-data" data-line-start="38" data-line-end="39"><a id="3_Factorization_Method_38"></a>3. Factorization Method</h2>
+<p class="has-line-data" data-line-start="40" data-line-end="41">For:</p>
+<pre><code class="has-line-data language-text" data-line-start="43" data-line-end="45">x^2 - 11x + 30 = 0
+</code></pre>
+<p class="has-line-data" data-line-start="46" data-line-end="47">Find two numbers whose product is 30 and sum is -11:</p>
+<pre><code class="has-line-data language-text" data-line-start="49" data-line-end="52">(x - 5)(x - 6) = 0
+x = 5 or 6
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="53" data-line-end="54"><a id="For_a_coefficient_before_x_squared_53"></a>For a coefficient before x squared</h3>
+<p class="has-line-data" data-line-start="55" data-line-end="56">For:</p>
+<pre><code class="has-line-data language-text" data-line-start="58" data-line-end="60">2x^2 - 7x + 3 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="62" data-line-end="65">(2x - 1)(x - 3) = 0
+x = 1/2 or 3
+</code></pre>
+<h2 class="code-line has-line-data" data-line-start="66" data-line-end="67"><a id="4_Discriminant_Method_66"></a>4. Discriminant Method</h2>
+<p class="has-line-data" data-line-start="68" data-line-end="69">For <code>ax^2 + bx + c = 0</code>:</p>
+<pre><code class="has-line-data language-text" data-line-start="71" data-line-end="75">D &gt; 0 -&gt; two distinct real roots
+D = 0 -&gt; equal real roots
+D &lt; 0 -&gt; no real roots
+</code></pre>
+<p class="has-line-data" data-line-start="76" data-line-end="77">The sum and product of roots are:</p>
+<pre><code class="has-line-data language-text" data-line-start="79" data-line-end="82">Sum = -b/a
+Product = c/a
+</code></pre>
+<p class="has-line-data" data-line-start="83" data-line-end="84">These relationships may solve a question without finding both roots.</p>
+<h2 class="code-line has-line-data" data-line-start="85" data-line-end="86"><a id="5_RootComparison_Method_85"></a>5. Root-Comparison Method</h2>
+<p class="has-line-data" data-line-start="87" data-line-end="88">Suppose the question gives equations for <code>x</code> and <code>y</code> and asks whether <code>x &gt; y</code>, <code>x &lt; y</code>, <code>x &gt;= y</code>, <code>x &lt;= y</code> or the relationship cannot be established.</p>
+<h3 class="code-line has-line-data" data-line-start="89" data-line-end="90"><a id="Step_1_Solve_or_factor_both_equations_89"></a>Step 1: Solve or factor both equations</h3>
+<p class="has-line-data" data-line-start="91" data-line-end="92">Write both possible roots.</p>
+<h3 class="code-line has-line-data" data-line-start="93" data-line-end="94"><a id="Step_2_Compare_the_relevant_roots_93"></a>Step 2: Compare the relevant roots</h3>
+<p class="has-line-data" data-line-start="95" data-line-end="96">If the question’s convention selects the larger root, compare larger roots. If it does not specify which root is selected, the relationship may be indeterminate.</p>
+<h3 class="code-line has-line-data" data-line-start="97" data-line-end="98"><a id="Step_3_Use_signs_first_97"></a>Step 3: Use signs first</h3>
+<ul>
+<li class="has-line-data" data-line-start="99" data-line-end="100">Any positive root is greater than any negative root.</li>
+<li class="has-line-data" data-line-start="100" data-line-end="101">If both roots are positive, compare approximate values.</li>
+<li class="has-line-data" data-line-start="101" data-line-end="103">If both roots are negative, the root closer to zero is greater.</li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="103" data-line-end="104"><a id="6_Solved_Questions_103"></a>6. Solved Questions</h2>
+<h3 class="code-line has-line-data" data-line-start="105" data-line-end="106"><a id="Q1_Source_pattern_Model_Test_19_Q66_105"></a>Q1 - Source pattern: Model Test 19, Q66</h3>
+<p class="has-line-data" data-line-start="107" data-line-end="108">Compare the larger roots:</p>
+<pre><code class="has-line-data language-text" data-line-start="110" data-line-end="113">I.  3x^2 - 16x + 21 = 0
+II. 3y^2 - 13y + 14 = 0
+</code></pre>
+<p class="has-line-data" data-line-start="114" data-line-end="115">Factor:</p>
+<pre><code class="has-line-data language-text" data-line-start="117" data-line-end="123">I:  (3x - 7)(x - 3) = 0
+    x = 7/3, 3
+
+II: (3y - 7)(y - 2) = 0
+    y = 7/3, 2
+</code></pre>
+<p class="has-line-data" data-line-start="124" data-line-end="125">Larger roots: <code>x = 3</code>, <code>y = 7/3</code>.</p>
+<p class="has-line-data" data-line-start="126" data-line-end="127"><strong>Answer: x &gt; y</strong></p>
+<h3 class="code-line has-line-data" data-line-start="128" data-line-end="129"><a id="Q2_Source_pattern_Model_Test_19_Q67_128"></a>Q2 - Source pattern: Model Test 19, Q67</h3>
+<pre><code class="has-line-data language-text" data-line-start="131" data-line-end="134">I.  4x^2 + 16x + 15 = 0
+II. 2y^2 + 13y + 21 = 0
+</code></pre>
+<p class="has-line-data" data-line-start="135" data-line-end="136">Factor:</p>
+<pre><code class="has-line-data language-text" data-line-start="138" data-line-end="144">I:  (2x + 3)(2x + 5) = 0
+    x = -3/2, -5/2
+
+II: (2y + 7)(y + 3) = 0
+    y = -7/2, -3
+</code></pre>
+<p class="has-line-data" data-line-start="145" data-line-end="146">Larger roots: <code>x = -3/2</code>, <code>y = -3</code>.</p>
+<p class="has-line-data" data-line-start="147" data-line-end="148"><strong>Answer: x &gt; y</strong></p>
+<h3 class="code-line has-line-data" data-line-start="149" data-line-end="150"><a id="Q3_Source_pattern_Model_Test_19_Q68_149"></a>Q3 - Source pattern: Model Test 19, Q68</h3>
+<pre><code class="has-line-data language-text" data-line-start="152" data-line-end="155">I.  2x^2 + 15x + 28 = 0
+II. 4y^2 + 20y + 21 = 0
+</code></pre>
+<p class="has-line-data" data-line-start="156" data-line-end="157">Factor:</p>
+<pre><code class="has-line-data language-text" data-line-start="159" data-line-end="165">I:  (2x + 7)(x + 4) = 0
+    x = -7/2, -4
+
+II: (2y + 3)(2y + 7) = 0
+    y = -3/2, -7/2
+</code></pre>
+<p class="has-line-data" data-line-start="166" data-line-end="167">If the larger roots are compared, <code>x = -7/2</code> and <code>y = -3/2</code>.</p>
+<p class="has-line-data" data-line-start="168" data-line-end="169"><strong>Answer: x &lt; y</strong></p>
+<h3 class="code-line has-line-data" data-line-start="170" data-line-end="171"><a id="Q4_Source_pattern_Model_Test_19_Q69_170"></a>Q4 - Source pattern: Model Test 19, Q69</h3>
+<pre><code class="has-line-data language-text" data-line-start="173" data-line-end="176">I.  6x^2 - 13x + 6 = 0
+II. 4y^2 - 16y + 15 = 0
+</code></pre>
+<p class="has-line-data" data-line-start="177" data-line-end="178">Factor:</p>
+<pre><code class="has-line-data language-text" data-line-start="180" data-line-end="186">I:  (3x - 2)(2x - 3) = 0
+    x = 2/3, 3/2
+
+II: (2y - 3)(2y - 5) = 0
+    y = 3/2, 5/2
+</code></pre>
+<p class="has-line-data" data-line-start="187" data-line-end="188">The larger roots are <code>x = 3/2</code> and <code>y = 5/2</code>.</p>
+<p class="has-line-data" data-line-start="189" data-line-end="190"><strong>Answer: x &lt; y</strong></p>
+<h3 class="code-line has-line-data" data-line-start="191" data-line-end="192"><a id="Q5_Source_pattern_Model_Test_19_Q70_191"></a>Q5 - Source pattern: Model Test 19, Q70</h3>
+<pre><code class="has-line-data language-text" data-line-start="194" data-line-end="197">I.  x^2 + 10x + 21 = 0
+II. y^2 + 7y + 10 = 0
+</code></pre>
+<p class="has-line-data" data-line-start="198" data-line-end="199">Factor:</p>
+<pre><code class="has-line-data language-text" data-line-start="201" data-line-end="207">I:  (x + 3)(x + 7) = 0
+    x = -3, -7
+
+II: (y + 5)(y + 2) = 0
+    y = -5, -2
+</code></pre>
+<p class="has-line-data" data-line-start="208" data-line-end="209">The larger roots are <code>x = -3</code> and <code>y = -2</code>.</p>
+<p class="has-line-data" data-line-start="210" data-line-end="211"><strong>Answer: x &lt; y</strong></p>
+<h2 class="code-line has-line-data" data-line-start="212" data-line-end="213"><a id="7_Additional_Practice_212"></a>7. Additional Practice</h2>
+<h3 class="code-line has-line-data" data-line-start="214" data-line-end="215"><a id="Q6_Factorization_214"></a>Q6 - Factorization</h3>
+<pre><code class="has-line-data language-text" data-line-start="217" data-line-end="219">x^2 - 9x + 20 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="221" data-line-end="223">(x - 4)(x - 5) = 0
+</code></pre>
+<p class="has-line-data" data-line-start="224" data-line-end="225"><strong>Roots: 4 and 5</strong></p>
+<h3 class="code-line has-line-data" data-line-start="226" data-line-end="227"><a id="Q7_Nonmonic_equation_226"></a>Q7 - Non-monic equation</h3>
+<pre><code class="has-line-data language-text" data-line-start="229" data-line-end="231">3x^2 - 10x + 3 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="233" data-line-end="235">(3x - 1)(x - 3) = 0
+</code></pre>
+<p class="has-line-data" data-line-start="236" data-line-end="237"><strong>Roots: 1/3 and 3</strong></p>
+<h3 class="code-line has-line-data" data-line-start="238" data-line-end="239"><a id="Q8_Equal_roots_238"></a>Q8 - Equal roots</h3>
+<p class="has-line-data" data-line-start="240" data-line-end="241">Find <code>k</code> if <code>x^2 - 6x + k = 0</code> has equal roots.</p>
+<pre><code class="has-line-data language-text" data-line-start="243" data-line-end="247">D = (-6)^2 - 4(1)(k) = 0
+36 - 4k = 0
+k = 9
+</code></pre>
+<p class="has-line-data" data-line-start="248" data-line-end="249"><strong>Answer: 9</strong></p>
+<h3 class="code-line has-line-data" data-line-start="250" data-line-end="251"><a id="Q9_Root_nature_250"></a>Q9 - Root nature</h3>
+<p class="has-line-data" data-line-start="252" data-line-end="253">Determine the nature of roots of <code>2x^2 + 3x + 5 = 0</code>.</p>
+<pre><code class="has-line-data language-text" data-line-start="255" data-line-end="257">D = 3^2 - 4(2)(5) = 9 - 40 = -31
+</code></pre>
+<p class="has-line-data" data-line-start="258" data-line-end="259"><strong>Answer: no real roots</strong></p>
+<h3 class="code-line has-line-data" data-line-start="260" data-line-end="261"><a id="Q10_Sumproduct_shortcut_260"></a>Q10 - Sum/product shortcut</h3>
+<p class="has-line-data" data-line-start="262" data-line-end="263">If the roots of <code>3x^2 - 12x + 9 = 0</code> are <code>p</code> and <code>q</code>, find <code>p+q</code> and <code>pq</code>.</p>
+<pre><code class="has-line-data language-text" data-line-start="265" data-line-end="268">p+q = -(-12)/3 = 4
+pq = 9/3 = 3
+</code></pre>
+<p class="has-line-data" data-line-start="269" data-line-end="270"><strong>Answer: p+q = 4, pq = 3</strong></p>
+<h2 class="code-line has-line-data" data-line-start="271" data-line-end="272"><a id="8_Common_Traps_271"></a>8. Common Traps</h2>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Trap</th>
+<th>Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comparing the smaller root in one equation with the larger root in another</td>
+<td>State which root is being compared.</td>
+</tr>
+<tr>
+<td>Forgetting negative-number order</td>
+<td><code>-2 &gt; -5</code>; the number closer to zero is larger.</td>
+</tr>
+<tr>
+<td>Losing the denominator in a non-monic equation</td>
+<td>Use the complete factorization.</td>
+</tr>
+<tr>
+<td>Treating <code>D &lt; 0</code> as equal roots</td>
+<td>Equal roots require <code>D = 0</code>.</td>
+</tr>
+<tr>
+<td>Spending too long on an unfactorable equation</td>
+<td>Try the discriminant or skip after 20 seconds.</td>
+</tr>
+<tr>
+<td>Assuming a relationship when both roots are possible</td>
+<td>If root selection is unspecified, choose the indeterminate option.</td>
+</tr>
+</tbody>
+</table>
+<h2 class="code-line has-line-data" data-line-start="282" data-line-end="283"><a id="9_Fast_Revision_Table_282"></a>9. Fast Revision Table</h2>
+<pre><code class="has-line-data language-text" data-line-start="285" data-line-end="293">Equation form                 First check
+x^2 + bx + c                 Factor using sum/product
+ax^2 + bx + c               Split middle term or use factor pairs
+Equal-root question          Set D = 0
+Nature of roots               Calculate D
+Root comparison               Factor both and compare signs/values
+Large coefficients            Use sum/product or approximate roots
+</code></pre>
+<h2 class="code-line has-line-data" data-line-start="294" data-line-end="295"><a id="10_FiveMinute_Drill_294"></a>10. Five-Minute Drill</h2>
+<pre><code class="has-line-data language-text" data-line-start="297" data-line-end="303">Minute 1: 2 monic factorization questions
+Minute 2: 2 non-monic factorization questions
+Minute 3: 2 x-vs-y comparisons
+Minute 4: 2 discriminant questions
+Minute 5: review sign and root-selection errors
+</code></pre>
+<p class="has-line-data" data-line-start="304" data-line-end="305">Track errors as:</p>
+<pre><code class="has-line-data language-text" data-line-start="307" data-line-end="313">F = factorization error
+D = discriminant error
+S = sign/comparison error
+R = root-selection error
+T = time error
+</code></pre>
+<h2 class="code-line has-line-data" data-line-start="314" data-line-end="315"><a id="11_ExamDay_Algorithm_314"></a>11. Exam-Day Algorithm</h2>
+<pre><code class="has-line-data language-text" data-line-start="317" data-line-end="330">Scan both equations
+        |
+Can both factor in under 20 seconds?
+        | yes
+Factor and compare roots
+        |
+        no
+Check discriminant or sum/product
+        |
+Still unclear after 40-50 seconds?
+        |
+Skip and return later
+</code></pre>
+<p class="has-line-data" data-line-start="331" data-line-end="332">Quadratic equations become scoring questions when factorization is automatic. The key habit is to compare signs first, calculate only the roots required and leave an opaque equation before it consumes the section.</p>
+<h2 class="code-line has-line-data" data-line-start="334" data-line-end="335"><a id="12_Fifteen_Real_ModelTest_Questions_with_Fast_Solutions_334"></a>12. Fifteen Real Model-Test Questions with Fast Solutions</h2>
+<p class="has-line-data" data-line-start="336" data-line-end="337">The following are exact quadratic-comparison questions from the supplied model tests. For consistency, the comparison uses the larger root of each equation, as used in the standard bank-exam <code>x</code> versus <code>y</code> format. Always follow the root-selection convention stated in the original question.</p>
+<h3 class="code-line has-line-data" data-line-start="338" data-line-end="339"><a id="Model_Test_1_Q42Q46_338"></a>Model Test 1: Q42-Q46</h3>
+<h4 class="code-line has-line-data" data-line-start="340" data-line-end="341"><a id="Q11_Model_Test_1_Q42_340"></a>Q11 - Model Test 1, Q42</h4>
+<pre><code class="has-line-data language-text" data-line-start="343" data-line-end="346">I. x^2 + 13x + 40 = 0
+II. y^2 + 7y + 12 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="348" data-line-end="351">I:  (x+5)(x+8)=0 -&gt; x = -5, -8
+II: (y+3)(y+4)=0 -&gt; y = -3, -4
+</code></pre>
+<p class="has-line-data" data-line-start="352" data-line-end="353">Larger roots: <code>x=-5</code>, <code>y=-3</code>.</p>
+<p class="has-line-data" data-line-start="354" data-line-end="355"><strong>Answer: x &lt; y</strong></p>
+<p class="has-line-data" data-line-start="356" data-line-end="357"><strong>Fastest approach:</strong> Factor using product 40 and sum -13; no discriminant is needed.</p>
+<h4 class="code-line has-line-data" data-line-start="358" data-line-end="359"><a id="Q12_Model_Test_1_Q43_358"></a>Q12 - Model Test 1, Q43</h4>
+<pre><code class="has-line-data language-text" data-line-start="361" data-line-end="364">I. x^2 = 49
+II. y^2 - 15y + 56 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="366" data-line-end="369">I:  x = -7, 7
+II: (y-7)(y-8)=0 -&gt; y = 7, 8
+</code></pre>
+<p class="has-line-data" data-line-start="370" data-line-end="371">The possible x-values never exceed the possible y-values.</p>
+<p class="has-line-data" data-line-start="372" data-line-end="373"><strong>Answer: x &lt;= y</strong></p>
+<p class="has-line-data" data-line-start="374" data-line-end="375"><strong>Fastest approach:</strong> Remember that <code>x^2=49</code> gives both <code>+7</code> and <code>-7</code>; do not keep only +7.</p>
+<h4 class="code-line has-line-data" data-line-start="376" data-line-end="377"><a id="Q13_Model_Test_1_Q44_376"></a>Q13 - Model Test 1, Q44</h4>
+<pre><code class="has-line-data language-text" data-line-start="379" data-line-end="382">I. 3x^2 - 13x + 12 = 0
+II. 2y^2 - 9y + 10 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="384" data-line-end="387">I:  (3x-4)(x-3)=0 -&gt; x = 4/3, 3
+II: (2y-5)(y-2)=0 -&gt; y = 5/2, 2
+</code></pre>
+<p class="has-line-data" data-line-start="388" data-line-end="389">Larger roots: <code>3 &gt; 5/2</code>.</p>
+<p class="has-line-data" data-line-start="390" data-line-end="391"><strong>Answer: x &gt; y</strong></p>
+<p class="has-line-data" data-line-start="392" data-line-end="393"><strong>Fastest approach:</strong> Use the product of first and last coefficients to split the middle term.</p>
+<h4 class="code-line has-line-data" data-line-start="394" data-line-end="395"><a id="Q14_Model_Test_1_Q45_394"></a>Q14 - Model Test 1, Q45</h4>
+<pre><code class="has-line-data language-text" data-line-start="397" data-line-end="400">I. 3x^2 + 10x + 8 = 0
+II. 3y^2 + 10y + 7 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="402" data-line-end="405">I:  (3x+4)(x+2)=0 -&gt; x = -4/3, -2
+II: (3y+7)(y+1)=0 -&gt; y = -7/3, -1
+</code></pre>
+<p class="has-line-data" data-line-start="406" data-line-end="407">Larger roots: <code>-4/3 &lt; -1</code>.</p>
+<p class="has-line-data" data-line-start="408" data-line-end="409"><strong>Answer: x &lt; y</strong></p>
+<p class="has-line-data" data-line-start="410" data-line-end="411"><strong>Fastest approach:</strong> For negative roots, the value closer to zero is larger.</p>
+<h4 class="code-line has-line-data" data-line-start="412" data-line-end="413"><a id="Q15_Model_Test_1_Q46_412"></a>Q15 - Model Test 1, Q46</h4>
+<pre><code class="has-line-data language-text" data-line-start="415" data-line-end="418">I. 2x^2 - 17x + 36 = 0
+II. 2y^2 - 15y + 28 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="420" data-line-end="423">I:  (2x-9)(x-4)=0 -&gt; x = 9/2, 4
+II: (2y-7)(y-4)=0 -&gt; y = 7/2, 4
+</code></pre>
+<p class="has-line-data" data-line-start="424" data-line-end="425">Larger roots: <code>9/2 &gt; 4</code>.</p>
+<p class="has-line-data" data-line-start="426" data-line-end="427"><strong>Answer: x &gt; y</strong></p>
+<p class="has-line-data" data-line-start="428" data-line-end="429"><strong>Fastest approach:</strong> Spot the factor pairs <code>(9,4)</code> and <code>(7,4)</code> quickly; compare only the larger roots.</p>
+<h3 class="code-line has-line-data" data-line-start="430" data-line-end="431"><a id="Model_Test_2_Q41Q45_430"></a>Model Test 2: Q41-Q45</h3>
+<h4 class="code-line has-line-data" data-line-start="432" data-line-end="433"><a id="Q16_Model_Test_2_Q41_432"></a>Q16 - Model Test 2, Q41</h4>
+<pre><code class="has-line-data language-text" data-line-start="435" data-line-end="438">I. x^2 - 17x + 72 = 0
+II. y^2 - 9y + 20 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="440" data-line-end="443">I:  (x-8)(x-9)=0 -&gt; x = 8, 9
+II: (y-4)(y-5)=0 -&gt; y = 4, 5
+</code></pre>
+<p class="has-line-data" data-line-start="444" data-line-end="445"><strong>Answer: x &gt; y</strong></p>
+<p class="has-line-data" data-line-start="446" data-line-end="447"><strong>Fastest approach:</strong> For positive roots, compare the larger factor immediately.</p>
+<h4 class="code-line has-line-data" data-line-start="448" data-line-end="449"><a id="Q17_Model_Test_2_Q42_448"></a>Q17 - Model Test 2, Q42</h4>
+<pre><code class="has-line-data language-text" data-line-start="451" data-line-end="454">I. 9x^2 - 15x + 4 = 0
+II. y^2 - 5y + 6 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="456" data-line-end="459">I:  (3x-1)(3x-4)=0 -&gt; x = 1/3, 4/3
+II: (y-2)(y-3)=0 -&gt; y = 2, 3
+</code></pre>
+<p class="has-line-data" data-line-start="460" data-line-end="461"><strong>Answer: x &lt; y</strong></p>
+<p class="has-line-data" data-line-start="462" data-line-end="463"><strong>Fastest approach:</strong> Do not compare coefficients; compare the actual roots.</p>
+<h4 class="code-line has-line-data" data-line-start="464" data-line-end="465"><a id="Q18_Model_Test_2_Q43_464"></a>Q18 - Model Test 2, Q43</h4>
+<pre><code class="has-line-data language-text" data-line-start="467" data-line-end="470">I. x^2 - x - 12 = 0
+II. y^2 + 7y + 12 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="472" data-line-end="475">I:  (x-4)(x+3)=0 -&gt; x = 4, -3
+II: (y+3)(y+4)=0 -&gt; y = -3, -4
+</code></pre>
+<p class="has-line-data" data-line-start="476" data-line-end="477">Larger roots: <code>4 &gt; -3</code>.</p>
+<p class="has-line-data" data-line-start="478" data-line-end="479"><strong>Answer: x &gt; y</strong></p>
+<p class="has-line-data" data-line-start="480" data-line-end="481"><strong>Fastest approach:</strong> One positive root is automatically greater than both negative y-roots.</p>
+<h4 class="code-line has-line-data" data-line-start="482" data-line-end="483"><a id="Q19_Model_Test_2_Q44_482"></a>Q19 - Model Test 2, Q44</h4>
+<pre><code class="has-line-data language-text" data-line-start="485" data-line-end="488">I. 2x^2 + 17x + 21 = 0
+II. 2y^2 + 5y + 3 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="490" data-line-end="493">I:  (2x+3)(x+7)=0 -&gt; x = -3/2, -7
+II: (2y+3)(y+1)=0 -&gt; y = -3/2, -1
+</code></pre>
+<p class="has-line-data" data-line-start="494" data-line-end="495">Larger roots: <code>-3/2 &lt; -1</code>.</p>
+<p class="has-line-data" data-line-start="496" data-line-end="497"><strong>Answer: x &lt; y</strong></p>
+<p class="has-line-data" data-line-start="498" data-line-end="499"><strong>Fastest approach:</strong> Both equations share one root; compare the other roots only after identifying the larger root in each.</p>
+<h4 class="code-line has-line-data" data-line-start="500" data-line-end="501"><a id="Q20_Model_Test_2_Q45_500"></a>Q20 - Model Test 2, Q45</h4>
+<pre><code class="has-line-data language-text" data-line-start="503" data-line-end="506">I. 3x^2 + 10x + 8 = 0
+II. 3y^2 + 7y + 4 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="508" data-line-end="511">I:  (3x+4)(x+2)=0 -&gt; x = -4/3, -2
+II: (3y+4)(y+1)=0 -&gt; y = -4/3, -1
+</code></pre>
+<p class="has-line-data" data-line-start="512" data-line-end="513">Larger roots: <code>-4/3 &lt; -1</code>.</p>
+<p class="has-line-data" data-line-start="514" data-line-end="515"><strong>Answer: x &lt; y</strong></p>
+<p class="has-line-data" data-line-start="516" data-line-end="517"><strong>Fastest approach:</strong> Since one root is common, compare the remaining roots and remember negative-number order.</p>
+<h3 class="code-line has-line-data" data-line-start="518" data-line-end="519"><a id="Model_Test_19_Q66Q70_518"></a>Model Test 19: Q66-Q70</h3>
+<h4 class="code-line has-line-data" data-line-start="520" data-line-end="521"><a id="Q21_Model_Test_19_Q66_520"></a>Q21 - Model Test 19, Q66</h4>
+<pre><code class="has-line-data language-text" data-line-start="523" data-line-end="526">I. 3x^2 - 16x + 21 = 0
+II. 3y^2 - 13y + 14 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="528" data-line-end="531">I:  (3x-7)(x-3)=0 -&gt; x = 7/3, 3
+II: (3y-7)(y-2)=0 -&gt; y = 7/3, 2
+</code></pre>
+<p class="has-line-data" data-line-start="532" data-line-end="533"><strong>Answer: x &gt; y</strong></p>
+<p class="has-line-data" data-line-start="534" data-line-end="535"><strong>Fastest approach:</strong> The roots share <code>7/3</code>; compare the other roots.</p>
+<h4 class="code-line has-line-data" data-line-start="536" data-line-end="537"><a id="Q22_Model_Test_19_Q67_536"></a>Q22 - Model Test 19, Q67</h4>
+<pre><code class="has-line-data language-text" data-line-start="539" data-line-end="542">I. 4x^2 + 16x + 15 = 0
+II. 2y^2 + 13y + 21 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="544" data-line-end="547">I:  (2x+3)(2x+5)=0 -&gt; x = -3/2, -5/2
+II: (2y+7)(y+3)=0 -&gt; y = -7/2, -3
+</code></pre>
+<p class="has-line-data" data-line-start="548" data-line-end="549">Larger roots: <code>-3/2 &gt; -3</code>.</p>
+<p class="has-line-data" data-line-start="550" data-line-end="551"><strong>Answer: x &gt; y</strong></p>
+<p class="has-line-data" data-line-start="552" data-line-end="553"><strong>Fastest approach:</strong> When all roots are negative, compare the root with the smaller absolute value.</p>
+<h4 class="code-line has-line-data" data-line-start="554" data-line-end="555"><a id="Q23_Model_Test_19_Q68_554"></a>Q23 - Model Test 19, Q68</h4>
+<pre><code class="has-line-data language-text" data-line-start="557" data-line-end="560">I. 2x^2 + 15x + 28 = 0
+II. 4y^2 + 20y + 21 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="562" data-line-end="565">I:  (2x+7)(x+4)=0 -&gt; x = -7/2, -4
+II: (2y+3)(2y+7)=0 -&gt; y = -3/2, -7/2
+</code></pre>
+<p class="has-line-data" data-line-start="566" data-line-end="567">Larger roots: <code>-7/2 &lt; -3/2</code>.</p>
+<p class="has-line-data" data-line-start="568" data-line-end="569"><strong>Answer: x &lt; y</strong></p>
+<p class="has-line-data" data-line-start="570" data-line-end="571"><strong>Fastest approach:</strong> Factor both and compare the larger negative root, not the more negative root.</p>
+<h4 class="code-line has-line-data" data-line-start="572" data-line-end="573"><a id="Q24_Model_Test_19_Q69_572"></a>Q24 - Model Test 19, Q69</h4>
+<pre><code class="has-line-data language-text" data-line-start="575" data-line-end="578">I. 6x^2 - 13x + 6 = 0
+II. 4y^2 - 16y + 15 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="580" data-line-end="583">I:  (3x-2)(2x-3)=0 -&gt; x = 2/3, 3/2
+II: (2y-3)(2y-5)=0 -&gt; y = 3/2, 5/2
+</code></pre>
+<p class="has-line-data" data-line-start="584" data-line-end="585"><strong>Answer: x &lt; y</strong></p>
+<p class="has-line-data" data-line-start="586" data-line-end="587"><strong>Fastest approach:</strong> Both equations share 3/2; compare the remaining larger root, 3/2 versus 5/2.</p>
+<h4 class="code-line has-line-data" data-line-start="588" data-line-end="589"><a id="Q25_Model_Test_19_Q70_588"></a>Q25 - Model Test 19, Q70</h4>
+<pre><code class="has-line-data language-text" data-line-start="591" data-line-end="594">I. x^2 + 10x + 21 = 0
+II. y^2 + 7y + 10 = 0
+</code></pre>
+<pre><code class="has-line-data language-text" data-line-start="596" data-line-end="599">I:  (x+3)(x+7)=0 -&gt; x = -3, -7
+II: (y+5)(y+2)=0 -&gt; y = -5, -2
+</code></pre>
+<p class="has-line-data" data-line-start="600" data-line-end="601">Larger roots: <code>-3 &lt; -2</code>.</p>
+<p class="has-line-data" data-line-start="602" data-line-end="603"><strong>Answer: x &lt; y</strong></p>
+<p class="has-line-data" data-line-start="604" data-line-end="605"><strong>Fastest approach:</strong> Factor immediately; for negatives, -2 is greater than -3.</p>
+<h2 class="code-line has-line-data" data-line-start="606" data-line-end="607"><a id="13_Fastest_Quadratic_Decision_Rules_606"></a>13. Fastest Quadratic Decision Rules</h2>
+<pre><code class="has-line-data language-text" data-line-start="609" data-line-end="616">Can factor in 20 seconds? -&gt; Factor and compare.
+Cannot factor?             -&gt; Check discriminant or approximate roots.
+Both roots negative?       -&gt; Compare the root closer to zero.
+One positive, one negative?-&gt; Positive root is larger.
+Same root appears twice?   -&gt; Compare the remaining roots.
+x^2 = a^2?                -&gt; Remember both +a and -a.
+</code></pre>
+<h2 class="code-line has-line-data" data-line-start="617" data-line-end="618"><a id="14_FiveMinute_Quadratic_Drill_617"></a>14. Five-Minute Quadratic Drill</h2>
+<pre><code class="has-line-data language-text" data-line-start="620" data-line-end="626">Minute 1: 2 monic equations
+Minute 2: 2 non-monic equations
+Minute 3: 2 x-vs-y comparisons
+Minute 4: 2 negative-root comparisons
+Minute 5: review factorization and sign errors
+</code></pre>
+<p class="has-line-data" data-line-start="627" data-line-end="628">For every wrong answer, label the error:</p>
+<pre><code class="has-line-data language-text" data-line-start="630" data-line-end="636">F = factorization
+S = sign/order of negative numbers
+R = wrong root selected
+D = discriminant
+T = time spent
+</code></pre>
+
+</main>
+
+<footer class="site-footer">
+  <hr>
+  <p>Last Updated: 23 July 2026</p>
+  <p><a href="index.html">&#8592; Back to Home</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

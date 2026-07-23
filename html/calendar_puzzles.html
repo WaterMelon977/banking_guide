@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar Puzzles — SBI PO Prep</title>
+  <meta name="description" content="Calendar puzzle solving guide for SBI PO and IBPS PO Prelims reasoning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <a class="site-title" href="index.html">SBI PO Prep</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="english.html" class="nav-link">English</a>
+    <div class="dropdown" id="dd-quant">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-quant">
+        Quantitative Aptitude <span class="arrow" aria-hidden="true">&#9660;</span>
+      </button>
+      <ul class="dd-menu" id="menu-quant" role="menu">
+        <li><a href="quant.html" role="menuitem">Quant Home</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="arithmetic.html" role="menuitem">Arithmetic</a></li>
+        <li><a href="di.html" role="menuitem">Data Interpretation</a></li>
+        <li><a href="quadratic.html" role="menuitem">Quadratic Equations</a></li>
+        <li><a href="series.html" role="menuitem">Number Series</a></li>
+        <li><a href="simplifiation.html" role="menuitem">Simplification</a></li>
+      </ul>
+    </div>
+    <div class="dropdown" id="dd-reasoning">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-reasoning">
+        Reasoning <span class="arrow" aria-hidden="true">&#9660;</span>
+      </button>
+      <ul class="dd-menu" id="menu-reasoning" role="menu">
+        <li><a href="reasoning.html" role="menuitem">Reasoning Home</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="box_stack.html" role="menuitem">Box Stack</a></li>
+        <li><a href="floors.html" role="menuitem">Floor Puzzle</a></li>
+        <li><a href="seating.html" role="menuitem">Seating Arrangement</a></li>
+        <li><a href="hierarchy.html" role="menuitem">Hierarchy</a></li>
+        <li><a href="calendar_puzzles.html" role="menuitem">Calendar Puzzles</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content" class="page-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="bc-sep">&#8250;</span>
+    <a href="reasoning.html">Reasoning</a>
+    <span class="bc-sep">&#8250;</span>
+    <span class="bc-current">Calendar Puzzles</span>
+  </nav>
+<h1 class="code-line has-line-data" data-line-start="0" data-line-end="1"><a id="Scheduling_Calendar_Puzzles_Complete_Solving_Guide_0"></a>Scheduling / Calendar Puzzles - Complete Solving Guide</h1>
+<h2 class="code-line has-line-data" data-line-start="2" data-line-end="3"><a id="1_Model_Overview_2"></a>1. Model Overview</h2>
+<ul>
+<li class="has-line-data" data-line-start="4" data-line-end="5"><strong>What it is:</strong> People, events or appointments are assigned to months, dates, days and sometimes time slots. Every clue restricts either the calendar position or a linked attribute.</li>
+<li class="has-line-data" data-line-start="5" data-line-end="6"><strong>Why it appears in exams:</strong> These puzzles test chronological order, date gaps, weekday relationships, time intervals, overlap and conditional scheduling.</li>
+<li class="has-line-data" data-line-start="6" data-line-end="7"><strong>Key challenges:</strong> Solvers often count dates incorrectly, confuse calendar order with weekday order, or read “after” as “immediately after.”</li>
+<li class="has-line-data" data-line-start="7" data-line-end="9"><strong>Exam frequency:</strong> Usually 1 set (5-10 questions); month and date sets are common, while time-slot schedules are often combined with departments or people.</li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="9" data-line-end="10"><a id="2_Core_Components_Terminology_9"></a>2. Core Components &amp; Terminology</h2>
+<ul>
+<li class="has-line-data" data-line-start="11" data-line-end="12"><strong>Primary variable:</strong> Month, date, day or time slot.</li>
+<li class="has-line-data" data-line-start="12" data-line-end="13"><strong>Secondary variables:</strong> Person, event, city, topic, department, room or priority.</li>
+<li class="has-line-data" data-line-start="13" data-line-end="14"><strong>Calendar elements:</strong> Before, after, earlier, later, first half, second half, odd date, even date, weekday and consecutive date.</li>
+<li class="has-line-data" data-line-start="14" data-line-end="16"><strong>Schedule elements:</strong> Morning/evening, time interval, duration, overlap, immediately before, immediately after and free slot.</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="16" data-line-end="17"><a id="Miniglossary_16"></a>Mini-glossary</h3>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Before X</td>
+<td>Any earlier calendar position or time</td>
+</tr>
+<tr>
+<td>After X</td>
+<td>Any later position; not necessarily immediately later</td>
+</tr>
+<tr>
+<td>Immediately before</td>
+<td>The directly preceding date, day or time slot</td>
+</tr>
+<tr>
+<td>Between X and Y</td>
+<td>A position strictly inside the interval from X to Y</td>
+</tr>
+<tr>
+<td>Two days after</td>
+<td>Add exactly two calendar days unless the clue specifies working days</td>
+</tr>
+<tr>
+<td>Consecutive days</td>
+<td>No date or day gap between the positions</td>
+</tr>
+<tr>
+<td>Alternate days</td>
+<td>A one-day gap between successive scheduled days</td>
+</tr>
+<tr>
+<td>First half of month</td>
+<td>Usually dates 1-15 unless the puzzle defines another range</td>
+</tr>
+<tr>
+<td>Second half of month</td>
+<td>Usually dates 16 onward</td>
+</tr>
+<tr>
+<td>Overlap</td>
+<td>Two events occupy some or all of the same time</td>
+</tr>
+<tr>
+<td>Free slot</td>
+<td>A time position not assigned to any event</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="32" data-line-end="33"><strong>Important:</strong> Distinguish calendar dates from weekdays. For example, “two days after Monday” is Wednesday, but “two dates after 12 June” is 14 June only when the intervening calendar has no special restriction.</p>
+<h2 class="code-line has-line-data" data-line-start="34" data-line-end="35"><a id="3_Prerequisite_Checks_Before_Solving_34"></a>3. Prerequisite Checks (Before Solving)</h2>
+<ul>
+<li class="has-line-data" data-line-start="36" data-line-end="37"><input type="checkbox" id="checkbox24"><label for="checkbox24">Count the months, dates, weekdays and time slots.</label></li>
+<li class="has-line-data" data-line-start="37" data-line-end="38"><input type="checkbox" id="checkbox25"><label for="checkbox25">Check whether dates are within one month or across multiple months.</label></li>
+<li class="has-line-data" data-line-start="38" data-line-end="39"><input type="checkbox" id="checkbox26"><label for="checkbox26">Note the number of days in each relevant month.</label></li>
+<li class="has-line-data" data-line-start="39" data-line-end="40"><input type="checkbox" id="checkbox27"><label for="checkbox27">Confirm whether weekends or holidays are excluded.</label></li>
+<li class="has-line-data" data-line-start="40" data-line-end="41"><input type="checkbox" id="checkbox28"><label for="checkbox28">Determine whether appointments can overlap.</label></li>
+<li class="has-line-data" data-line-start="41" data-line-end="42"><input type="checkbox" id="checkbox29"><label for="checkbox29">Check whether every person/event is assigned exactly once.</label></li>
+<li class="has-line-data" data-line-start="42" data-line-end="43"><input type="checkbox" id="checkbox30"><label for="checkbox30">Identify fixed dates, fixed weekdays and fixed time slots.</label></li>
+<li class="has-line-data" data-line-start="43" data-line-end="45"><input type="checkbox" id="checkbox31"><label for="checkbox31">Mark whether a clue says calendar days, working days, weeks or hours.</label></li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="45" data-line-end="46"><a id="4_StepbyStep_Solving_Methodology_45"></a>4. Step-by-Step Solving Methodology</h2>
+<h3 class="code-line has-line-data" data-line-start="47" data-line-end="48"><a id="Phase_1_Diagram_Preparation_47"></a>Phase 1: Diagram Preparation</h3>
+<h4 class="code-line has-line-data" data-line-start="49" data-line-end="50"><a id="Month_and_date_timeline_49"></a>Month and date timeline</h4>
+<pre><code class="has-line-data language-text" data-line-start="52" data-line-end="57">Month:       January     February     March       April
+Order:          1           2           3           4
+Person:       [  ]         [  ]         [  ]         [  ]
+Event:        [  ]         [  ]         [  ]         [  ]
+</code></pre>
+<p class="has-line-data" data-line-start="58" data-line-end="59">For exact dates, use a numbered strip:</p>
+<pre><code class="has-line-data language-text" data-line-start="61" data-line-end="64">Date:       10   11   12   13   14   15   16
+Event:     [ ]  [ ]  [ ]  [ ]  [ ]  [ ]  [ ]
+</code></pre>
+<h4 class="code-line has-line-data" data-line-start="65" data-line-end="66"><a id="Daytime_schedule_65"></a>Day/time schedule</h4>
+<pre><code class="has-line-data language-text" data-line-start="68" data-line-end="72">             9-10   10-11   11-12   12-1   1-2
+Monday       [  ]    [  ]    [  ]    [  ]   [  ]
+Tuesday      [  ]    [  ]    [  ]    [  ]   [  ]
+</code></pre>
+<p class="has-line-data" data-line-start="73" data-line-end="74">For a weekly schedule, write the days in chronological order. Do not place Monday next to Sunday unless the puzzle explicitly treats the week as circular.</p>
+<h3 class="code-line has-line-data" data-line-start="75" data-line-end="76"><a id="Phase_2_Constraint_Extraction_Prioritization_75"></a>Phase 2: Constraint Extraction &amp; Prioritization</h3>
+<p class="has-line-data" data-line-start="77" data-line-end="78">Classify the clues:</p>
+<ol>
+<li class="has-line-data" data-line-start="79" data-line-end="80"><strong>Direct:</strong> “Ravi’s appointment is on 12 March.” Place it immediately.</li>
+<li class="has-line-data" data-line-start="80" data-line-end="81"><strong>Fixed weekday/time:</strong> “The audit is on Tuesday at 10 a.m.” Fix both dimensions.</li>
+<li class="has-line-data" data-line-start="81" data-line-end="82"><strong>Order:</strong> “P’s meeting is before Q’s meeting.” Record <code>P &lt; Q</code>.</li>
+<li class="has-line-data" data-line-start="82" data-line-end="83"><strong>Exact gap:</strong> “S’s event is three days after T’s event.” Count the exact interval.</li>
+<li class="has-line-data" data-line-start="83" data-line-end="84"><strong>Restriction:</strong> “U’s appointment is not on a weekend.” Eliminate those dates.</li>
+<li class="has-line-data" data-line-start="84" data-line-end="86"><strong>Conditional:</strong> “If V is on Wednesday, W is at 2 p.m.” Test only in a relevant case.</li>
+</ol>
+<p class="has-line-data" data-line-start="86" data-line-end="87">Start with fixed dates and times, then exact gaps, then chains of order clues. Apply broad before/after and conditional clues after the tight structure is visible.</p>
+<h3 class="code-line has-line-data" data-line-start="88" data-line-end="89"><a id="Phase_3_Iterative_Placement_88"></a>Phase 3: Iterative Placement</h3>
+<ol>
+<li class="has-line-data" data-line-start="90" data-line-end="91">Write the entire calendar or schedule in chronological order.</li>
+<li class="has-line-data" data-line-start="91" data-line-end="92">Place direct clues and fixed time slots.</li>
+<li class="has-line-data" data-line-start="92" data-line-end="93">Translate date gaps carefully. A three-day gap means three calendar increments, not three empty cells.</li>
+<li class="has-line-data" data-line-start="93" data-line-end="94">Combine chains such as <code>A before B before C</code>.</li>
+<li class="has-line-data" data-line-start="94" data-line-end="95">Cross out impossible dates, weekdays and time slots.</li>
+<li class="has-line-data" data-line-start="95" data-line-end="96">For events with duration, shade all occupied slots, not just the starting slot.</li>
+<li class="has-line-data" data-line-start="96" data-line-end="98">Create cases only where needed and reject a case immediately after a contradiction.</li>
+</ol>
+<p class="has-line-data" data-line-start="98" data-line-end="99">Useful notation:</p>
+<pre><code class="has-line-data language-text" data-line-start="101" data-line-end="106">A &lt; B       A occurs before B
+A &lt;&lt; B      A occurs immediately before B
+A + 2       A occurs two calendar positions later
+A != Friday A cannot be on Friday
+</code></pre>
+<h3 class="code-line has-line-data" data-line-start="107" data-line-end="108"><a id="Phase_4_Verification_CrossCheck_107"></a>Phase 4: Verification &amp; Cross-Check</h3>
+<ul>
+<li class="has-line-data" data-line-start="109" data-line-end="110">Confirm every event has the correct date, day and time.</li>
+<li class="has-line-data" data-line-start="110" data-line-end="111">Recalculate all date differences from the final calendar.</li>
+<li class="has-line-data" data-line-start="111" data-line-end="112">Check month lengths when a gap crosses a month boundary.</li>
+<li class="has-line-data" data-line-start="112" data-line-end="113">Check that appointments do not overlap unless overlap is allowed.</li>
+<li class="has-line-data" data-line-start="113" data-line-end="114">Verify weekday/date combinations where the puzzle provides a starting weekday.</li>
+<li class="has-line-data" data-line-start="114" data-line-end="116">For a must-be-true question, compare every surviving schedule case.</li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="116" data-line-end="117"><a id="5_Common_Pitfalls_How_to_Avoid_Them_116"></a>5. Common Pitfalls &amp; How to Avoid Them</h2>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Pitfall</th>
+<th>Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Treating after as immediately after</td>
+<td>Use adjacency only for immediately, directly or just.</td>
+</tr>
+<tr>
+<td>Counting the starting date as day one</td>
+<td>For “three days after 10th,” count 11, 12, 13.</td>
+</tr>
+<tr>
+<td>Ignoring month length</td>
+<td>Write the dates continuously across month boundaries.</td>
+</tr>
+<tr>
+<td>Confusing weekday and date</td>
+<td>Keep separate columns for date and weekday.</td>
+</tr>
+<tr>
+<td>Forgetting event duration</td>
+<td>Mark every occupied time interval.</td>
+</tr>
+<tr>
+<td>Assuming weekends are excluded</td>
+<td>Exclude them only when the clue says working days or weekdays.</td>
+</tr>
+<tr>
+<td>Accepting an incomplete schedule</td>
+<td>Test every clue against the complete calendar before answering.</td>
+</tr>
+</tbody>
+</table>
+<h2 class="code-line has-line-data" data-line-start="128" data-line-end="129"><a id="6_Shortcut_Techniques_Pattern_Recognition_128"></a>6. Shortcut Techniques &amp; Pattern Recognition</h2>
+<ul>
+<li class="has-line-data" data-line-start="130" data-line-end="131"><strong>Date conversion:</strong> Write a short continuous sequence around the relevant dates rather than calculating mentally.</li>
+<li class="has-line-data" data-line-start="131" data-line-end="132"><strong>Extreme-date logic:</strong> An event after all others must be at the latest available date; one before all others must be earliest.</li>
+<li class="has-line-data" data-line-start="132" data-line-end="133"><strong>Gap blocks:</strong> Treat consecutive appointments as a block, such as <code>A/B/C</code> for three consecutive days.</li>
+<li class="has-line-data" data-line-start="133" data-line-end="134"><strong>Parity shortcut:</strong> If a clue says events occur on alternate dates, preserve odd/even date parity unless a month boundary changes the pattern.</li>
+<li class="has-line-data" data-line-start="134" data-line-end="135"><strong>Slot capacity:</strong> If a two-hour event occupies 10-12, cross out 10-11 and 11-12 for every conflicting event.</li>
+<li class="has-line-data" data-line-start="135" data-line-end="136"><strong>Chain compression:</strong> Combine <code>A before B</code> and <code>B two days before C</code> into one chronological chain.</li>
+<li class="has-line-data" data-line-start="136" data-line-end="137"><strong>Calendar anchor:</strong> If one date and its weekday are known, derive nearby weekdays instead of treating them as independent variables.</li>
+<li class="has-line-data" data-line-start="137" data-line-end="139"><strong>Case comparison:</strong> A fact common to all valid schedules is usually the answer to a definite-position question.</li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="139" data-line-end="140"><a id="7_ASCII_Diagram_Examples_139"></a>7. ASCII Diagram Examples</h2>
+<h3 class="code-line has-line-data" data-line-start="141" data-line-end="142"><a id="Example_1_MonthBased_Puzzle_141"></a>Example 1: Month-Based Puzzle</h3>
+<p class="has-line-data" data-line-start="143" data-line-end="144"><strong>Puzzle Statement:</strong> Four people - A, B, C and D - were born in January, March, May and July, one person per month.</p>
+<ol>
+<li class="has-line-data" data-line-start="145" data-line-end="146">A was born before C.</li>
+<li class="has-line-data" data-line-start="146" data-line-end="147">B was born immediately after A in the listed month order.</li>
+<li class="has-line-data" data-line-start="147" data-line-end="149">D was born after C.</li>
+</ol>
+<p class="has-line-data" data-line-start="149" data-line-end="150"><strong>Solution Walkthrough</strong></p>
+<h4 class="code-line has-line-data" data-line-start="151" data-line-end="152"><a id="Setup_151"></a>Setup</h4>
+<pre><code class="has-line-data language-text" data-line-start="154" data-line-end="159">January   [    ]
+March     [    ]
+May       [    ]
+July      [    ]
+</code></pre>
+<h4 class="code-line has-line-data" data-line-start="160" data-line-end="161"><a id="Step_1_Place_the_consecutive_pair_160"></a>Step 1: Place the consecutive pair</h4>
+<p class="has-line-data" data-line-start="162" data-line-end="163">A and B must occupy consecutive listed months. Possible blocks are January-March, March-May or May-July.</p>
+<h4 class="code-line has-line-data" data-line-start="164" data-line-end="165"><a id="Step_2_Apply_the_remaining_order_clues_164"></a>Step 2: Apply the remaining order clues</h4>
+<p class="has-line-data" data-line-start="166" data-line-end="167">The chain is <code>A &lt; B</code>, <code>A &lt; C &lt; D</code>. The only block that leaves two positions after A for C and D is January-March. Therefore:</p>
+<pre><code class="has-line-data language-text" data-line-start="169" data-line-end="174">January   [A   ]
+March     [B   ]
+May       [C   ]
+July      [D   ]
+</code></pre>
+<p class="has-line-data" data-line-start="175" data-line-end="176"><strong>Final Answer</strong></p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Month</th>
+<th>Person</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>January</td>
+<td>A</td>
+</tr>
+<tr>
+<td>March</td>
+<td>B</td>
+</tr>
+<tr>
+<td>May</td>
+<td>C</td>
+</tr>
+<tr>
+<td>July</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+<h3 class="code-line has-line-data" data-line-start="184" data-line-end="185"><a id="Example_2_DayTime_Scheduling_Puzzle_184"></a>Example 2: Day/Time Scheduling Puzzle</h3>
+<p class="has-line-data" data-line-start="186" data-line-end="187"><strong>Puzzle Statement:</strong> Four meetings - HR, IT, Sales and Audit - are scheduled in four one-hour slots: Monday 10 a.m., Monday 11 a.m., Tuesday 10 a.m. and Tuesday 11 a.m.</p>
+<ol>
+<li class="has-line-data" data-line-start="188" data-line-end="189">Audit is on Tuesday.</li>
+<li class="has-line-data" data-line-start="189" data-line-end="190">IT is immediately before Sales in the chronological schedule.</li>
+<li class="has-line-data" data-line-start="190" data-line-end="192">HR is on Monday.</li>
+</ol>
+<p class="has-line-data" data-line-start="192" data-line-end="193"><strong>Solution Walkthrough</strong></p>
+<h4 class="code-line has-line-data" data-line-start="194" data-line-end="195"><a id="Setup_194"></a>Setup</h4>
+<pre><code class="has-line-data language-text" data-line-start="197" data-line-end="203">Order  Slot             Meeting
+1      Mon 10 a.m.      [     ]
+2      Mon 11 a.m.      [     ]
+3      Tue 10 a.m.      [     ]
+4      Tue 11 a.m.      [     ]
+</code></pre>
+<h4 class="code-line has-line-data" data-line-start="204" data-line-end="205"><a id="Step_1_Place_day_restrictions_204"></a>Step 1: Place day restrictions</h4>
+<p class="has-line-data" data-line-start="206" data-line-end="207">Audit is fixed in slot 4 and HR is fixed in slot 1. IT/Sales must form a consecutive pair in the remaining slots.</p>
+<h4 class="code-line has-line-data" data-line-start="208" data-line-end="209"><a id="Step_2_Test_the_pairs_208"></a>Step 2: Test the pairs</h4>
+<p class="has-line-data" data-line-start="210" data-line-end="211">The only remaining consecutive slots are 2-3, so IT must be in slot 2 and Sales in slot 3.</p>
+<p class="has-line-data" data-line-start="212" data-line-end="213">The unique schedule is:</p>
+<pre><code class="has-line-data language-text" data-line-start="215" data-line-end="221">Order  Slot             Meeting
+1      Mon 10 a.m.      [HR    ]
+2      Mon 11 a.m.      [Sales ]
+3      Tue 10 a.m.      [Audit ]
+4      Tue 11 a.m.      [IT    ]
+</code></pre>
+<p class="has-line-data" data-line-start="222" data-line-end="223">This example demonstrates how fixed time slots reduce the remaining schedule to one consecutive pair.</p>
+<h2 class="code-line has-line-data" data-line-start="224" data-line-end="225"><a id="8_Decision_Tree_Quick_Reference_224"></a>8. Decision Tree / Quick Reference</h2>
+<pre><code class="has-line-data language-text" data-line-start="227" data-line-end="243">Are positions calendar dates or months?
+ Months  Draw the months in chronological order.
+ Dates   Write a continuous date strip and check month lengths.
+
+Are positions days and time slots?
+ Yes  Number all slots chronologically.
+ No   Use a month/date table.
+
+Is there an exact gap or consecutive clue?
+ Yes  Make a block and slide it through the available slots.
+ No   Start with fixed dates, days or times.
+
+Do multiple schedules remain?
+ Yes  Compare cases and use the question wording carefully.
+ No   Verify dates, weekdays, durations and all restrictions.
+</code></pre>
+<h2 class="code-line has-line-data" data-line-start="244" data-line-end="245"><a id="9_SelfCheck_Checklist_for_This_Model_244"></a>9. Self-Check Checklist for This Model</h2>
+<ul>
+<li class="has-line-data" data-line-start="246" data-line-end="247"><input type="checkbox" id="checkbox32"><label for="checkbox32">All dates, months, days and time slots are listed in chronological order.</label></li>
+<li class="has-line-data" data-line-start="247" data-line-end="248"><input type="checkbox" id="checkbox33"><label for="checkbox33">Every person or event is assigned exactly once.</label></li>
+<li class="has-line-data" data-line-start="248" data-line-end="249"><input type="checkbox" id="checkbox34"><label for="checkbox34">Exact date gaps have been counted correctly.</label></li>
+<li class="has-line-data" data-line-start="249" data-line-end="250"><input type="checkbox" id="checkbox35"><label for="checkbox35">Month boundaries and month lengths have been checked.</label></li>
+<li class="has-line-data" data-line-start="250" data-line-end="251"><input type="checkbox" id="checkbox36"><label for="checkbox36">Weekday and date information are mutually consistent.</label></li>
+<li class="has-line-data" data-line-start="251" data-line-end="252"><input type="checkbox" id="checkbox37"><label for="checkbox37">Event durations and overlaps are handled correctly.</label></li>
+<li class="has-line-data" data-line-start="252" data-line-end="253"><input type="checkbox" id="checkbox38"><label for="checkbox38">Conditional clues have been tested only in relevant cases.</label></li>
+<li class="has-line-data" data-line-start="253" data-line-end="255"><input type="checkbox" id="checkbox39"><label for="checkbox39">The final schedule is unique when the question requires a unique answer.</label></li>
+</ul>
+<h2 class="code-line has-line-data" data-line-start="255" data-line-end="256"><a id="10_Practice_Strategy_Time_Management_255"></a>10. Practice Strategy &amp; Time Management</h2>
+<ul>
+<li class="has-line-data" data-line-start="257" data-line-end="258"><strong>Ideal time:</strong> 4-6 minutes for month/order puzzles; 6-9 minutes for date and time-slot schedules.</li>
+<li class="has-line-data" data-line-start="258" data-line-end="259"><strong>First read:</strong> Count slots, write the chronological order and mark fixed dates or times.</li>
+<li class="has-line-data" data-line-start="259" data-line-end="260"><strong>Best starting clue:</strong> A fixed appointment, exact gap, consecutive block or extreme date.</li>
+<li class="has-line-data" data-line-start="260" data-line-end="261"><strong>Skip rule:</strong> If date calculations remain unclear after 2-3 minutes, move to another set and return later.</li>
+<li class="has-line-data" data-line-start="261" data-line-end="262"><strong>Difficulty scaling:</strong> Easy sets use months and simple order clues; medium sets add exact dates; hard sets add weekdays, durations, overlap and conditional clues.</li>
+<li class="has-line-data" data-line-start="262" data-line-end="266"><strong>Drill method:</strong> Practise date-gap conversion separately, then combine it with person/event matching. Reserve the last minute for a full calendar verification.</li>
+</ul>
+<hr>
+<p class="has-line-data" data-line-start="268" data-line-end="276">Seven persons K, L, M, N, O, P and Q - were born (not in given<br>
+order) on same date of same month but in different year –<br>
+1955, 1961, 1972, 1987, 1998, 2006, 2017. Consider base<br>
+year 2025 for age calculation.<br>
+M’s age is the cube of a number. 11 years difference between<br>
+M and K. Three persons are in between K and P. N is 32 years<br>
+older to Q. L’s age is the cube of a number. Age difference<br>
+between L and K is more than 10 years</p>
+<h3 class="code-line has-line-data" data-line-start="278" data-line-end="279"><a id="Step_1_Calculate_ages_Base_year_2025_278"></a>Step 1: Calculate ages (Base year = 2025)</h3>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Year</th>
+<th style="text-align:right">Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1955</td>
+<td style="text-align:right">70</td>
+</tr>
+<tr>
+<td>1961</td>
+<td style="text-align:right">64</td>
+</tr>
+<tr>
+<td>1972</td>
+<td style="text-align:right">53</td>
+</tr>
+<tr>
+<td>1987</td>
+<td style="text-align:right">38</td>
+</tr>
+<tr>
+<td>1998</td>
+<td style="text-align:right">27</td>
+</tr>
+<tr>
+<td>2006</td>
+<td style="text-align:right">19</td>
+</tr>
+<tr>
+<td>2017</td>
+<td style="text-align:right">8</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="292" data-line-end="293"><a id="Clue_1_292"></a>Clue 1</h2>
+<p class="has-line-data" data-line-start="294" data-line-end="295"><strong>M’s age is a cube.</strong></p>
+<p class="has-line-data" data-line-start="296" data-line-end="297">Cube ages = <strong>64, 27, 8</strong></p>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="300" data-line-end="301"><a id="Clue_2_300"></a>Clue 2</h2>
+<p class="has-line-data" data-line-start="302" data-line-end="303"><strong>L’s age is a cube.</strong></p>
+<p class="has-line-data" data-line-start="304" data-line-end="305">So L is also among <strong>64, 27, 8</strong>.</p>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="308" data-line-end="309"><a id="Clue_3_308"></a>Clue 3</h2>
+<p class="has-line-data" data-line-start="310" data-line-end="311"><strong>M and K differ by 11 years.</strong></p>
+<p class="has-line-data" data-line-start="312" data-line-end="313">Possible pairs:</p>
+<ul>
+<li class="has-line-data" data-line-start="314" data-line-end="315">(64,53) ✓</li>
+<li class="has-line-data" data-line-start="315" data-line-end="316">(27,38) ✓</li>
+<li class="has-line-data" data-line-start="316" data-line-end="318">(8,19) ✓</li>
+</ul>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="320" data-line-end="321"><a id="Clue_4_320"></a>Clue 4</h2>
+<p class="has-line-data" data-line-start="322" data-line-end="323"><strong>N is 32 years older than Q.</strong></p>
+<p class="has-line-data" data-line-start="324" data-line-end="325">Only possible pair:</p>
+<ul>
+<li class="has-line-data" data-line-start="326" data-line-end="328"><strong>70 &amp; 38</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="328" data-line-end="329">Therefore,</p>
+<ul>
+<li class="has-line-data" data-line-start="330" data-line-end="331"><strong>N = 70</strong></li>
+<li class="has-line-data" data-line-start="331" data-line-end="333"><strong>Q = 38</strong></li>
+</ul>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="335" data-line-end="336"><a id="Clue_5_335"></a>Clue 5</h2>
+<p class="has-line-data" data-line-start="337" data-line-end="338"><strong>Age difference between L and K is more than 10 years.</strong></p>
+<p class="has-line-data" data-line-start="339" data-line-end="340">This eliminates several possibilities.</p>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="343" data-line-end="344"><a id="Clue_6_343"></a>Clue 6</h2>
+<p class="has-line-data" data-line-start="345" data-line-end="346"><strong>Three persons are between K and P.</strong></p>
+<p class="has-line-data" data-line-start="347" data-line-end="349">Arrange people by age (oldest → youngest).<br>
+Three persons between them means <strong>distance = 4 positions</strong>.</p>
+<p class="has-line-data" data-line-start="350" data-line-end="351">Testing the remaining possibilities leaves only one valid arrangement.</p>
+<hr>
+<h1 class="code-line has-line-data" data-line-start="354" data-line-end="355"><a id="Final_Age_Order_Oldest_Youngest_354"></a>Final Age Order (Oldest → Youngest)</h1>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:center">Position</th>
+<th style="text-align:center">Person</th>
+<th style="text-align:center">Age</th>
+<th style="text-align:center">Birth Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">70</td>
+<td style="text-align:center">1955</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">1961</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">K</td>
+<td style="text-align:center">53</td>
+<td style="text-align:center">1972</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Q</td>
+<td style="text-align:center">38</td>
+<td style="text-align:center">1987</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">L</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">1998</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">O</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">2006</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">P</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">2017</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="368" data-line-end="369"><a id="Verification_368"></a>Verification</h2>
+<ul>
+<li class="has-line-data" data-line-start="370" data-line-end="371">✓ M’s age is a cube → <strong>64</strong></li>
+<li class="has-line-data" data-line-start="371" data-line-end="372">✓ L’s age is a cube → <strong>27</strong></li>
+<li class="has-line-data" data-line-start="372" data-line-end="373">✓ M and K differ by 11 years → <strong>64 − 53 = 11</strong></li>
+<li class="has-line-data" data-line-start="373" data-line-end="374">✓ N is 32 years older than Q → <strong>70 − 38 = 32</strong></li>
+<li class="has-line-data" data-line-start="374" data-line-end="375">✓ L and K differ by more than 10 years → <strong>53 − 27 = 26</strong></li>
+<li class="has-line-data" data-line-start="375" data-line-end="377">✓ Three persons are between K and P (Positions 3 &amp; 7)</li>
+</ul>
+<h3 class="code-line has-line-data" data-line-start="377" data-line-end="378"><a id="Final_Answer_377"></a>Final Answer</h3>
+<ul>
+<li class="has-line-data" data-line-start="379" data-line-end="380"><strong>N → 1955 (70)</strong></li>
+<li class="has-line-data" data-line-start="380" data-line-end="381"><strong>M → 1961 (64)</strong></li>
+<li class="has-line-data" data-line-start="381" data-line-end="382"><strong>K → 1972 (53)</strong></li>
+<li class="has-line-data" data-line-start="382" data-line-end="383"><strong>Q → 1987 (38)</strong></li>
+<li class="has-line-data" data-line-start="383" data-line-end="384"><strong>L → 1998 (27)</strong></li>
+<li class="has-line-data" data-line-start="384" data-line-end="385"><strong>O → 2006 (19)</strong></li>
+<li class="has-line-data" data-line-start="385" data-line-end="388"><strong>P → 2017 (8)</strong></li>
+</ul>
+<hr>
+<p class="has-line-data" data-line-start="389" data-line-end="400">Seven persons P, Q, R, S, T, U and V - do different activities<br>
+in seven different months i.e., January, March, April, June,<br>
+July, August and November. The activities are – Yoga,<br>
+meditation, dancing, hiking, cycling, camping and reading. Cycling is done in the month of 30 days. Three persons are<br>
+in between S and the one who does cycling. One person is in<br>
+between S and T. Number of persons after T is same as<br>
+before the one who does Yoga. P is just before the one who<br>
+does dancing. More than three persons are in between P and<br>
+V who does meditation. Hiking is done in the month of 30<br>
+days before R. Reading is done before Q who does not do<br>
+hiking.</p>
+<p class="has-line-data" data-line-start="402" data-line-end="403">Arrange the months in chronological order:</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:right">Position</th>
+<th>Month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>January</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>March</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>April</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>June</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>July</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>August</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>November</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="416" data-line-end="417"><a id="Stepwise_deductions_416"></a>Stepwise deductions</h2>
+<h3 class="code-line has-line-data" data-line-start="418" data-line-end="419"><a id="1_P_is_just_before_the_one_who_does_dancing_418"></a>1. P is just before the one who does dancing.</h3>
+<p class="has-line-data" data-line-start="420" data-line-end="421">So,</p>
+<pre><code class="has-line-data language-text" data-line-start="423" data-line-end="425">P → immediately before Dancing
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="428" data-line-end="429"><a id="2_V_does_meditation_428"></a>2. V does meditation.</h3>
+<pre><code class="has-line-data language-text" data-line-start="431" data-line-end="433">V → Meditation
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="436" data-line-end="437"><a id="3_More_than_three_persons_are_between_P_and_V_436"></a>3. More than three persons are between P and V.</h3>
+<p class="has-line-data" data-line-start="438" data-line-end="439">With 7 positions, this means the distance is at least 5.</p>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="442" data-line-end="443"><a id="4_One_person_is_between_S_and_T_442"></a>4. One person is between S and T.</h3>
+<pre><code class="has-line-data language-text" data-line-start="445" data-line-end="449">S _ T
+or
+T _ S
+</code></pre>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="452" data-line-end="453"><a id="5_Persons_after_T_persons_before_Yoga_452"></a>5. Persons after T = persons before Yoga.</h3>
+<p class="has-line-data" data-line-start="454" data-line-end="455">If T is at position (x),</p>
+<p class="has-line-data" data-line-start="456" data-line-end="459">[<br>
+\text{Yoga position}=7-x<br>
+]</p>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="462" data-line-end="463"><a id="6_Cycling_is_in_a_30day_month_462"></a>6. Cycling is in a 30-day month.</h3>
+<p class="has-line-data" data-line-start="464" data-line-end="465">30-day months among the given months:</p>
+<ul>
+<li class="has-line-data" data-line-start="466" data-line-end="467">April</li>
+<li class="has-line-data" data-line-start="467" data-line-end="468">June</li>
+<li class="has-line-data" data-line-start="468" data-line-end="470">November</li>
+</ul>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="472" data-line-end="473"><a id="7_Three_persons_are_between_S_and_Cycling_472"></a>7. Three persons are between S and Cycling.</h3>
+<p class="has-line-data" data-line-start="474" data-line-end="475">Distance = 4.</p>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="478" data-line-end="479"><a id="8_Hiking_is_done_in_a_30day_month_before_R_478"></a>8. Hiking is done in a 30-day month before R.</h3>
+<hr>
+<h3 class="code-line has-line-data" data-line-start="482" data-line-end="483"><a id="9_Reading_is_before_Q_and_Q_does_not_do_hiking_482"></a>9. Reading is before Q, and Q does not do hiking.</h3>
+<hr>
+<p class="has-line-data" data-line-start="486" data-line-end="487">Combining all the clues gives a unique arrangement.</p>
+<h1 class="code-line has-line-data" data-line-start="488" data-line-end="489"><a id="Final_Arrangement_488"></a>Final Arrangement</h1>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Month</th>
+<th>Person</th>
+<th>Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>January</strong></td>
+<td><strong>P</strong></td>
+<td><strong>Reading</strong></td>
+</tr>
+<tr>
+<td><strong>March</strong></td>
+<td><strong>Q</strong></td>
+<td><strong>Dancing</strong></td>
+</tr>
+<tr>
+<td><strong>April</strong></td>
+<td><strong>S</strong></td>
+<td><strong>Yoga</strong></td>
+</tr>
+<tr>
+<td><strong>June</strong></td>
+<td><strong>U</strong></td>
+<td><strong>Hiking</strong></td>
+</tr>
+<tr>
+<td><strong>July</strong></td>
+<td><strong>T</strong></td>
+<td><strong>Camping</strong></td>
+</tr>
+<tr>
+<td><strong>August</strong></td>
+<td><strong>V</strong></td>
+<td><strong>Meditation</strong></td>
+</tr>
+<tr>
+<td><strong>November</strong></td>
+<td><strong>R</strong></td>
+<td><strong>Cycling</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line has-line-data" data-line-start="502" data-line-end="503"><a id="Verification_502"></a>Verification</h2>
+<ul>
+<li class="has-line-data" data-line-start="504" data-line-end="505">✓ Cycling is in a 30-day month (<strong>November</strong>)</li>
+<li class="has-line-data" data-line-start="505" data-line-end="506">✓ Three persons between <strong>S</strong> and Cycling</li>
+<li class="has-line-data" data-line-start="506" data-line-end="507">✓ One person between <strong>S</strong> and <strong>T</strong></li>
+<li class="has-line-data" data-line-start="507" data-line-end="508">✓ Persons after <strong>T</strong> = persons before <strong>Yoga</strong> (2 = 2)</li>
+<li class="has-line-data" data-line-start="508" data-line-end="509">✓ <strong>P</strong> is just before Dancing</li>
+<li class="has-line-data" data-line-start="509" data-line-end="510">✓ More than three persons between <strong>P</strong> and <strong>V</strong></li>
+<li class="has-line-data" data-line-start="510" data-line-end="511">✓ Hiking is in a 30-day month before <strong>R</strong></li>
+<li class="has-line-data" data-line-start="511" data-line-end="512">✓ Reading is before <strong>Q</strong></li>
+<li class="has-line-data" data-line-start="512" data-line-end="514">✓ <strong>Q</strong> does not do Hiking</li>
+</ul>
+<p class="has-line-data" data-line-start="514" data-line-end="515"><strong>Answer (Month-wise):</strong></p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>January</th>
+<th>March</th>
+<th>April</th>
+<th>June</th>
+<th>July</th>
+<th>August</th>
+<th>November</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P – Reading</strong></td>
+<td><strong>Q – Dancing</strong></td>
+<td><strong>S – Yoga</strong></td>
+<td><strong>U – Hiking</strong></td>
+<td><strong>T – Camping</strong></td>
+<td><strong>V – Meditation</strong></td>
+<td><strong>R – Cycling</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+</main>
+
+<footer class="site-footer">
+  <hr>
+  <p>Last Updated: 23 July 2026</p>
+  <p><a href="index.html">&#8592; Back to Home</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

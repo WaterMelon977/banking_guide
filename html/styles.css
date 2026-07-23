@@ -1,0 +1,558 @@
+/* ============================================================
+   SBI PO Prelims Study Portal — Global Stylesheet
+   Design: Academic book / LaTeX-inspired, light mode
+   ============================================================ */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ---------- Reset & Box Model ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  --bg:          #f5f3f0;
+  --bg-alt:      #fafaf8;
+  --bg-code:     #f0ede8;
+  --text:        #2c2c2c;
+  --text-light:  #6b6b6b;
+  --text-muted:  #999;
+  --accent:      #8b6914;
+  --link:        #0066cc;
+  --link-hover:  #004499;
+  --border:      #d9d7d5;
+  --border-dark: #b5b3b0;
+
+  --font-serif:  'EB Garamond', 'Lora', Georgia, 'Times New Roman', serif;
+  --font-body:   'Lora', Georgia, 'Times New Roman', serif;
+  --font-mono:   'Courier New', Courier, monospace;
+
+  --size-xs:   0.75rem;   /* 12px */
+  --size-sm:   0.875rem;  /* 14px */
+  --size-base: 1.0625rem; /* 17px */
+  --size-md:   1.125rem;  /* 18px */
+  --size-lg:   1.25rem;   /* 20px */
+  --size-xl:   1.5rem;    /* 24px */
+  --size-2xl:  2rem;      /* 32px */
+  --size-3xl:  2.75rem;   /* 44px */
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  --max-width: 750px;
+  --page-padding: 60px;
+}
+
+/* ---------- Base ---------- */
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--size-base);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Skip Link ---------- */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 0;
+  background: var(--text);
+  color: var(--bg);
+  padding: 8px 16px;
+  font-size: var(--size-sm);
+  text-decoration: none;
+  z-index: 9999;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ---------- Site Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--page-padding);
+  height: 52px;
+}
+
+.site-title {
+  font-family: var(--font-serif);
+  font-size: var(--size-lg);
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.site-title:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ---------- Navigation ---------- */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nav-link {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--size-sm);
+  padding: 5px 12px;
+  text-decoration: none;
+  transition: background-color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.nav-link:hover,
+.nav-link:focus {
+  background-color: var(--bg-code);
+  border-color: var(--border-dark);
+  text-decoration: none;
+  outline: none;
+}
+
+/* ---------- Dropdowns ---------- */
+.dropdown {
+  position: relative;
+}
+
+.dd-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--size-sm);
+  padding: 5px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.dd-btn:hover,
+.dd-btn:focus {
+  background-color: var(--bg-code);
+  border-color: var(--border-dark);
+  outline: none;
+}
+.dd-btn[aria-expanded="true"] {
+  background-color: var(--bg-code);
+  border-color: var(--border-dark);
+}
+.dd-btn .arrow {
+  font-size: 0.65em;
+  transition: transform 0.15s;
+  display: inline-block;
+}
+.dd-btn[aria-expanded="true"] .arrow {
+  transform: rotate(180deg);
+}
+
+.dd-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  min-width: 210px;
+  list-style: none;
+  z-index: 200;
+  padding: var(--space-1) 0;
+}
+.dd-menu.is-open {
+  display: block;
+}
+
+.dd-menu li a {
+  display: block;
+  padding: 6px 18px;
+  font-size: var(--size-sm);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 0.12s;
+  white-space: nowrap;
+}
+.dd-menu li a:hover,
+.dd-menu li a:focus {
+  background-color: var(--bg-code);
+  color: var(--link);
+  text-decoration: underline;
+  outline: none;
+}
+.dd-menu li a.current-page {
+  font-weight: 600;
+  color: var(--accent);
+}
+.dd-menu .dd-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 4px 0;
+}
+
+/* ---------- Page Content Area ---------- */
+.page-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-4) var(--page-padding) var(--space-6);
+}
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb {
+  font-size: var(--size-xs);
+  color: var(--text-light);
+  margin-bottom: var(--space-4);
+  line-height: 1.4;
+}
+.breadcrumb a {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+.breadcrumb a:hover {
+  color: var(--link);
+}
+.breadcrumb .bc-sep {
+  margin: 0 5px;
+  color: var(--text-muted);
+}
+.breadcrumb .bc-current {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: var(--size-3xl);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-2);
+}
+
+h2 {
+  font-size: var(--size-2xl);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+h3 {
+  font-size: var(--size-xl);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-1);
+}
+
+h4 {
+  font-size: var(--size-lg);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-1);
+  font-style: italic;
+}
+
+h5, h6 {
+  font-size: var(--size-base);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+p {
+  margin-bottom: var(--space-2);
+}
+
+/* ---------- Links ---------- */
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s;
+}
+a:hover {
+  color: var(--link-hover);
+  text-decoration-thickness: 2px;
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  margin-left: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+li {
+  margin-bottom: 4px;
+}
+li > ul, li > ol {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* ---------- Blockquote ---------- */
+blockquote {
+  border-left: 3px solid var(--border-dark);
+  padding-left: var(--space-2);
+  margin: var(--space-3) 0;
+  color: var(--text-light);
+  font-style: italic;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+
+/* ---------- Code & Pre ---------- */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  padding: 1px 5px;
+  line-height: 1.4;
+}
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--size-sm);
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-dark);
+  padding: var(--space-2) var(--space-2);
+  overflow-x: auto;
+  margin: var(--space-3) 0;
+  line-height: 1.6;
+}
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* ---------- Tables ---------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--space-3) 0;
+  font-size: var(--size-sm);
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: var(--bg-code);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: var(--size-base);
+}
+tr:nth-child(even) td {
+  background: var(--bg-alt);
+}
+
+/* ---------- Horizontal Rule ---------- */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--space-4) 0;
+}
+
+/* ---------- Strong / Em ---------- */
+strong {
+  font-weight: 600;
+  color: var(--text);
+}
+em {
+  font-style: italic;
+}
+
+/* ---------- KaTeX Math ---------- */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: var(--space-3) 0;
+  text-align: center;
+}
+.katex {
+  font-size: 1.05em;
+}
+
+/* ---------- Hub Topic Cards (quant.html / reasoning.html) ---------- */
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-2);
+  margin: var(--space-3) 0;
+}
+.topic-card {
+  display: block;
+  padding: var(--space-2) var(--space-2);
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-serif);
+  font-size: var(--size-base);
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.topic-card:hover {
+  background-color: var(--bg-code);
+  border-color: var(--border-dark);
+  color: var(--link);
+  text-decoration: underline;
+}
+.topic-card .tc-title {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+.topic-card .tc-desc {
+  font-size: var(--size-sm);
+  color: var(--text-light);
+  font-style: italic;
+  font-family: var(--font-body);
+}
+
+/* ---------- Collapsible Sections (details/summary) ---------- */
+details {
+  border: 1px solid var(--border);
+  margin: var(--space-2) 0;
+}
+details > summary {
+  font-family: var(--font-serif);
+  font-size: var(--size-base);
+  font-weight: 600;
+  padding: 10px var(--space-2);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-code);
+  transition: background-color 0.15s;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: '▶';
+  font-size: 0.65em;
+  transition: transform 0.15s;
+  flex-shrink: 0;
+}
+details[open] > summary::before {
+  transform: rotate(90deg);
+}
+details > summary:hover {
+  background-color: var(--bg-alt);
+}
+details > .details-body {
+  padding: var(--space-2) var(--space-2);
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- Inline utility ---------- */
+.note {
+  border-left: 3px solid var(--accent);
+  background: var(--bg-alt);
+  padding: var(--space-1) var(--space-2);
+  margin: var(--space-2) 0;
+  font-size: var(--size-sm);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-padding) var(--space-4);
+}
+.site-footer hr {
+  margin-bottom: var(--space-2);
+}
+.site-footer p {
+  font-size: var(--size-sm);
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+.site-footer a {
+  color: var(--text-light);
+  font-size: var(--size-sm);
+}
+.site-footer a:hover {
+  color: var(--link);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 800px) {
+  :root {
+    --page-padding: 24px;
+  }
+  .site-header {
+    padding: 0 var(--space-2);
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    gap: 8px;
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --size-base:  1rem;
+    --size-3xl:   2.1rem;
+    --size-2xl:   1.6rem;
+  }
+  h1 { font-size: var(--size-3xl); }
+  .site-nav { gap: 8px; }
+}
+
+/* ---------- Print Styles ---------- */
+@media print {
+  .site-header,
+  .site-footer,
+  .breadcrumb,
+  .skip-link,
+  details > summary,
+  .dd-menu { display: none !important; }
+
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+  .page-content {
+    max-width: 100%;
+    padding: 0;
+  }
+  a { color: #000; text-decoration: underline; }
+  pre, code { border: 1px solid #ccc; }
+  h1, h2, h3 { page-break-after: avoid; }
+  pre, table, blockquote { page-break-inside: avoid; }
+  details > .details-body { display: block !important; }
+}
