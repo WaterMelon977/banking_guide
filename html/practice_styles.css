@@ -1,6 +1,6 @@
 /* ============================================================
    Practice PYQs - Focus Mode Console Stylesheet
-   Designed to seamlessly match SBI PO Study Portal Theme
+   Design: Classic Bookman & Elegant Minimalist Editorial
    FOCUSED LAYOUT: Tata iON Split Exam Screen (Left Dataset, Right Question)
    ============================================================ */
 
@@ -17,9 +17,9 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--bg-alt);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dark);
   padding: 0.75rem 1.25rem;
-  border-radius: 6px;
+  border-radius: 4px;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
@@ -29,7 +29,7 @@
   gap: 4px;
   background: var(--bg);
   padding: 3px;
-  border-radius: 4px;
+  border-radius: 3px;
   border: 1px solid var(--border);
 }
 
@@ -41,37 +41,38 @@
   font-size: var(--size-sm);
   color: var(--text-light);
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 2px;
   transition: all 0.2s ease;
 }
 
 .mode-btn.active {
   background: var(--accent);
-  color: #fff;
+  color: var(--bg);
   font-weight: 600;
 }
 
 .timer-chip {
   font-family: var(--font-mono);
   font-size: var(--size-sm);
-  background: #fff;
+  background: var(--bg);
   border: 1px solid var(--border);
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   gap: 6px;
+  color: var(--text);
 }
 
 /* Toggle Drawer Button */
 .btn-toggle-drawer {
-  background: #fff;
-  border: 1px solid var(--border);
+  background: var(--bg);
+  border: 1px solid var(--border-dark);
   color: var(--text);
   font-family: var(--font-body);
   font-size: var(--size-sm);
   padding: 5px 12px;
-  border-radius: 4px;
+  border-radius: 3px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -81,15 +82,15 @@
 
 .btn-toggle-drawer:hover {
   background: var(--bg-code);
-  border-color: var(--border-dark);
+  border-color: var(--accent);
 }
 
 /* Collapsible Filter & Palette Drawer Panel */
 .collapsible-panel {
   display: none;
   background-color: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
   padding: 1.25rem;
   animation: fadeIn 0.25s ease-out;
 }
@@ -116,7 +117,7 @@
 }
 
 .drawer-section-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: var(--size-md);
   font-weight: 600;
   color: var(--text);
@@ -133,9 +134,9 @@
   padding: 6px 12px;
   font-family: var(--font-body);
   font-size: var(--size-sm);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  background: #fff;
+  border: 1px solid var(--border-dark);
+  border-radius: 3px;
+  background: var(--bg);
   color: var(--text);
   margin-bottom: 0.5rem;
 }
@@ -155,7 +156,7 @@
   padding: 5px 8px;
   font-size: var(--size-sm);
   color: var(--text-light);
-  border-radius: 4px;
+  border-radius: 3px;
   cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -167,7 +168,7 @@
 
 .filter-pill-item.active {
   background-color: var(--accent);
-  color: #fff;
+  color: var(--bg);
   font-weight: 600;
 }
 
@@ -187,9 +188,9 @@
 
 .pal-btn {
   height: 32px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  background: #fff;
+  border: 1px solid var(--border-dark);
+  border-radius: 3px;
+  background: var(--bg);
   color: var(--text);
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -209,19 +210,19 @@
 .pal-btn.current {
   border-color: var(--accent);
   background: var(--accent);
-  color: #fff;
+  color: var(--bg);
 }
 
 .pal-btn.answered {
-  background: #e6f4ea;
-  border-color: #34a853;
-  color: #137333;
+  background: #f0f4ed;
+  border-color: #557a46;
+  color: #2d4a1e;
 }
 
 .pal-btn.review {
-  background: #fef7e0;
-  border-color: #fbbc04;
-  color: #b06000;
+  background: #fcf6e8;
+  border-color: #b8860b;
+  color: #664d03;
 }
 
 /* TATA iON SPLIT SCREEN EXAM CONSOLE LAYOUT */
@@ -245,9 +246,9 @@
 /* LEFT PANEL: Dataset & Instructions (Tata iON Style) */
 .left-dataset-panel {
   background-color: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--accent);
-  border-radius: 6px;
+  border: 1px solid var(--border-dark);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -256,11 +257,10 @@
   overflow-y: auto;
   position: sticky;
   top: 70px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
 .dataset-panel-header {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-weight: 600;
   font-size: var(--size-md);
   color: var(--accent);
@@ -281,13 +281,12 @@
 /* RIGHT PANEL: Question & Interactive Options Card */
 .right-question-panel {
   background-color: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .card-header-meta {
@@ -302,10 +301,10 @@
   font-family: var(--font-mono);
   font-size: var(--size-md);
   font-weight: 700;
-  background: var(--text);
+  background: var(--accent);
   color: var(--bg);
   padding: 4px 12px;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .tags-group {
@@ -318,19 +317,19 @@
   padding: 3px 10px;
   background: var(--bg-code);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: 3px;
   color: var(--text-light);
   font-weight: 500;
 }
 
 .btn-icon-action {
-  background: #fff;
-  border: 1px solid var(--border);
+  background: var(--bg);
+  border: 1px solid var(--border-dark);
   font-size: 0.9rem;
   color: var(--text-light);
   cursor: pointer;
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: all 0.15s ease;
 }
 
@@ -341,7 +340,7 @@
 
 .btn-icon-action.active {
   background: var(--accent);
-  color: #fff;
+  color: var(--bg);
   border-color: var(--accent);
 }
 
@@ -366,8 +365,8 @@
   gap: 12px;
   padding: 11px 15px;
   border: 1px solid var(--border);
-  border-radius: 6px;
-  background: #fff;
+  border-radius: 4px;
+  background: var(--bg);
   cursor: pointer;
   transition: all 0.15s ease;
   user-select: none;
@@ -376,7 +375,6 @@
 .option-item:hover {
   border-color: var(--border-dark);
   background: var(--bg-code);
-  transform: translateX(3px);
 }
 
 .opt-circle {
@@ -391,36 +389,38 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--text-light);
-  background: var(--bg);
+  background: var(--bg-alt);
   flex-shrink: 0;
 }
 
 .opt-label {
   font-size: var(--size-base);
   color: var(--text);
+  font-family: var(--font-body);
 }
 
 .option-item.selected {
   border-color: var(--accent);
-  background: #fdfaf3;
+  background: var(--bg-code);
 }
 
 .option-item.selected .opt-circle {
   background: var(--accent);
-  color: #fff;
+  color: var(--bg);
   border-color: var(--accent);
 }
 
 /* Solution Accordion */
 .solution-panel {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
   padding: 1.1rem;
   display: none;
   flex-direction: column;
   gap: 0.5rem;
   font-size: var(--size-sm);
+  font-family: var(--font-body);
 }
 
 .solution-panel.open {
@@ -428,7 +428,7 @@
 }
 
 .sol-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-weight: 600;
   font-size: var(--size-md);
   color: var(--accent);
@@ -446,30 +446,31 @@
 
 .btn-nav {
   padding: 7px 16px;
-  border: 1px solid var(--border);
-  background: #fff;
+  border: 1px solid var(--border-dark);
+  border-radius: 3px;
+  background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
   font-size: var(--size-sm);
-  border-radius: 4px;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .btn-nav:hover {
   background: var(--bg-code);
-  border-color: var(--border-dark);
+  border-color: var(--accent);
 }
 
 .btn-nav.primary {
   background: var(--accent);
-  color: #fff;
+  color: var(--bg);
   border-color: var(--accent);
   font-weight: 600;
 }
 
 .btn-nav.primary:hover {
-  background: #735610;
+  background: var(--accent-light);
+  border-color: var(--accent-light);
 }
 
 /* Keybindings Bar */
