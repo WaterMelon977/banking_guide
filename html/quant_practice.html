@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBI PO Quantitative Aptitude — Practice PYQs</title>
+  <meta name="description" content="Interactive Quantitative Aptitude Previous Year Question practice console for SBI PO / IBPS PO.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  
+  <!-- Core Site Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tata iON Split Screen Practice Stylesheet -->
+  <link rel="stylesheet" href="practice_styles.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- Site Navigation Header -->
+<header class="site-header">
+  <a class="site-title" href="index.html">SBI PO Prep</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="english.html" class="nav-link">English</a>
+    
+    <!-- Quant Dropdown -->
+    <div class="dropdown" id="dd-quant">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-quant">
+        Quantitative Aptitude <span class="arrow" aria-hidden="true">▼</span>
+      </button>
+      <ul class="dd-menu" id="menu-quant" role="menu">
+        <li><a href="quant.html" role="menuitem">Quant Home</a></li>
+        <li><a href="quant_practice.html" role="menuitem">Practice PYQs</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="arithmetic.html" role="menuitem">Arithmetic</a></li>
+        <li><a href="di.html" role="menuitem">Data Interpretation</a></li>
+        <li><a href="quadratic.html" role="menuitem">Quadratic Equations</a></li>
+        <li><a href="series.html" role="menuitem">Number Series</a></li>
+        <li><a href="simplifiation.html" role="menuitem">Simplification</a></li>
+      </ul>
+    </div>
+
+    <!-- Reasoning Dropdown -->
+    <div class="dropdown" id="dd-reasoning">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-reasoning">
+        Reasoning <span class="arrow" aria-hidden="true">▼</span>
+      </button>
+      <ul class="dd-menu" id="menu-reasoning" role="menu">
+        <li><a href="reasoning.html" role="menuitem">Reasoning Home</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="box_stack.html" role="menuitem">Box Stack</a></li>
+        <li><a href="floors.html" role="menuitem">Floor Puzzle</a></li>
+        <li><a href="seating.html" role="menuitem">Seating Arrangement</a></li>
+        <li><a href="hierarchy.html" role="menuitem">Hierarchy</a></li>
+        <li><a href="calendar_puzzles.html" role="menuitem">Calendar Puzzles</a></li>
+        <li><a href="reasoning_puzzles.html" role="menuitem">Reasoning Puzzles Set</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Main Page Content -->
+<main id="main-content" class="page-content" style="max-width: 1100px;">
+  
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="bc-sep">›</span>
+    <a href="quant.html">Quantitative Aptitude</a>
+    <span class="bc-sep">›</span>
+    <span class="bc-current">Practice PYQs</span>
+  </nav>
+
+  <h1>Quantitative Aptitude — Practice PYQs</h1>
+
+  <div class="practice-console-wrapper">
+    
+    <!-- Top Control Bar -->
+    <div class="practice-control-bar">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="mode-toggle-group">
+          <button id="modePracticeBtn" class="mode-btn active" onclick="setAppMode('practice')">Practice Mode</button>
+          <button id="modeExamBtn" class="mode-btn" onclick="setAppMode('exam')">Exam Mode</button>
+        </div>
+
+        <!-- Collapsible Toggle Button -->
+        <button id="toggleDrawerBtn" class="btn-toggle-drawer" onclick="toggleFilterDrawer()">
+          🔍 Search, Filter & Palette ▾
+        </button>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div id="examTimerChip" class="timer-chip" style="display: none;">
+          ⏱️ <span id="timerDisplay">20:00</span>
+        </div>
+        <span class="pill-count" id="accuracyText">0 Solved</span>
+      </div>
+    </div>
+
+    <!-- Collapsible Filter & Question Palette Panel -->
+    <div class="collapsible-panel" id="filterDrawer">
+      <div class="drawer-grid">
+        
+        <!-- Search & Category Column -->
+        <div>
+          <div class="drawer-section-title">Categories</div>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search questions..." oninput="handleSearch()">
+          <div class="filter-pills" id="categoryFilterList"></div>
+        </div>
+
+        <!-- Subtopics Column -->
+        <div>
+          <div class="drawer-section-title">Subtopics</div>
+          <div class="filter-pills" id="subtopicFilterList"></div>
+        </div>
+
+        <!-- Question Palette Grid Column -->
+        <div>
+          <div class="drawer-section-title">
+            <span>Question Palette</span>
+            <span id="paletteCountBadge" class="pill-count">(156)</span>
+          </div>
+          <div class="palette-buttons-grid" id="paletteGrid"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TATA iON SPLIT SCREEN EXAM SOLVING WORKSPACE -->
+    <div class="solving-container" id="solvingContainer">
+      
+      <!-- LEFT PANEL: Dataset & Instructions (Visible when question has passage) -->
+      <div class="left-dataset-panel" id="passagePanel" style="display: none;">
+        <div class="dataset-panel-header">
+          <span>📊 Dataset & Instructions</span>
+        </div>
+        <div id="passageContent" class="dataset-panel-body"></div>
+      </div>
+
+      <!-- RIGHT PANEL: Question & Interactive Options Console -->
+      <div class="right-question-panel" id="questionPanel">
+        
+        <!-- Top Card Meta Header -->
+        <div class="card-header-meta">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span id="qBadgeNum" class="q-badge">Q1</span>
+            <div class="tags-group">
+              <span id="qCategoryTag" class="tag-badge">Data Interpretation</span>
+              <span id="qSubtopicTag" class="tag-badge">Table DI</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 6px;">
+            <button class="btn-icon-action" id="bookmarkBtn" title="Bookmark" onclick="toggleBookmark()">★ Bookmark</button>
+            <button class="btn-icon-action" id="reviewMarkBtn" title="Mark Review" onclick="toggleMarkForReview()">📌 Review</button>
+          </div>
+        </div>
+
+        <!-- Question Statement -->
+        <div id="questionStatement" class="q-statement">Loading question...</div>
+
+        <!-- Options Grid -->
+        <div id="optionsContainer" class="options-list"></div>
+
+        <!-- Solution Panel -->
+        <div id="solutionBox" class="solution-panel">
+          <div class="sol-title">💡 Solution Logic</div>
+          <div id="solutionText">Use standard quantitative techniques or estimation.</div>
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="card-nav-footer">
+          <button class="btn-nav" onclick="navigateQuestion(-1)">← Previous</button>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn-nav" onclick="clearChoice()">Clear Choice</button>
+            <button id="showSolBtn" class="btn-nav" onclick="toggleSolution()">Show Solution</button>
+          </div>
+          <button class="btn-nav primary" onclick="navigateQuestion(1)">Next →</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Keybindings Bar -->
+    <div class="key-hints">
+      Shortcut Keys: <span class="key-badge">1–5</span> Select Option | <span class="key-badge">←/→</span> Prev/Next | <span class="key-badge">M</span> Review | <span class="key-badge">S</span> Solution
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <hr>
+  <p>Last Updated: 28 July 2026</p>
+  <p><a href="index.html">&#8592; Back to Home</a></p>
+</footer>
+
+<!-- Site Script -->
+<script src="script.js"></script>
+<!-- Data File -->
+<script src="questions_data.js"></script>
+<!-- Practice Logic Script -->
+<script src="quant_practice.js"></script>
+</body>
+</html>
