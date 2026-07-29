@@ -1,0 +1,2366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantitative Aptitude — Solved Questions | SBI PO Prep</title>
+  <meta name="description" content="Fully worked verbatim solutions for SBI PO Prelims Quantitative Aptitude practice questions across all arithmetic topics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})">
+  </script>
+
+  <style>
+    /* ── Topic Pills Bar ─────────────────────────────── */
+    .topic-nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 10px 0 8px;
+      margin-bottom: 0;
+    }
+    .topic-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+    .topic-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--bg-alt);
+      border: 1px solid var(--border-dark);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .topic-pill:hover {
+      background: var(--accent-light);
+      color: var(--bg);
+      border-color: var(--accent-light);
+    }
+    .topic-pill.active {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+    }
+    .pill-count {
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: rgba(255,255,255,0.25);
+      color: inherit;
+      border-radius: 8px;
+      padding: 1px 6px;
+      letter-spacing: 0.02em;
+    }
+    .topic-pill:not(.active) .pill-count {
+      background: var(--border-dark);
+      color: var(--text-muted);
+    }
+
+    /* ── Section Control Bar ────────────────────────── */
+    .section-control-bar {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: var(--space-4) 0 var(--space-3);
+      padding-bottom: var(--space-2);
+      border-bottom: 1px solid var(--border);
+    }
+    .section-title-display {
+      font-family: var(--font-heading);
+      font-size: var(--size-xl);
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .btn-expand-all {
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 500;
+      color: var(--link);
+      background: none;
+      border: 1px solid var(--border-dark);
+      border-radius: 2px;
+      padding: 4px 12px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn-expand-all:hover { background: var(--bg-alt); }
+
+    /* ── Topic Sections ─────────────────────────────── */
+    .topic-section { display: none; }
+    .topic-section.active { display: block; }
+
+    /* ── Section intro paragraph ────────────────────── */
+    .section-intro {
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: var(--space-4);
+      font-size: var(--size-base);
+    }
+
+    /* ── Question block ─────────────────────────────── */
+    .question-block {
+      margin-bottom: var(--space-5);
+      padding-left: var(--space-3);
+      border-left: 3px solid var(--border-dark);
+      transition: border-color 0.2s;
+    }
+    .question-block:hover { border-left-color: var(--accent); }
+    .question-block h3 {
+      font-family: var(--font-body);
+      font-size: var(--size-md);
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: var(--space-2);
+    }
+
+    /* ── Options list ───────────────────────────────── */
+    .options-list {
+      list-style-type: lower-alpha;
+      margin: var(--space-2) 0 var(--space-3) 1.6em;
+      font-size: var(--size-base);
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ── Collapsible solution ───────────────────────── */
+    .solution-details { margin-top: var(--space-2); }
+    .solution-details > summary {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      user-select: none;
+      padding: 4px 10px;
+      border: 1px solid var(--border-dark);
+      border-radius: 3px;
+      background: var(--bg-alt);
+      transition: background 0.15s, color 0.15s;
+      list-style: none;
+    }
+    .solution-details > summary::-webkit-details-marker { display: none; }
+    .solution-details > summary::marker { display: none; }
+    .solution-details[open] > summary {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+    }
+    .solution-details > summary:hover {
+      background: var(--accent-light);
+      color: var(--bg);
+      border-color: var(--accent-light);
+    }
+    .solution-body {
+      margin-top: var(--space-2);
+      padding: var(--space-3) var(--space-4);
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 0 4px 4px 4px;
+      font-size: var(--size-base);
+      line-height: 1.75;
+    }
+    .solution-body p { margin-bottom: var(--space-2); }
+    .solution-body .katex-display { margin: var(--space-2) 0; }
+
+    /* ── Correct answer badge ───────────────────────── */
+    .correct-ans {
+      margin-top: var(--space-3) !important;
+      padding: var(--space-1) var(--space-2);
+      background: #eef5e8;
+      border-left: 3px solid #6a994e;
+      font-weight: 600;
+      font-size: var(--size-base);
+      color: #2d5a1b;
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* ── Tip aside ──────────────────────────────────── */
+    .tip {
+      display: block;
+      margin: var(--space-2) 0;
+      padding: var(--space-2) var(--space-3);
+      background: #fdf8ed;
+      border-left: 3px solid #c09c3a;
+      font-style: italic;
+      font-size: var(--size-sm);
+      color: var(--text-light);
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* ── Print ──────────────────────────────────────── */
+    @media print {
+      .topic-nav-bar, .section-control-bar { display: none; }
+      .topic-section { display: block !important; }
+      .solution-details .solution-body { display: block !important; }
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <a class="site-title" href="index.html">SBI PO Prep</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="english.html" class="nav-link">English</a>
+    <div class="dropdown" id="dd-quant">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-quant">
+        Quantitative Aptitude <span class="arrow" aria-hidden="true">&#9660;</span>
+      </button>
+      <ul class="dd-menu" id="menu-quant" role="menu">
+        <li><a href="quant.html" role="menuitem">Quant Home</a></li>
+        <li><a href="quant_practice.html" role="menuitem">Practice PYQs</a></li>
+        <li><a href="quant_speed_bible.html" role="menuitem">Quant Speed Bible</a></li>
+        <li><a href="quant_solutions.html" role="menuitem">Solved Questions</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="arithmetic.html" role="menuitem">Arithmetic</a></li>
+        <li><a href="di.html" role="menuitem">Data Interpretation</a></li>
+        <li><a href="quadratic.html" role="menuitem">Quadratic Equations</a></li>
+        <li><a href="series.html" role="menuitem">Number Series</a></li>
+        <li><a href="simplifiation.html" role="menuitem">Simplification</a></li>
+      </ul>
+    </div>
+    <div class="dropdown" id="dd-reasoning">
+      <button class="dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="menu-reasoning">
+        Reasoning <span class="arrow" aria-hidden="true">&#9660;</span>
+      </button>
+      <ul class="dd-menu" id="menu-reasoning" role="menu">
+        <li><a href="reasoning.html" role="menuitem">Reasoning Home</a></li>
+        <li><hr class="dd-divider"></li>
+        <li><a href="box_stack.html" role="menuitem">Box Stack</a></li>
+        <li><a href="floors.html" role="menuitem">Floor Puzzle</a></li>
+        <li><a href="seating.html" role="menuitem">Seating Arrangement</a></li>
+        <li><a href="hierarchy.html" role="menuitem">Hierarchy</a></li>
+        <li><a href="calendar_puzzles.html" role="menuitem">Calendar Puzzles</a></li>
+        <li><a href="reasoning_puzzles.html" role="menuitem">Reasoning Puzzles Set</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content" class="page-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="bc-sep">&#8250;</span>
+    <a href="quant.html">Quantitative Aptitude</a>
+    <span class="bc-sep">&#8250;</span>
+    <span class="bc-current">Solved Questions</span>
+  </nav>
+
+  <h1>Quantitative Aptitude &mdash; Solved Questions</h1>
+  <p>Select a topic below to view its complete worked solutions. Click <strong>&#9654; Solution</strong> on any question to expand the full step-by-step working.</p>
+
+  <!-- ── TOPIC PILLS NAVIGATION ── -->
+  <nav class="topic-nav-bar" aria-label="Topic navigation">
+    <div class="topic-pills" role="tablist">
+      <button class="topic-pill active" role="tab" data-topic="number-series" onclick="activateTopic('number-series',this)">Number Series <span class="pill-count">7</span></button>
+      <button class="topic-pill" role="tab" data-topic="quadratic" onclick="activateTopic('quadratic',this)">Quadratic <span class="pill-count">3</span></button>
+      <button class="topic-pill" role="tab" data-topic="data-sufficiency" onclick="activateTopic('data-sufficiency',this)">Data Sufficiency <span class="pill-count">3</span></button>
+      <button class="topic-pill" role="tab" data-topic="quantity-comparison" onclick="activateTopic('quantity-comparison',this)">Qty. Comparison <span class="pill-count">1</span></button>
+      <button class="topic-pill" role="tab" data-topic="simplification" onclick="activateTopic('simplification',this)">Simplification <span class="pill-count">3</span></button>
+      <button class="topic-pill" role="tab" data-topic="partnership" onclick="activateTopic('partnership',this)">Partnership <span class="pill-count">7</span></button>
+      <button class="topic-pill" role="tab" data-topic="percentage" onclick="activateTopic('percentage',this)">Percentage <span class="pill-count">5</span></button>
+      <button class="topic-pill" role="tab" data-topic="profit-loss" onclick="activateTopic('profit-loss',this)">Profit &amp; Loss <span class="pill-count">7</span></button>
+      <button class="topic-pill" role="tab" data-topic="si-ci" onclick="activateTopic('si-ci',this)">SI &amp; CI <span class="pill-count">7</span></button>
+      <button class="topic-pill" role="tab" data-topic="average" onclick="activateTopic('average',this)">Average <span class="pill-count">5</span></button>
+      <button class="topic-pill" role="tab" data-topic="mensuration" onclick="activateTopic('mensuration',this)">Mensuration <span class="pill-count">8</span></button>
+      <button class="topic-pill" role="tab" data-topic="mixtures" onclick="activateTopic('mixtures',this)">Mixtures <span class="pill-count">5</span></button>
+      <button class="topic-pill" role="tab" data-topic="time-work" onclick="activateTopic('time-work',this)">Time &amp; Work <span class="pill-count">5</span></button>
+      <button class="topic-pill" role="tab" data-topic="trains-speed" onclick="activateTopic('trains-speed',this)">Trains &amp; Speed <span class="pill-count">5</span></button>
+      <button class="topic-pill" role="tab" data-topic="ages" onclick="activateTopic('ages',this)">Ages <span class="pill-count">8</span></button>
+      <button class="topic-pill" role="tab" data-topic="number-theory" onclick="activateTopic('number-theory',this)">Number Theory <span class="pill-count">3</span></button>
+      <button class="topic-pill" role="tab" data-topic="boats-streams" onclick="activateTopic('boats-streams',this)">Boats &amp; Streams <span class="pill-count">5</span></button>
+    </div>
+  </nav>
+
+  <!-- ── SECTION CONTROL BAR ── -->
+  <div class="section-control-bar">
+    <div id="sectionTitle" class="section-title-display">Number Series</div>
+    <button id="expandAllBtn" class="btn-expand-all" onclick="toggleExpandAll()">&#9660; Expand All</button>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §1. NUMBER SERIES                                      -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section active" id="number-series" role="tabpanel">
+    <p class="section-intro">Wrong-number series questions: identify the one term that breaks the pattern and select it from the options.</p>
+
+    <article class="question-block">
+      <h3>Q46. 20, 24, 51, 115, 240, 456, 799</h3>
+      <ol class="options-list" type="a">
+        <li>24</li><li>20</li><li>51</li><li>115</li><li>240</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Observe the pattern:</p>
+          $$+2^3,\quad +3^3,\quad +4^3,\quad +5^3,\quad +6^3,\quad +7^3$$
+          <p>Verification:</p>
+          $$24+27=51$$
+          $$51+64=115$$
+          $$115+125=240$$
+          $$240+216=456$$
+          $$456+343=799$$
+          <p>Hence, the first term should be:</p>
+          $$24-8=16$$
+          <p>The given first term is <strong>20</strong>, which is incorrect.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 20</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q47. 24, 6, 12, 10, 28, 62, 194</h3>
+      <ol class="options-list" type="a">
+        <li>62</li><li>10</li><li>12</li><li>24</li><li>6</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Observe the alternating pattern:</p>
+          $$\times2-1,\quad \times3+1$$
+          <p>Verification:</p>
+          $$6\times2-1=11$$
+          $$11\times3+1=34$$
+          $$34\times2-1=67$$
+          $$67\times3+1=202$$
+          $$202\times2-1=403$$
+          $$403\times3+1=1210$$
+          <p>Thus, the fourth term should be <strong>16</strong>, not <strong>10</strong>.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 10</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q48. 6, 11, 34, 67, 202, 403, 1215</h3>
+      <ol class="options-list" type="a">
+        <li>34</li><li>11</li><li>6</li><li>1215</li><li>67</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Observe the alternating operations:</p>
+          $$\times2-1,\quad \times3+1$$
+          <p>Verification:</p>
+          $$6\times2-1=11$$
+          $$11\times3+1=34$$
+          $$34\times2-1=67$$
+          $$67\times3+1=202$$
+          $$202\times2-1=403$$
+          <p>Next term should be:</p>
+          $$403\times3+1=1210$$
+          <p>The given term is <strong>1215</strong>, which is incorrect.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 1215</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q55. 210, 221, 230, 244, 265, 295, 336</h3>
+      <ol class="options-list" type="a">
+        <li>210</li><li>221</li><li>230</li><li>265</li><li>336</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Required differences:</p>
+          $$11,\quad 13,\quad 17,\quad 23,\quad 31,\quad 41$$
+          <p>The increments between differences are:</p>
+          $$+2,\quad +4,\quad +6,\quad +8,\quad +10$$
+          <p>Hence,</p>
+          $$221+13=234$$
+          <p>The third term should be <strong>234</strong>, not <strong>230</strong>.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) 230</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q56. 56, 53, 105, 314, 1255, 6274, 37643</h3>
+      <ol class="options-list" type="a">
+        <li>1255</li><li>314</li><li>105</li><li>53</li><li>56</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Pattern:</p>
+          $$\times2-1,\quad \times3-1,\quad \times4-1,\quad \times5-1,\quad \times6-1$$
+          <p>Verification:</p>
+          $$53\times2-1=105$$
+          $$105\times3-1=314$$
+          $$314\times4-1=1255$$
+          $$1255\times5-1=6274$$
+          $$6274\times6-1=37643$$
+          <p>Therefore, the first term should be:</p>
+          $$(53+1)\div2=27$$
+          <p>The given first term <strong>56</strong> is incorrect.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 56</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q59. 8, 21, 41, 72, 116, 175, 257</h3>
+      <ol class="options-list" type="a">
+        <li>257</li><li>116</li><li>21</li><li>175</li><li>41</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>First differences:</p>
+          $$13,\quad 20,\quad 31,\quad 44,\quad 59,\quad 82$$
+          <p>The intended second differences are:</p>
+          $$7,\quad 9,\quad 11,\quad 13,\quad 15$$
+          <p>Hence, the correct first differences become:</p>
+          $$13,\quad 20,\quad 29,\quad 40,\quad 53,\quad 68$$
+          <p>So the terms should be:</p>
+          $$8,\quad 21,\quad 41,\quad 70,\quad 110,\quad 163,\quad 231$$
+          <p>or starting from 72, the last term should be:</p>
+          $$175+68=243$$
+          <p>Instead, <strong>257</strong> is given, which is incorrect.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 257</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q60. 5040, 720, 120, 24, 8, 2</h3>
+      <ol class="options-list" type="a">
+        <li>720</li><li>120</li><li>5044</li><li>2</li><li>8</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Pattern of factorials:</p>
+          $$7!=5040$$
+          $$6!=720$$
+          $$5!=120$$
+          $$4!=24$$
+          $$3!=6$$
+          $$2!=2$$
+          <p>The fifth term should be <strong>6</strong>, not <strong>8</strong>.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 8</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §2. QUADRATIC EQUATIONS                               -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="quadratic" role="tabpanel">
+    <p class="section-intro">Find roots of both equations and compare all pairs to determine the relation between $x$ and $y$.</p>
+
+    <article class="question-block">
+      <h3>Question 68 (Set 4)</h3>
+      <p><strong>I.</strong> $x^2 - 18x + 65 = 0$</p>
+      <p><strong>II.</strong> $y^2 - 29y + 208 = 0$</p>
+      <ol class="options-list" type="a">
+        <li>$x > y$</li><li>$x \ge y$</li><li>$x < y$</li><li>$x \le y$</li><li>$x = y$ or relation cannot be established</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Equation I:</strong></p>
+          $$x^2 - 18x + 65 = 0$$
+          $$(x - 5)(x - 13) = 0$$
+          $$x = 5, 13$$
+          <p><strong>Equation II:</strong></p>
+          $$y^2 - 29y + 208 = 0$$
+          $$(y - 13)(y - 16) = 0$$
+          $$y = 13, 16$$
+          <p><strong>Comparison:</strong></p>
+          <p>When $x = 5$: $5 < 13$ and $5 < 16$</p>
+          <p>When $x = 13$: $13 = 13$ and $13 < 16$</p>
+          <p>Thus, $x \le y$.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) $x \le y$</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 69 (Set 5)</h3>
+      <p><strong>I.</strong> $x^2 - 15x + 50 = 0$</p>
+      <p><strong>II.</strong> $y^2 - 12y + 35 = 0$</p>
+      <ol class="options-list" type="a">
+        <li>$x > y$</li><li>$x \ge y$</li><li>$x < y$</li><li>$x \le y$</li><li>$x = y$ or relation cannot be established</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Equation I:</strong></p>
+          $$x^2 - 15x + 50 = 0$$
+          $$(x - 5)(x - 10) = 0$$
+          $$x = 5, 10$$
+          <p><strong>Equation II:</strong></p>
+          $$y^2 - 12y + 35 = 0$$
+          $$(y - 5)(y - 7) = 0$$
+          $$y = 5, 7$$
+          <p><strong>Comparison:</strong></p>
+          <p>When $x = 5$: $5 = 5$ and $5 < 7$</p>
+          <p>When $x = 10$: $10 > 5$ and $10 > 7$</p>
+          <p>Since both $x < y$ and $x > y$ conditions occur, no relation can be established.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) $x = y$ or relation cannot be established</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 70 (Set 7)</h3>
+      <p><strong>I.</strong> $x^2 - 14x + 49 = 0$</p>
+      <p><strong>II.</strong> $y^2 - 10y + 21 = 0$</p>
+      <ol class="options-list" type="a">
+        <li>$x > y$</li><li>$x \ge y$</li><li>$x < y$</li><li>$x \le y$</li><li>$x = y$ or relation cannot be established</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Equation I:</strong></p>
+          $$x^2 - 14x + 49 = 0$$
+          $$(x - 7)^2 = 0$$
+          $$x = 7$$
+          <p><strong>Equation II:</strong></p>
+          $$y^2 - 10y + 21 = 0$$
+          $$(y - 3)(y - 7) = 0$$
+          $$y = 3, 7$$
+          <p><strong>Comparison:</strong></p>
+          <p>When $x = 7$: $7 > 3$ and $7 = 7$</p>
+          <p>Thus, $x \ge y$.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) $x \ge y$</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §3. DATA SUFFICIENCY                                   -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="data-sufficiency" role="tabpanel">
+    <p class="section-intro">Determine whether each statement individually, or both together, are sufficient to answer the question.</p>
+
+    <article class="question-block">
+      <h3>Question 69 (Set 3)</h3>
+      <p><strong>What will be the ratio of savings of V and D?</strong></p>
+      <p><strong>Statement I:</strong> Income of V is 4% less than S. Expenditure ratio of V and S is 7 : 8. D spends $\frac{3}{5}$ of his income.</p>
+      <p><strong>Statement II:</strong> S saves Rs. 14000 and V saves Rs. 14800. Income of D is Rs. 2000 more than S.</p>
+      <ol class="options-list" type="a">
+        <li>The data in statement I alone is sufficient to answer the question, while the data in statement II alone is not sufficient to answer the question.</li>
+        <li>The data in statement II alone is sufficient to answer the question, while the data in statement I alone is not sufficient to answer the question.</li>
+        <li>The data either in statement I alone or in statement II alone is sufficient to answer the question.</li>
+        <li>The data given in both statements I and II together are not sufficient to answer the question.</li>
+        <li>The data in both statements I and II together are necessary to answer the question.</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>From Statement I:</strong></p>
+          <p>Let income of S be $100x$. Then income of V $= 96x$.</p>
+          <p>Ratio of expenditure of V and S $= 7 : 8$.</p>
+          <p>D spends $\frac{3}{5}$ of his income, so D saves $\frac{2}{5}$ of his income.</p>
+          <p>However, we do not have absolute values or D's income relative to V or S. Statement I alone is not sufficient.</p>
+          <p><strong>From Statement II:</strong></p>
+          <p>Savings of S $= 14000$, Savings of V $= 14800$.</p>
+          <p>Income of D $= \text{Income of S} + 2000$.</p>
+          <p>Statement II alone does not give expenditures or ratios. Statement II alone is not sufficient.</p>
+          <p><strong>Combining Statements I and II:</strong></p>
+          <p>From I &amp; II:</p>
+          $$\text{Income of V} - \text{Expenditure of V} = 14800$$
+          $$96x - 7y = 14800$$
+          $$\text{Income of S} - \text{Expenditure of S} = 14000$$
+          $$100x - 8y = 14000$$
+          <p>Solving these two linear equations gives unique values for $x$ and $y$.</p>
+          <p>Once $x$ is known, Income of S $= 100x$ is known.</p>
+          <p>Then Income of D $= 100x + 2000$ is known.</p>
+          <p>Savings of D $= \frac{2}{5} \times \text{Income of D}$ is known.</p>
+          <p>Savings of V is given as $14800$.</p>
+          <p>Thus, the ratio of savings of V and D can be uniquely determined.</p>
+          <p>Both statements together are necessary.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) The data in both statements I and II together are necessary to answer the question.</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 70 (Set 4)</h3>
+      <p><strong>What is the age of R after two years?</strong></p>
+      <p><strong>Statement I:</strong> Average age of A and N is 24 years. Ratio of age of R and A is 2 : 3.</p>
+      <p><strong>Statement II:</strong> N is 4 years older than S. Ratio of age of S and R is 1 : 2.</p>
+      <ol class="options-list" type="a">
+        <li>The data in statement I alone is sufficient...</li>
+        <li>The data in statement II alone is sufficient...</li>
+        <li>The data either in statement I alone or in statement II alone is sufficient...</li>
+        <li>The data given in both statements I and II together are not sufficient...</li>
+        <li>The data in both statements I and II together are necessary...</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>From Statement I:</strong></p>
+          $$A + N = 48$$
+          $$\frac{R}{A} = \frac{2}{3} \Rightarrow A = 1.5R$$
+          <p>Not sufficient alone (N is unknown).</p>
+          <p><strong>From Statement II:</strong></p>
+          $$N = S + 4$$
+          $$\frac{S}{R} = \frac{1}{2} \Rightarrow R = 2S$$
+          <p>Not sufficient alone.</p>
+          <p><strong>Combining Statements I and II:</strong></p>
+          <p>We have:</p>
+          $$A = 1.5R = 1.5(2S) = 3S$$
+          $$N = S + 4$$
+          <p>Substitute into $A + N = 48$:</p>
+          $$3S + S + 4 = 48$$
+          $$4S = 44 \Rightarrow S = 11$$
+          $$R = 2S = 22$$
+          <p>Age of R after two years $= 22 + 2 = 24$ years.</p>
+          <p>Both statements together are necessary.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) The data in both statements I and II together are necessary to answer the question.</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q57 (Set 6)</h3>
+      <p><strong>If LCM of 16, X and 40 is 160, then find the value of X.</strong></p>
+      <p><strong>Statement I:</strong> X is an even number.</p>
+      <p><strong>Statement II:</strong> X is a multiple of 5.</p>
+      <ol class="options-list" type="a">
+        <li>The data in statement I alone is sufficient...</li>
+        <li>The data in statement II alone is sufficient...</li>
+        <li>The data either in statement I alone or in statement II alone is sufficient...</li>
+        <li>The data given in both statements I and II together are not sufficient...</li>
+        <li>The data in both statements I and II together are necessary...</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Given:</p>
+          $$\text{LCM}(16, X, 40) = 160$$
+          <p>Prime factorizations:</p>
+          $$16 = 2^4$$
+          $$40 = 2^3 \times 5$$
+          $$160 = 2^5 \times 5$$
+          <p>For the LCM to contain $2^5$, $X$ must contribute $2^5 = 32$. Thus, $X$ must be a multiple of 32 (e.g., 32 or 160).</p>
+          <p><strong>From Statement I:</strong></p>
+          <p>$X$ is even. This does not uniquely fix $X$ ($X$ could be 32 or 160). Not sufficient.</p>
+          <p><strong>From Statement II:</strong></p>
+          <p>$X$ is a multiple of 5. Since $X$ must also contain $2^5 = 32$, $X$ must be a multiple of $32 \times 5 = 160$.</p>
+          <p>Since $\text{LCM}(16, X, 40) = 160$, the maximum value $X$ can take is 160. Hence $X = 160$ uniquely.</p>
+          <p>Statement II alone is sufficient.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) The data in statement II alone is sufficient to answer the question, while the data in statement I alone is not sufficient to answer the question.</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §4. QUANTITY COMPARISON                               -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="quantity-comparison" role="tabpanel">
+
+    <article class="question-block">
+      <h3>Q44 (Set 2)</h3>
+      <p>In the following question, two quantities are given. Compare the quantities and choose the correct option.</p>
+      <p>$x^2 - 5x + 6 = 0$</p>
+      <p>$2y^2 - 9y + 9 = 0$</p>
+      <p><strong>Quantity I:</strong> Product of the largest roots of both equations.</p>
+      <p><strong>Quantity II:</strong> $\sqrt[3]{729}$</p>
+      <ol class="options-list" type="a">
+        <li>Quantity I &gt; Quantity II</li>
+        <li>Quantity I &lt; Quantity II</li>
+        <li>Quantity I $\ge$ Quantity II</li>
+        <li>Quantity I $\le$ Quantity II</li>
+        <li>Quantity I = Quantity II or relation cannot be established</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Equation 1:</strong></p>
+          $$x^2 - 5x + 6 = 0$$
+          $$(x - 2)(x - 3) = 0$$
+          $$x = 2, 3$$
+          <p>Largest root of equation 1 is $3$.</p>
+          <p><strong>Equation 2:</strong></p>
+          $$2y^2 - 9y + 9 = 0$$
+          $$2y^2 - 6y - 3y + 9 = 0$$
+          $$2y(y - 3) - 3(y - 3) = 0$$
+          $$(2y - 3)(y - 3) = 0$$
+          $$y = 1.5, 3$$
+          <p>Largest root of equation 2 is $3$.</p>
+          <p><strong>Quantity I:</strong></p>
+          $$\text{Product of largest roots} = 3 \times 3 = 9$$
+          <p><strong>Quantity II:</strong></p>
+          $$\sqrt[3]{729} = 9$$
+          <p>Therefore, Quantity I = Quantity II.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) Quantity I = Quantity II or relation cannot be established</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §5. SIMPLIFICATION                                     -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="simplification" role="tabpanel">
+    <p class="section-intro">Approximate given values to clean numbers and solve.</p>
+
+    <article class="question-block">
+      <h3>Q60. What approximate value should come in place of the question mark (?) in the following question?</h3>
+      <p>$$6561.01 \div (8.98 \times 3.01) \div 2.98 = ?$$</p>
+      <ol class="options-list" type="a"><li>27</li><li>54</li><li>72</li><li>81</li><li>78</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Approximating values:</p>
+          $$6561 \div (9 \times 3) \div 3 = ?$$
+          $$6561 \div 27 \div 3 = ?$$
+          $$243 \div 3 = ?$$
+          $$? = 81$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 81</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q62. What approximate value should come in place of question mark (?) in the following question?</h3>
+      <p>$$127.001 \times 7.998 + 6.05 \times 4.001 = ?$$</p>
+      <ol class="options-list" type="a"><li>1440</li><li>1400</li><li>1000</li><li>1040</li><li>1140</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Approximating values:</p>
+          $$127 \times 8 + 6 \times 4 = ?$$
+          $$1016 + 24 = ?$$
+          $$? = 1040$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 1040</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q63. What approximate value should come in place of question mark (?) in the following question?</h3>
+      <p>$$39.05 \times 14.95 - 27.99 \times 10.12 = (36.01 + ?) \times 4.98$$</p>
+      <ol class="options-list" type="a"><li>20</li><li>30</li><li>40</li><li>35</li><li>25</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Approximating values:</p>
+          $$39 \times 15 - 28 \times 10 = (36 + ?) \times 5$$
+          $$585 - 280 = (36 + ?) \times 5$$
+          $$305 = (36 + ?) \times 5$$
+          $$36 + ? = 61$$
+          $$? = 25$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 25</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §6. PARTNERSHIP                                        -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="partnership" role="tabpanel">
+    <p class="section-intro">Profit $\propto$ Investment $\times$ Time. Always compute investment-time products before forming ratios.</p>
+
+    <article class="question-block">
+      <h3>Q64 (Set 1)</h3>
+      <p>A and B started a business with investments in the ratio of 3 : 4 respectively. Out of the total annual profit of Rs. 5100, A’s share was Rs. 2700. If the difference between the periods for which A and B invested is 3 months, for how many months did A invest?</p>
+      <ol class="options-list" type="a"><li>6</li><li>8</li><li>9</li><li>12</li><li>10</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Total profit $=$ Rs. 5100</p>
+          <p>A's share $=$ Rs. 2700</p>
+          <p>B's share $= 5100 - 2700 =$ Rs. 2400</p>
+          <p>Ratio of profit of A to B $= 2700 : 2400 = 9 : 8$</p>
+          <p>Let investment of A $= 3x$ and B $= 4x$.</p>
+          <p>Let investment time of A $= T_A$ months and B $= T_B$ months.</p>
+          <p>Profit ratio:</p>
+          $$\frac{3x \times T_A}{4x \times T_B} = \frac{9}{8}$$
+          $$\frac{T_A}{T_B} = \frac{9}{8} \times \frac{4}{3} = \frac{3}{2}$$
+          <p>Given difference between investment periods is 3 months:</p>
+          $$T_A - T_B = 3$$
+          <p>Since $\frac{T_A}{T_B} = \frac{3}{2}$, let $T_A = 3k$ and $T_B = 2k$.</p>
+          $$3k - 2k = 3 \Rightarrow k = 3$$
+          $$T_A = 3 \times 3 = 9\text{ months}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) 9</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q41 (Set 2)</h3>
+      <p>A and B started a business with capitals in the ratio 7 : 9. After 6 months, C joined them with capital twice that of A. At the end of the year, total profit was Rs. 92000. Find the combined share of profit of B and C.</p>
+      <ol class="options-list" type="a"><li>Rs. 56000</li><li>Rs. 64000</li><li>Rs. 72000</li><li>Rs. 48000</li><li>Rs. 60000</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let capitals of A and B be $7x$ and $9x$ respectively.</p>
+          <p>Capital of C $= 2 \times 7x = 14x$.</p>
+          <p>Time period of investment:</p>
+          <p>A invested for 12 months.</p>
+          <p>B invested for 12 months.</p>
+          <p>C invested for 6 months.</p>
+          <p>Ratio of profit shares:</p>
+          $$\text{A} : \text{B} : \text{C} = (7x \times 12) : (9x \times 12) : (14x \times 6)$$
+          $$\text{A} : \text{B} : \text{C} = 84x : 108x : 84x$$
+          $$\text{A} : \text{B} : \text{C} = 7 : 9 : 7$$
+          <p>Total ratio parts $= 7 + 9 + 7 = 23$.</p>
+          <p>Combined share of B and C $= 9 + 7 = 16$ parts.</p>
+          $$\text{Combined share} = \frac{16}{23} \times 92000 = 16 \times 4000 = \text{Rs. } 64000$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) Rs. 64000</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q65 (Set 3)</h3>
+      <p>A started a business by investing Rs. 2400 and B joined him by investing Rs. X. After 9 months, A added Rs. 600 while B withdrew Rs. 600. If at the end of the year, the ratio of profit of A to B is 17 : 23, then find the value of X.</p>
+      <ol class="options-list" type="a"><li>2400</li><li>3000</li><li>2800</li><li>3200</li><li>3600</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Total equivalent investment of A for 1 year:</p>
+          $$= 2400 \times 9 + (2400 + 600) \times 3$$
+          $$= 21600 + 3000 \times 3$$
+          $$= 21600 + 9000 = 30600$$
+          <p>Total equivalent investment of B for 1 year:</p>
+          $$= X \times 9 + (X - 600) \times 3$$
+          $$= 9X + 3X - 1800$$
+          $$= 12X - 1800$$
+          <p>Given profit ratio of A to B is 17 : 23:</p>
+          $$\frac{30600}{12X - 1800} = \frac{17}{23}$$
+          $$\frac{1800}{12X - 1800} = \frac{1}{23} \quad (\text{dividing numerator by } 17)$$
+          $$1800 \times 23 = 12X - 1800$$
+          $$41400 = 12X - 1800$$
+          $$12X = 43200$$
+          $$X = 3600$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 3600</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q51 (Set 4)</h3>
+      <p>A and B invested in the ratio <strong>4 : 5</strong>. At the end of the year, <strong>30%</strong> of the dividend is equally distributed, and the remaining dividend is distributed according to the profit ratio. If the difference in their dividend shares is <strong>Rs. 280</strong>, find the total profit.</p>
+      <ol class="options-list" type="a">
+        <li>Rs. 2800</li>
+        <li>Rs. 3600</li>
+        <li>Rs. 4200</li>
+        <li>Rs. 3000</li>
+        <li>Rs. 4800</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Only the remaining <strong>70%</strong> is divided in the ratio (4:5).</p>
+          <p>Equal distribution:</p>
+          $$15\%\text{ each}$$
+          <p>Difference comes only from the remaining 70%.</p>
+          <p>Difference in ratio:</p>
+          $$5-4=1$$
+          <p>Difference received:</p>
+          $$70\%\times\frac{1}{9}=\frac{7}{90}$$
+          <p>Let total profit be (P).</p>
+          $$\frac{7}{90}P=280$$
+          $$P=\frac{280\times90}{7}=3600$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) Rs. 3600</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q58 (Set 5)</h3>
+      <p>Three friends A, B and C invested <strong>Rs. 2800, Rs. 3600 and Rs. 4000</strong>, respectively. After (x) months, C left the business. The annual profit ratio of <strong>C : (A+B)</strong> is <strong>5 : 12</strong>. Find (x).</p>
+      <ol class="options-list" type="a">
+        <li>6</li>
+        <li>8</li>
+        <li>10</li>
+        <li>4</li>
+        <li>9</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Profit &#8733; Investment &#215; Time.</p>
+          <p>A and B remain for 12 months.</p>
+          $$A+B=2800\times12+3600\times12=76800$$
+          <p>C's investment-time:</p>
+          $$4000x$$
+          <p>Given,</p>
+          $$4000x:76800=5:12$$
+          $$48000x=384000$$
+          $$x=8$$
+          <p>Hence, C remained for 8 months.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 8 months</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q70 (Set 6)</h3>
+      <p>A started a business with Rs. 6000 and B joined him with Rs. 8000. After 9 months, A withdrew half of his capital while B added Rs. X to his capital. If at the end of the year, the ratio of profit of A to B was 21 : 34, find the value of X.</p>
+      <ol class="options-list" type="a"><li>1000</li><li>2000</li><li>3000</li><li>4000</li><li>5000</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Total investment of A for 1 year:</p>
+          $$= 6000 \times 9 + 3000 \times 3$$
+          $$= 54000 + 9000 = 63000$$
+          <p>Total investment of B for 1 year:</p>
+          $$= 8000 \times 9 + (8000 + X) \times 3$$
+          $$= 72000 + 24000 + 3X$$
+          $$= 96000 + 3X$$
+          <p>Given profit ratio A : B $= 21 : 34$:</p>
+          $$\frac{63000}{96000 + 3X} = \frac{21}{34}$$
+          $$\frac{3000}{96000 + 3X} = \frac{1}{34} \quad (\text{dividing numerator by } 21)$$
+          $$96000 + 3X = 102000$$
+          $$3X = 6000$$
+          $$X = 2000$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 2000</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q63 (Set 7)</h3>
+      <p>Rachit and Varun together started a business with a total investment of Rs. 18000. After 6 months, Rachit withdrew Rs. 2000. At the end of the year, out of the total profit of Rs. 3400, Rachit's share was Rs. 2200. Find the initial investment of Rachit.</p>
+      <ol class="options-list" type="a"><li>Rs. 8000</li><li>Rs. 10000</li><li>Rs. 11000</li><li>Rs. 12000</li><li>Rs. 14000</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Total profit $=$ Rs. 3400</p>
+          <p>Rachit's profit share $=$ Rs. 2200</p>
+          <p>Varun's profit share $= 3400 - 2200 =$ Rs. 1200</p>
+          <p>Ratio of profit of Rachit to Varun $= 2200 : 1200 = 11 : 6$</p>
+          <p>Let initial investment of Rachit be Rs. $X$.</p>
+          <p>Then initial investment of Varun $= 18000 - X$.</p>
+          <p>Equivalent investment of Rachit for 1 year:</p>
+          $$= X \times 6 + (X - 2000) \times 6$$
+          $$= 6X + 6X - 12000 = 12X - 12000$$
+          <p>Equivalent investment of Varun for 1 year:</p>
+          $$= (18000 - X) \times 12$$
+          $$= 216000 - 12X$$
+          <p>Ratio of investments $=$ Profit ratio:</p>
+          $$\frac{12X - 12000}{216000 - 12X} = \frac{11}{6}$$
+          $$\frac{X - 1000}{18000 - X} = \frac{11}{6} \quad (\text{dividing numerator and denominator by } 12)$$
+          $$6(X - 1000) = 11(18000 - X)$$
+          $$6X - 6000 = 198000 - 11X$$
+          $$17X = 204000$$
+          $$X = 12000$$
+          <p>Initial investment of Rachit $=$ Rs. 12000.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) Rs. 12000</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §7. PERCENTAGE                                         -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="percentage" role="tabpanel">
+    <p class="section-intro">Convert all known expenses to percentages of original income first; then form one equation for the unknown.</p>
+
+    <article class="question-block">
+      <h3>Question 58 (Set 1)</h3>
+      <p>A man spends 12% of his monthly salary on education and 7% on house rent. Out of the remaining salary, he invests Rs. 10250 in SIP and saves $4x\%$ of his total monthly salary. If his monthly salary is Rs. 25000, find the value of $x$.</p>
+      <ol class="options-list" type="a"><li>5</li><li>15</li><li>12</li><li>10</li><li>6</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Monthly salary $=$ Rs. 25000</p>
+          <p>Percentage spent on education $+$ rent $= 12\% + 7\% = 19\%$</p>
+          <p>Amount spent on education and rent:</p>
+          $$= 19\% \text{ of } 25000 = \frac{19}{100} \times 25000 = \text{Rs. } 4750$$
+          <p>Remaining salary after education and rent:</p>
+          $$= 25000 - 4750 = \text{Rs. } 20250$$
+          <p>Amount invested in SIP $=$ Rs. 10250</p>
+          <p>Remaining savings:</p>
+          $$= 20250 - 10250 = \text{Rs. } 10000$$
+          <p>Savings as percentage of total salary:</p>
+          $$\text{Savings \%} = \frac{10000}{25000} \times 100 = 40\%$$
+          <p>Given savings percentage is $4x\%$:</p>
+          $$4x = 40 \Rightarrow x = 10$$
+          <span class="tip"><strong>Tip:</strong> Convert all known expenses to percentages first; the remainder is the unknown.</span>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 10</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 70 (Set 2)</h3>
+      <p>The monthly income of a person is Rs. 50000. He spends $x\%$ of his income on house rent, 20% of the remaining on education, and half of the remaining on travel. If his monthly savings are Rs. 18000, then the amount spent on travel is what percent more than the amount spent on house rent?</p>
+      <ol class="options-list" type="a"><li>130%</li><li>260%</li><li>160%</li><li>240%</li><li>360%</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Monthly income $=$ Rs. 50000</p>
+          <p>Let amount left after rent be $R$.</p>
+          <p>Amount spent on education $= 20\% \text{ of } R = 0.2R$.</p>
+          <p>Remaining after education $= 0.8R$.</p>
+          <p>Amount spent on travel $= \frac{1}{2} \times 0.8R = 0.4R$.</p>
+          <p>Remaining savings $= 0.4R$.</p>
+          <p>Given savings $=$ Rs. 18000:</p>
+          $$0.4R = 18000 \Rightarrow R = 45000$$
+          <p>Since $R = 45000$, amount spent on rent:</p>
+          $$= 50000 - 45000 = \text{Rs. } 5000$$
+          <p>Amount spent on travel $= 0.4R = 18000$.</p>
+          <p>Percentage by which travel expenditure is more than rent expenditure:</p>
+          $$\% \text{ more} = \frac{18000 - 5000}{5000} \times 100 = \frac{13000}{5000} \times 100 = 260\%$$
+          <span class="tip"><strong>Tip:</strong> When half is saved and half is spent on travel, they are equal.</span>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 260%</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 70 (Set 3)</h3>
+      <p>A spends 50% of his monthly income on house rent, 20% of the remaining on food, and 10% of the original income on travel. If he saves Rs. 10800, and B’s monthly income is 25% less than A’s monthly income, find 60% of B’s monthly income.</p>
+      <ol class="options-list" type="a"><li>11500</li><li>13500</li><li>12500</li><li>16500</li><li>15500</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let monthly income of A be $I$.</p>
+          <p>Spend on rent $= 50\% \text{ of } I = 0.50I$.</p>
+          <p>Remaining after rent $= 0.50I$.</p>
+          <p>Spend on food $= 20\% \text{ of } 0.50I = 0.10I$.</p>
+          <p>Spend on travel $= 10\% \text{ of } I = 0.10I$.</p>
+          <p>Total expenditure $= 0.50I + 0.10I + 0.10I = 0.70I$.</p>
+          <p>Savings $= I - 0.70I = 0.30I$.</p>
+          <p>Given savings $=$ Rs. 10800:</p>
+          $$0.30I = 10800 \Rightarrow I = 36000$$
+          <p>Income of A $=$ Rs. 36000.</p>
+          <p>Income of B is 25% less than A:</p>
+          $$\text{Income of B} = 75\% \text{ of } 36000 = \text{Rs. } 27000$$
+          <p>60% of B's income:</p>
+          $$= 60\% \text{ of } 27000 = \text{Rs. } 16200$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 16500</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 66 (Set 6)</h3>
+      <p>A person spends 30.1% of his income on groceries, 20.1% of the remaining on house rent, and 1/4th of the remaining on EMI. If he saves Rs. 1260, find his approximate monthly income.</p>
+      <ol class="options-list" type="a"><li>3000</li><li>3200</li><li>3050</li><li>2950</li><li>2440</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let income be $I$.</p>
+          <p>Approximating percentages:</p>
+          <p>Groceries $\approx 30\%$, so remaining $\approx 70\% = 0.70I$.</p>
+          <p>Rent $\approx 20\%$ of remaining, so remaining $\approx 80\% \text{ of } 0.70I = 0.56I$.</p>
+          <p>EMI $= \frac{1}{4}$ of remaining, so savings $= \frac{3}{4} \text{ of remaining}$.</p>
+          $$\text{Savings} \approx \frac{3}{4} \times 0.56I = 0.42I$$
+          <p>Given savings $=$ Rs. 1260:</p>
+          $$0.42I = 1260$$
+          $$I = \frac{1260}{0.42} = 3000$$
+          <p>Approximate monthly income $=$ Rs. 3000.</p>
+          <span class="tip"><strong>Tip:</strong> Multiply successive remaining factors first; approximate only at the final step.</span>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 3000</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 59 (Set 7)</h3>
+      <p>A spends 25% of his monthly income on groceries and 20% of the remaining on house rent. The remaining amount is divided in the ratio 1 : 3 : 6 among EMI, clothes, and savings respectively. If the difference between the amount spent on house rent and clothes is Rs. 570, find A's monthly income.</p>
+      <ol class="options-list" type="a"><li>Rs. 14000</li><li>Rs. 12000</li><li>Rs. 19000</li><li>Rs. 15000</li><li>Rs. 11000</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let monthly income be $I$.</p>
+          <p>Groceries $= 25\% \text{ of } I = 0.25I$.</p>
+          <p>Remaining after groceries $= 0.75I$.</p>
+          <p>House rent $= 20\% \text{ of } 0.75I = 0.15I$.</p>
+          <p>Remaining after rent $= 0.75I - 0.15I = 0.60I$.</p>
+          <p>Ratio for EMI, clothes, savings $= 1 : 3 : 6$. Total parts $= 10$.</p>
+          <p>Amount spent on clothes:</p>
+          $$= \frac{3}{10} \times 0.60I = 0.18I$$
+          <p>Difference between clothes and house rent:</p>
+          $$= 0.18I - 0.15I = 0.03I$$
+          <p>Given difference $= 570$:</p>
+          $$0.03I = 570 \Rightarrow I = \frac{570}{0.03} = 19000$$
+          <p>Monthly income $=$ Rs. 19000.</p>
+          <span class="tip"><strong>Tip:</strong> Apply the ratio only to the remaining amount, not the original income.</span>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) Rs. 19000</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §8. PROFIT & LOSS                                      -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="profit-loss" role="tabpanel">
+    <p class="section-intro">Use multiplier method: Markup factor $\times$ Discount factor = Effective SP factor. Avoid computing marked price separately when only percentages are given.</p>
+
+    <article class="question-block">
+      <h3>Q68 (Set 5)</h3>
+      <p>A shopkeeper made a loss of <strong>15%</strong> on selling an article. Had he sold the article for <strong>Rs. 3000 more</strong>, he would have made a <strong>profit of 5%</strong>. If he marked the article at <strong>20% above the cost price</strong>, then find the <strong>discount given</strong> on the article?</p>
+      <ol class="options-list" type="a">
+        <li>Rs. 5050</li>
+        <li>Rs. 5250</li>
+        <li>Rs. 5450</li>
+        <li>Rs. 4850</li>
+        <li>Rs. 5350</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Markup is applied first and then discount. First determine the cost price using the change from 15% loss to 5% profit.</p>
+          <p><strong>Calculation</strong></p>
+          <p>Let Cost Price ($=\text{CP}$).</p>
+          <p>Loss 15%:</p>
+          $$\text{SP}_1=0.85\text{CP}$$
+          <p>Profit 5%:</p>
+          $$\text{SP}_2=1.05\text{CP}$$
+          <p>Difference in selling prices:</p>
+          $$1.05\text{CP}-0.85\text{CP}=3000$$
+          $$0.20\text{CP}=3000$$
+          $$\text{CP}=15000$$
+          <p>Marked Price:</p>
+          $$\text{MP}=1.20\times15000=18000$$
+          <p>Actual Selling Price:</p>
+          $$\text{SP}=0.85\times15000=12750$$
+          <p>Discount:</p>
+          $$18000-12750=5250$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>Option (b) – Rs. 5250</strong></p>
+          <span class="tip"><strong>Tip:</strong> Use the change in profit/loss percentages to find the cost price quickly before applying markup and discount.</span>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 68 (Set 6)</h3>
+      <p>The ratio of cost price to selling price of an article is 4 : 7 and the ratio of marked price to selling price is 36 : 35. If the markup amount is Rs. 160, find the profit earned on the article.</p>
+      <ol class="options-list" type="a"><li>Rs. 180</li><li>Rs. 120</li><li>Rs. 140</li><li>Rs. 160</li><li>Rs. 150</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Given ratios:</p>
+          $$CP : SP = 4 : 7 = 20 : 35$$
+          $$MP : SP = 36 : 35$$
+          <p>Combining the ratios:</p>
+          $$CP : SP : MP = 20 : 35 : 36$$
+          <p>Let $CP = 20k$, $SP = 35k$, $MP = 36k$.</p>
+          <p>Markup amount $= MP - CP = 36k - 20k = 16k$.</p>
+          <p>Given markup amount $= 160$:</p>
+          $$16k = 160 \Rightarrow k = 10$$
+          <p>Profit earned $= SP - CP = 35k - 20k = 15k$.</p>
+          $$\text{Profit} = 15 \times 10 = \text{Rs. } 150$$
+          <span class="tip"><strong>Tip:</strong> Assume convenient values from ratios and scale using the given amount.</span>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) Rs. 150</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 69 (Set 1)</h3>
+      <p>A retailer marks an article 35% above its cost price and allows a discount of 20%, earning a profit of Rs. 96. If he allows a discount of 15% instead, find his profit.</p>
+      <ol class="options-list" type="a"><li>118</li><li>177</li><li>236</li><li>214</li><li>154</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let $CP = 100x$.</p>
+          <p>$MP = 135x$.</p>
+          <p>At 20% discount:</p>
+          $$SP_1 = 135x \times 0.80 = 108x$$
+          $$\text{Profit}_1 = 108x - 100x = 8x$$
+          <p>Given $\text{Profit}_1 = 96$:</p>
+          $$8x = 96 \Rightarrow x = 12 \Rightarrow CP = 1200$$
+          <p>At 15% discount:</p>
+          $$SP_2 = 135x \times 0.85 = 114.75x$$
+          $$\text{Profit}_2 = 114.75x - 100x = 14.75x$$
+          $$\text{Profit}_2 = 14.75 \times 12 = \text{Rs. } 177$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 177</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 49 (Set 2)</h3>
+      <p>Sneha marks an article 40% above its cost price and gives a discount of 10%, earning a profit of Rs. 364. Find the difference between the profit earned if the article was sold at a 25% profit vs. the actual profit earned.</p>
+      <ol class="options-list" type="a"><li>16</li><li>14</li><li>18</li><li>20</li><li>24</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let $CP = 100x$.</p>
+          <p>$MP = 140x$.</p>
+          $$SP = 140x \times 0.90 = 126x$$
+          $$\text{Profit} = 126x - 100x = 26x$$
+          <p>Given profit $= 364$:</p>
+          $$26x = 364 \Rightarrow x = 14 \Rightarrow CP = 1400$$
+          <p>Profit at 25% $= 25\% \text{ of } 1400 = \text{Rs. } 350$.</p>
+          <p>Difference between actual profit and 25% profit:</p>
+          $$= 364 - 350 = 14$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 14</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 67 (Set 3)</h3>
+      <p>The cost price of an article is Rs. 500. A shopkeeper marks it $X\%$ above the cost price and gives a discount of 20%, earning a profit of 4%. Find the value of $X$.</p>
+      <ol class="options-list" type="a"><li>30</li><li>20</li><li>10</li><li>15</li><li>25</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let $CP = 100$.</p>
+          <p>Profit $= 4\% \Rightarrow SP = 104$.</p>
+          <p>With 20% discount on MP:</p>
+          $$0.80 \times MP = 104 \Rightarrow MP = 130$$
+          <p>Markup percentage $X = 130 - 100 = 30\%$.</p>
+          <span class="tip"><strong>Tip:</strong> The actual CP is irrelevant when only percentages are involved.</span>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 30</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 57 (Set 4)</h3>
+      <p>The cost price of an article is Rs. X. It is marked 40% above the cost price and sold after giving a discount of 20%. If the cost price is decreased by Rs. 100 and the selling price is increased by Rs. 80, the profit percentage becomes 60%. Find the original selling price.</p>
+      <ol class="options-list" type="a"><li>540</li><li>720</li><li>840</li><li>560</li><li>600</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Original CP $= X$.</p>
+          <p>Original MP $= 1.40X$.</p>
+          <p>Original SP $= 1.40X \times 0.80 = 1.12X$.</p>
+          <p>New CP $= X - 100$.</p>
+          <p>New SP $= 1.12X + 80$.</p>
+          <p>Given new profit percentage $= 60\%$:</p>
+          $$1.12X + 80 = 1.60(X - 100)$$
+          $$1.12X + 80 = 1.60X - 160$$
+          $$0.48X = 240 \Rightarrow X = 500$$
+          <p>Original SP $= 1.12 \times 500 = \text{Rs. } 560$.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 560</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 60 (Set 7)</h3>
+      <p>A shopkeeper marks an article 50% above its cost price and gives a discount of 20%, thereby earning a profit of Rs. 40. If he allows a discount of 25% instead, find his new profit.</p>
+      <ol class="options-list" type="a"><li>Rs. 40</li><li>Rs. 50</li><li>Rs. 25</li><li>Rs. 10</li><li>Rs. 5</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let $CP = 100x$.</p>
+          <p>$MP = 150x$.</p>
+          $$SP_1 = 150x \times 0.80 = 120x$$
+          $$\text{Profit}_1 = 120x - 100x = 20x$$
+          <p>Given $\text{Profit}_1 = 40$:</p>
+          $$20x = 40 \Rightarrow x = 2 \Rightarrow CP = 200$$
+          <p>At 25% discount:</p>
+          $$SP_2 = 150x \times 0.75 = 112.5x$$
+          $$\text{Profit}_2 = 112.5x - 100x = 12.5x$$
+          $$\text{Profit}_2 = 12.5 \times 2 = \text{Rs. } 25$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) Rs. 25</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §9. SI & CI                                           -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="si-ci" role="tabpanel">
+    <p class="section-intro">2-year CI shortcut at $r\%$: CI $=\left(2r+\frac{r^2}{100}\right)\%$ of P. At 10%: CI $=21\%P$. At 20%: CI $=44\%P$.</p>
+
+    <article class="question-block">
+      <h3>Question 66 (Set 1)</h3>
+      <p>A invested Rs. X in Scheme A offering Simple Interest at 12% p.a. for 4 years and received Rs. 2160 as interest. If Rs. (X + 500) is invested in Scheme B offering Compound Interest (compounded annually) at 10% p.a. for 2 years, find the interest received from Scheme B.</p>
+      <ol class="options-list" type="a"><li>Rs. 1090</li><li>Rs. 1205</li><li>Rs. 1120</li><li>Rs. 870</li><li>Rs. 1050</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Scheme A (SI):</strong></p>
+          $$SI = \frac{P \times R \times T}{100}$$
+          $$2160 = \frac{X \times 12 \times 4}{100}$$
+          $$2160 = \frac{48X}{100} \Rightarrow X = \frac{216000}{48} = 4500$$
+          <p><strong>Scheme B (CI):</strong></p>
+          $$\text{Principal} = X + 500 = 4500 + 500 = 5000$$
+          <p>Rate $= 10\%$, Time $= 2$ years.</p>
+          <p>Effective CI rate for 2 years at 10% $= 10 + 10 + \frac{10 \times 10}{100} = 21\%$.</p>
+          $$CI = 21\% \text{ of } 5000 = \frac{21}{100} \times 5000 = \text{Rs. } 1050$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) Rs. 1050</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 68 (Set 3)</h3>
+      <p>A person invested Rs. X at 6% p.a. simple interest for 5 years and received Rs. 1500 as interest. If he invests Rs. 3X at 10% p.a. compound interest (compounded annually) for 2 years, find the total amount received at the end of 2 years.</p>
+      <ol class="options-list" type="a"><li>13250</li><li>17220</li><li>14450</li><li>12150</li><li>18150</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>From SI:</p>
+          $$1500 = \frac{X \times 6 \times 5}{100}$$
+          $$1500 = \frac{30X}{100} \Rightarrow X = 5000$$
+          <p>For CI investment:</p>
+          $$\text{Principal} = 3X = 3 \times 5000 = 15000$$
+          $$\text{Amount} = P \left(1 + \frac{R}{100}\right)^T$$
+          $$\text{Amount} = 15000 \times (1.10)^2 = 15000 \times 1.21 = 18150$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 18150</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 53 (Set 4)</h3>
+      <p>A sum of money becomes 13 times of itself in a certain time at simple interest. If the numerical value of the rate of interest per annum is thrice the time period in years, find the rate of interest.</p>
+      <ol class="options-list" type="a"><li>20</li><li>50</li><li>40</li><li>60</li><li>90</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let Principal $= P$. Amount $= 13P \Rightarrow SI = 12P$.</p>
+          <p>Given $R = 3T$.</p>
+          $$SI = \frac{P \times R \times T}{100}$$
+          $$12P = \frac{P \times 3T \times T}{100}$$
+          $$12 = \frac{3T^2}{100} \Rightarrow T^2 = 400 \Rightarrow T = 20$$
+          $$R = 3T = 3 \times 20 = 60\%$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 60</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 67 (Set 5)</h3>
+      <p>A man invested a certain amount at 15% SI for 2 years and received Rs. 7800 interest. He then increased the amount by Rs. X and invested it at 10% CI for 2 years, receiving Rs. 6720 as interest. Find X.</p>
+      <ol class="options-list" type="a"><li>Rs. 8000</li><li>Rs. 5000</li><li>Rs. 4000</li><li>Rs. 3000</li><li>Rs. 6000</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>First find original principal $P$:</p>
+          $$7800 = \frac{P \times 15 \times 2}{100}$$
+          $$7800 = \frac{30P}{100} \Rightarrow P = 26000$$
+          <p>For CI investment:</p>
+          $$\text{New Principal} = 26000 + X$$
+          <p>2-year CI at 10% $= 21\%$.</p>
+          $$6720 = 21\% \text{ of } (26000 + X)$$
+          $$26000 + X = \frac{6720}{0.21} = 32000$$
+          $$X = 32000 - 26000 = 6000$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) Rs. 6000</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 49 (Set 6)</h3>
+      <p>Karan invested Rs. 9000 at $(x+2)\%$ and Rs. 12000 at $(x-2)\%$. Both are SI for 5 years. Interests are equal. Find $x$.</p>
+      <ol class="options-list" type="a"><li>24</li><li>14</li><li>12</li><li>10</li><li>8</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Time is common (5 years), so we equate $P \times R$:</p>
+          $$9000(x + 2) = 12000(x - 2)$$
+          $$3(x + 2) = 4(x - 2)$$
+          $$3x + 6 = 4x - 8$$
+          $$x = 14$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 14</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 69 (Set 6)</h3>
+      <p>A man invested Rs. (P + 500) at 10% CI for 2 years and received Rs. 1785 interest. If he invested Rs. (P - 1000) at the same rate and period, find the compound interest.</p>
+      <ol class="options-list" type="a"><li>Rs. 1470</li><li>Rs. 1520</li><li>Rs. 2190</li><li>Rs. 1860</li><li>Rs. 1660</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Two-year CI at 10% $= 21\%$.</p>
+          $$1785 = 21\% \text{ of } (P + 500)$$
+          $$P + 500 = \frac{1785}{0.21} = 8500$$
+          $$P = 8000$$
+          <p>Required principal $= P - 1000 = 8000 - 1000 = 7000$.</p>
+          $$\text{Interest} = 7000 \times 21\% = 1470$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) Rs. 1470</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Question 66 (Set 7)</h3>
+      <p>A man invested Rs. X at 20% CI for 2 years and the same amount at 21% SI for 3 years. The difference between the interests is Rs. 1900. Find X.</p>
+      <ol class="options-list" type="a"><li>10000</li><li>12000</li><li>14000</li><li>8000</li><li>15000</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>CI (20%, 2 years) $= 20 + 20 + \frac{400}{100} = 44\%$.</p>
+          <p>SI (21%, 3 years) $= 21 \times 3 = 63\%$.</p>
+          <p>Difference $= 63\% - 44\% = 19\%$.</p>
+          $$19\% \text{ of } X = 1900$$
+          $$X = \frac{1900 \times 100}{19} = 10000$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 10000</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §10. AVERAGE                                           -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="average" role="tabpanel">
+    <p class="section-intro">In average problems, convert all averages to totals before forming equations. Never average the given averages directly.</p>
+
+    <article class="question-block">
+      <h3>Q67 (Set 1)</h3>
+      <p>The average weight of ‘X’ boys in a class is 40 kg and average weight of 18 girls in the same class is 25 kg. If total weight of the class is 1410 kg, then find the value of (2.5X)?</p>
+      <ol class="options-list" type="a"><li>54</li><li>48</li><li>36</li><li>72</li><li>60</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Boys' total weight $= 40X$</p>
+          <p>Girls' total weight $= 18 \times 25 = 450$</p>
+          <p>Total class weight:</p>
+          $$40X + 450 = 1410$$
+          $$40X = 960 \Rightarrow X = 24$$
+          <p>Therefore,</p>
+          $$2.5X = 2.5 \times 24 = 60$$
+          <span class="tip"><strong>Tip:</strong> In average problems, always convert averages into totals before forming equations.</span>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 60</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q69 (Set 2)</h3>
+      <p>The average weight of 12 students in a class is ‘y’ kg. Two new students joined them with a total weight of 72 kg and the average weight of the class decreased by (y/16) kg. If the weight of the heavier student out of the two students who joined is (y-24) kg, then find the difference between the weights of the two students who joined.</p>
+      <ol class="options-list" type="a"><li>10 kg</li><li>4 kg</li><li>12 kg</li><li>8 kg</li><li>6 kg</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Initial total $= 12y$</p>
+          <p>After adding two students (total students = 14):</p>
+          $$\frac{12y + 72}{14} = y - \frac{y}{16} = \frac{15y}{16}$$
+          $$16(12y + 72) = 14(15y)$$
+          $$192y + 1152 = 210y$$
+          $$18y = 1152 \Rightarrow y = 64$$
+          <p>Heavier student's weight $= 64 - 24 = 40\text{ kg}$</p>
+          <p>Other student's weight $= 72 - 40 = 32\text{ kg}$</p>
+          <p>Difference $= 40 - 32 = 8\text{ kg}$</p>
+          <span class="tip"><strong>Tip:</strong> When average changes after addition, update the total instead of averaging again.</span>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 8 kg</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q56 (Set 5)</h3>
+      <p>The average weight of $x$ students in a class is 62 kg. If two students weighing 82.5 kg and 78.5 kg leave the class and one new student weighing 162 kg joins the class, the average weight of the class becomes 65.5 kg. Find $x$.</p>
+      <ol class="options-list" type="a"><li>18</li><li>19</li><li>20</li><li>21</li><li>22</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Initial total weight $= 62x$</p>
+          <p>Net change in weight $= -82.5 - 78.5 + 162 = 1\text{ kg}$</p>
+          <p>New total weight $= 62x + 1$</p>
+          <p>New number of students $= x - 2 + 1 = x - 1$</p>
+          <p>New average $= 65.5\text{ kg}$:</p>
+          $$\frac{62x + 1}{x - 1} = 65.5$$
+          $$62x + 1 = 65.5x - 65.5$$
+          $$3.5x = 66.5 \Rightarrow x = 19$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 19</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q62 (Set 6)</h3>
+      <p>The ratio of average weight of (A, B) to (A, C) is 4 : 5. Weight of C is 40 kg and ratio of weight of A to B is 7 : 5. Find average weight of A, B, C.</p>
+      <ol class="options-list" type="a"><li>40</li><li>12.5</li><li>33.33</li><li>32.5</li><li>66.67</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let $A = 7k$, $B = 5k$, $C = 40$.</p>
+          $$\frac{\frac{A + B}{2}}{\frac{A + C}{2}} = \frac{A + B}{A + C} = \frac{4}{5}$$
+          $$\frac{12k}{7k + 40} = \frac{4}{5}$$
+          $$60k = 28k + 160 \Rightarrow 32k = 160 \Rightarrow k = 5$$
+          <p>$A = 35$, $B = 25$, $C = 40$.</p>
+          $$\text{Average} = \frac{35 + 25 + 40}{3} = \frac{100}{3} \approx 33.33\text{ kg}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) 33.33</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q62 (Set 7)</h3>
+      <p>The average weight of 12 boys in a class is 15 kg and the average weight of 'X' girls is 10 kg. If the average weight of all boys and girls together is 12.4 kg, find X.</p>
+      <ol class="options-list" type="a"><li>19</li><li>15</li><li>10</li><li>12</li><li>13</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$\frac{12 \times 15 + X \times 10}{12 + X} = 12.4$$
+          $$180 + 10X = 148.8 + 12.4X$$
+          $$2.4X = 31.2 \Rightarrow X = 13$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 13</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §11. MENSURATION                                       -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="mensuration" role="tabpanel">
+
+    <article class="question-block">
+      <h3>Q68 (Set 1)</h3>
+      <p>The difference between the circumferences of two circles P and Q is 132 cm. If the radius of circle Q is 4 times the radius of circle P, find the area of circle Q.</p>
+      <ol class="options-list" type="a"><li>2404</li><li>2464</li><li>2214</li><li>2004</li><li>2124</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let radius of P be $r$. Radius of Q $= 4r$.</p>
+          $$2\pi(4r) - 2\pi r = 132$$
+          $$6\pi r = 132$$
+          $$6 \times \frac{22}{7} \times r = 132 \Rightarrow r = 7\text{ cm}$$
+          <p>Radius of Q $= 4 \times 7 = 28\text{ cm}$.</p>
+          $$\text{Area of Q} = \pi (28)^2 = \frac{22}{7} \times 784 = 2464\text{ cm}^2$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 2464</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q70 (Set 1)</h3>
+      <p>The ratio of volume of a cylinder to a sphere is 3 : 1 and their radii are equal. Find the ratio of total surface area of cylinder to total surface area of sphere.</p>
+      <ol class="options-list" type="a"><li>2 : 1</li><li>5 : 2</li><li>4 : 1</li><li>3 : 2</li><li>7 : 2</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$\frac{\pi r^2 h}{\frac{4}{3}\pi r^3} = \frac{3}{1}$$
+          $$\frac{3h}{4r} = 3 \Rightarrow h = 4r$$
+          <p>TSA of cylinder $= 2\pi r(r + h) = 2\pi r(5r) = 10\pi r^2$.</p>
+          <p>TSA of sphere $= 4\pi r^2$.</p>
+          $$\text{Ratio} = \frac{10\pi r^2}{4\pi r^2} = 5 : 2$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 5 : 2</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q42 (Set 2)</h3>
+      <p>Area of a rectangle is 216 m² and ratio of length to breadth is 3 : 2. If diameter of a circle is (7/6)th of breadth of rectangle, find the difference between area of rectangle and circle.</p>
+      <ol class="options-list" type="a"><li>54</li><li>72</li><li>62</li><li>48</li><li>60</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let $l = 3x, b = 2x$.</p>
+          $$3x \times 2x = 216 \Rightarrow 6x^2 = 216 \Rightarrow x = 6$$
+          <p>Breadth $b = 12\text{ m}$.</p>
+          <p>Diameter of circle $= \frac{7}{6} \times 12 = 14\text{ m} \Rightarrow r = 7\text{ m}$.</p>
+          $$\text{Area of circle} = \frac{22}{7} \times 49 = 154\text{ m}^2$$
+          $$\text{Difference} = 216 - 154 = 62\text{ m}^2$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) 62</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q62 (Set 3)</h3>
+      <p>Curved surface area of a cylinder is 836 cm² and its height is 19 cm. If radius of cylinder is 3 cm less than side of a square, find area of square.</p>
+      <ol class="options-list" type="a"><li>100</li><li>64</li><li>36</li><li>225</li><li>196</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$2\pi r h = 836$$
+          $$2 \times \frac{22}{7} \times r \times 19 = 836 \Rightarrow r = 7\text{ cm}$$
+          <p>Side of square $= 7 + 3 = 10\text{ cm}$.</p>
+          $$\text{Area of square} = 10^2 = 100\text{ cm}^2$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 100</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q67 (Set 4)</h3>
+      <p>The area of a rectangle is 528 cm² more than the area of a circle. The ratio of length to breadth of rectangle is 26 : 11. If radius of circle is (7/11)th of breadth of rectangle, find radius of circle.</p>
+      <ol class="options-list" type="a"><li>14</li><li>10.5</li><li>28</li><li>21</li><li>7</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let $l = 26x, b = 11x \Rightarrow \text{Radius } r = 7x$.</p>
+          $$\text{Area of rectangle} = 286x^2$$
+          $$\text{Area of circle} = \frac{22}{7} \times (7x)^2 = 154x^2$$
+          $$286x^2 - 154x^2 = 528$$
+          $$132x^2 = 528 \Rightarrow x = 2$$
+          <p>Radius $= 7 \times 2 = 14\text{ cm}$.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 14</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q59 (Set 5)</h3>
+      <p>The perimeter of a square with side (A+10) cm is equal to the perimeter of a rectangle with length A cm and breadth 3A cm. Find the difference between the area of rectangle and square (in sq. cm).</p>
+      <ol class="options-list" type="a"><li>100</li><li>180</li><li>160</li><li>150</li><li>20</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$4(A + 10) = 2(A + 3A) = 8A$$
+          $$4A + 40 = 8A \Rightarrow A = 10$$
+          <p>Rectangle area $= 10 \times 30 = 300\text{ sq. cm}$.</p>
+          <p>Square area $= 20^2 = 400\text{ sq. cm}$.</p>
+          $$\text{Difference} = 400 - 300 = 100\text{ sq. cm}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 100</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q65 (Set 6)</h3>
+      <p>The ratio of the volume of a cube to a sphere is 21 : 88, and the total surface area of the cube is 294 cm². Find the curved surface area of the sphere (in cm²).</p>
+      <ol class="options-list" type="a"><li>1450</li><li>1080</li><li>576</li><li>484</li><li>616</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Cube TSA $= 6a^2 = 294 \Rightarrow a = 7\text{ cm}$.</p>
+          $$\frac{7^3}{\frac{4}{3}\pi r^3} = \frac{21}{88}$$
+          $$\frac{343}{\frac{88}{21}r^3} = \frac{21}{88} \Rightarrow r^3 = 343 \Rightarrow r = 7\text{ cm}$$
+          $$\text{CSA of sphere} = 4\pi r^2 = 4 \times \frac{22}{7} \times 49 = 616\text{ cm}^2$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 616</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q67 (Set 7)</h3>
+      <p>The perimeter of rectangle B is 30% of the perimeter of rectangle A. The breadth and length of rectangle A are 16 cm and 24 cm, respectively. If the length of rectangle B is (1/3)rd that of rectangle A, then find the area of rectangle B (in sq. cm).</p>
+      <ol class="options-list" type="a"><li>8</li><li>16</li><li>24</li><li>32</li><li>None of these</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Perimeter A $= 2(24 + 16) = 80\text{ cm}$.</p>
+          <p>Perimeter B $= 30\% \times 80 = 24\text{ cm}$.</p>
+          <p>Length of B $= \frac{1}{3} \times 24 = 8\text{ cm}$.</p>
+          $$2(8 + b) = 24 \Rightarrow b = 4\text{ cm}$$
+          $$\text{Area of B} = 8 \times 4 = 32\text{ cm}^2$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 32</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §12. MIXTURES & ALLIGATION                            -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="mixtures" role="tabpanel">
+    <p class="section-intro">Track milk and water separately. Removing a mixture removes components proportionally.</p>
+
+    <article class="question-block">
+      <h3>Q56 (Set 1)</h3>
+      <p>A vessel contains 139.96 litres of a mixture of milk and water, where 80% is milk. If 24.96% of the mixture is removed and 19 litres of water is added, what is the percentage of water in the resultant mixture (approximate)?</p>
+      <ol class="options-list" type="a"><li>48%</li><li>24%</li><li>36%</li><li>32%</li><li>40%</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Initial: Milk $= 111.968\text{ L}$, Water $= 27.992\text{ L}$.</p>
+          <p>Removed: $24.96\% \Rightarrow$ Remaining percentage $= 75.04\%$.</p>
+          <p>Remaining Milk $= 84.02\text{ L}$, Remaining Water $= 21.00\text{ L}$.</p>
+          <p>After adding 19 L water: Water $= 40\text{ L}$, Total $\approx 124.02\text{ L}$.</p>
+          $$\% \text{ Water} = \frac{40}{124.02} \times 100 \approx 32\%$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 32%</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q48 (Set 2)</h3>
+      <p>Vessel A contains mixture of milk and water in the ratio of 3 : 1 respectively. 20 liters of mixture is taken out from vessel A and added in vessel B which contains (x) liters of milk and 30 liters of water. If the ratio of milk to water in vessel B becomes 11 : 7, find (x).</p>
+      <ol class="options-list" type="a"><li>55</li><li>35</li><li>41</li><li>62</li><li>40</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>From A: 20 L removed $\Rightarrow$ Milk $= 15\text{ L}$, Water $= 5\text{ L}$.</p>
+          <p>In Vessel B: Milk $= x + 15$, Water $= 30 + 5 = 35$.</p>
+          $$\frac{x + 15}{35} = \frac{11}{7} \Rightarrow x + 15 = 55 \Rightarrow x = 40$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 40</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q70 (Set 5)</h3>
+      <p>Vessel X contains a mixture of milk and water in the ratio 5 : 4. 9 litres of mixture is removed from vessel X and 20 litres of mixture from vessel Y (containing milk and water in ratio 3 : 2) is added to vessel X. If the final ratio of milk to water in vessel X becomes 4 : 3, find the initial quantity of mixture in vessel X.</p>
+      <ol class="options-list" type="a"><li>120 L</li><li>60 L</li><li>45 L</li><li>90 L</li><li>80 L</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let initial quantity in X be $Q$ L.</p>
+          <p>Milk $= \frac{5Q}{9}$, Water $= \frac{4Q}{9}$.</p>
+          <p>From 9 L removed: Milk $= 5$, Water $= 4$.</p>
+          <p>From 20 L added from Y (3 : 2): Milk $= 12$, Water $= 8$.</p>
+          $$\frac{\frac{5Q}{9} - 5 + 12}{\frac{4Q}{9} - 4 + 8} = \frac{4}{3}$$
+          $$\frac{5Q + 63}{4Q + 36} = \frac{4}{3}$$
+          $$15Q + 189 = 16Q + 144 \Rightarrow Q = 45\text{ L}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) 45 L</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q61 (Set 6)</h3>
+      <p>A vessel contains a mixture of milk and water containing 85% milk. If 20 litres of mixture is taken out and 30 litres of water is added, the percentage of milk becomes 65%. Find the initial quantity of mixture.</p>
+      <ol class="options-list" type="a"><li>140</li><li>112.5</li><li>114</li><li>117.5</li><li>105.5</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let initial volume $= V$. Milk $= 0.85V$.</p>
+          <p>Milk removed $= 0.85 \times 20 = 17\text{ L}$.</p>
+          <p>New total volume $= V - 20 + 30 = V + 10$.</p>
+          $$\frac{0.85V - 17}{V + 10} = 0.65$$
+          $$0.85V - 17 = 0.65V + 6.5$$
+          $$0.20V = 23.5 \Rightarrow V = 117.5\text{ L}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 117.5 L</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q65 (Set 7)</h3>
+      <p>A vessel contains a mixture of milk and water in ratio 5 : 3. If 32 litres of mixture is taken out and 4 litres of water is added, the ratio becomes 3 : 2. Find the initial quantity of mixture.</p>
+      <ol class="options-list" type="a"><li>80 L</li><li>112 L</li><li>128 L</li><li>98 L</li><li>64 L</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let initial quantity $= Q$.</p>
+          <p>From 32 L removed: Milk $= 20$, Water $= 12$.</p>
+          $$\frac{\frac{5Q}{8} - 20}{\frac{3Q}{8} - 12 + 4} = \frac{3}{2}$$
+          $$\frac{5Q - 160}{3Q - 64} = \frac{3}{2}$$
+          $$10Q - 320 = 9Q - 192 \Rightarrow Q = 128\text{ L}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) 128 L</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §13. TIME & WORK                                       -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="time-work" role="tabpanel">
+    <p class="section-intro">Combined efficiency: $\frac{1}{\text{days}}=\text{rate}$. Add rates for workers together.</p>
+
+    <article class="question-block">
+      <h3>Q57 (Set 1)</h3>
+      <p>A and B together can do a work in (2T) days and A alone can do the same work in 10 days. If B alone can do the work in (5T) days, then find the value of (T)?</p>
+      <ol class="options-list" type="a">
+        <li>8</li>
+        <li>5</li>
+        <li>6</li>
+        <li>3</li>
+        <li>4</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Use combined efficiency.</p>
+          $$\frac{1}{2T}=\frac{1}{10}+\frac{1}{5T}$$
+          <p>Multiply by (10T):</p>
+          $$5= T+2$$
+          $$T=3$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 3</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q51 (Set 2)</h3>
+      <p>A alone can do a work in 12 days and B alone can do the same work in 30 days. A and B work together for six days, and then C replaced both. If C completes 50% of the remaining work, then find the percentage of the work done by C?</p>
+      <ol class="options-list" type="a">
+        <li>25%</li>
+        <li>20%</li>
+        <li>10%</li>
+        <li>15%</li>
+        <li>5%</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Find remaining work after A and B.</p>
+          $$A+B=\frac1{12}+\frac1{30}=\frac7{60}$$
+          <p>Work done in 6 days:</p>
+          $$6\times\frac7{60}=\frac7{10}=70\%$$
+          <p>Remaining work:</p>
+          $$100\%-70\%=30\%$$
+          <p>Work done by C:</p>
+          $$50\%\text{ of }30\%=15\%$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 15%</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q57 (Set 5)</h3>
+      <p>A and B together can complete a work in 12 days while A, B and C together can complete the same work in 6 days. Efficiency of A is twice of B. If C alone can finish the work in ((R+8)) days, then find the time taken by A alone to complete the work (in terms of R)?</p>
+      <ol class="options-list" type="a">
+        <li>R+14</li>
+        <li>R+12</li>
+        <li>R+16</li>
+        <li>R</li>
+        <li>2R</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Find C's efficiency first to find R, then determine A's efficiency.</p>
+          <p>C's 1 day work:</p>
+          $$\frac16-\frac1{12}=\frac1{12}$$
+          <p>C alone takes 12 days:</p>
+          $$R+8=12 \Rightarrow R=4$$
+          <p>Since A's efficiency is twice of B ($A=2B$):</p>
+          $$A+B=\frac1{12}$$
+          $$2B+B=\frac1{12} \Rightarrow 3B=\frac1{12} \Rightarrow B=\frac1{36}$$
+          $$A=\frac2{36}=\frac1{18}$$
+          <p>Time taken by A alone $= 18\text{ days} = 4 + 14 = R+14$.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) R+14</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q50 (Set 6)</h3>
+      <p>A, B and C can finish a work in 15 days, 12 days and 10 days respectively. A and C worked together for (x) days and then B completed the remaining work in (2x) days. Find the value of (3x)?</p>
+      <ol class="options-list" type="a">
+        <li>18</li>
+        <li>12</li>
+        <li>6</li>
+        <li>3</li>
+        <li>9</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Form the equation using per-day efficiencies.</p>
+          $$A+C=\frac1{15}+\frac1{10}=\frac16$$
+          <p>Work equation:</p>
+          $$x\left(\frac16\right)+2x\left(\frac1{12}\right)=1$$
+          $$\frac{x}{6}+\frac{x}{6}=1 \Rightarrow \frac{x}{3}=1 \Rightarrow x=3$$
+          <p>Value of (3x):</p>
+          $$3x=3\times3=9$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 9</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q64 (Set 7)</h3>
+      <p>(X) men can finish a work in 15 days while (\frac{3X}{4}) women can finish the same work in 12 days. If 5 men and 6 women can finish the work in 12 days, then find the time taken by 8 men alone to complete the work?</p>
+      <ol class="options-list" type="a">
+        <li>19.5</li>
+        <li>21</li>
+        <li>22.5</li>
+        <li>20</li>
+        <li>24.5</li>
+      </ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Express total work in man-days and woman-days to find X.</p>
+          <p>Total work $= 15X\text{ man-days} = 12\left(\frac{3X}{4}\right) = 9X\text{ woman-days}$.</p>
+          <p>Ratio of efficiency:</p>
+          $$15X\text{ M} = 9X\text{ W} \Rightarrow 5\text{ M} = 3\text{ W}$$
+          <p>5 men $+$ 6 women $= 3\text{ W} + 6\text{ W} = 9\text{ women}$.</p>
+          <p>9 women take 12 days $\Rightarrow$ Total work $= 9 \times 12 = 108\text{ woman-days}$.</p>
+          <p>Since $9X\text{ woman-days} = 108 \Rightarrow X = 12$.</p>
+          <p>1 man's rate $= \frac{1}{15 \times 12} = \frac{1}{180}$.</p>
+          <p>8 men's rate $= \frac{8}{180} = \frac{2}{45}$.</p>
+          <p>Time taken by 8 men $= \frac{45}{2} = 22.5\text{ days}$.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) 22.5</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §14. TRAINS & SPEED                                    -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="trains-speed" role="tabpanel">
+    <p class="section-intro">Crossing a pole: covers own length. Crossing platform: length + platform. Opposite directions: relative speed = sum.</p>
+
+    <article class="question-block">
+      <h3>Q65 (Set 1)</h3>
+      <p>Train A (400 m long) crosses a pole in 16 seconds. Train B crosses a pole in 24 seconds. If both trains have the same speed, find the time taken by Train B to cross a 400 m long platform.</p>
+      <ol class="options-list" type="a"><li>32 s</li><li>40 s</li><li>45 s</li><li>54 s</li><li>24 s</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$\text{Speed} = \frac{400}{16} = 25\text{ m/s}$$
+          $$\text{Length of B} = 25 \times 24 = 600\text{ m}$$
+          $$\text{Time for B} = \frac{600 + 400}{25} = \frac{1000}{25} = 40\text{ seconds}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 40 s</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q50 (Set 2)</h3>
+      <p>Train A (300 m) crosses a 500 m platform in 30 seconds. Train B length is twice of A and speed is 198 km/hr. Find time taken by B to cross the same platform.</p>
+      <ol class="options-list" type="a"><li>30</li><li>25</li><li>15</li><li>20</li><li>40</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$v_B = 198 \times \frac{5}{18} = 55\text{ m/s}$$
+          $$L_B = 2 \times 300 = 600\text{ m}$$
+          $$\text{Time} = \frac{600 + 500}{55} = \frac{1100}{55} = 20\text{ seconds}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 20</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q66 (Set 3)</h3>
+      <p>Train A (600 m) crosses a 300 m bridge in 18 seconds. Speed ratio A : B = 2 : 1. Train B is 25% shorter than A. Find time taken by B to cross the same bridge.</p>
+      <ol class="options-list" type="a"><li>30</li><li>20</li><li>25</li><li>35</li><li>15</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$v_A = \frac{600 + 300}{18} = 50\text{ m/s} \Rightarrow v_B = 25\text{ m/s}$$
+          $$L_B = 600 \times 0.75 = 450\text{ m}$$
+          $$\text{Time} = \frac{450 + 300}{25} = \frac{750}{25} = 30\text{ seconds}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 30</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q66 (Set 5)</h3>
+      <p>$L_X = L_Y + L_Z$; $L_Z = 1.2 L_Y$. Train Y (50 m/s) crosses a pole in 6 seconds. Train X (40 m/s) crosses Z in 17 seconds in opposite direction. Find speed of Z.</p>
+      <ol class="options-list" type="a"><li>25</li><li>15</li><li>30</li><li>20</li><li>40</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$L_Y = 50 \times 6 = 300\text{ m}$$
+          $$L_Z = 1.2 \times 300 = 360\text{ m}$$
+          $$L_X = 300 + 360 = 660\text{ m}$$
+          $$\text{Relative speed} = \frac{660 + 360}{17} = \frac{1020}{17} = 60\text{ m/s}$$
+          $$v_Z = 60 - 40 = 20\text{ m/s}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 20</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q67 (Set 6)</h3>
+      <p>Speed of Train A is 90 km/hr (150% more than B). A crosses a pole in 16 seconds. Length ratio A : B = 8 : 5. Find time for B to cross a 150 m platform.</p>
+      <ol class="options-list" type="a"><li>20</li><li>40</li><li>60</li><li>45</li><li>55</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$v_A = 90 \times \frac{5}{18} = 25\text{ m/s}$$
+          $$L_A = 25 \times 16 = 400\text{ m} \Rightarrow L_B = \frac{5}{8} \times 400 = 250\text{ m}$$
+          $$v_A = 2.5 v_B \Rightarrow v_B = 10\text{ m/s}$$
+          $$\text{Time} = \frac{250 + 150}{10} = 40\text{ seconds}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 40</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §15. AGES                                              -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="ages" role="tabpanel">
+    <p class="section-intro">Express all ages in terms of a single variable; use future/past ratio conditions to form equations.</p>
+
+    <article class="question-block">
+      <h3>Q62 (Set 1)</h3>
+      <p>Present age of Y = 28 years. Four years hence X : Y = 7 : 8. Z is 25% more than X. Find Z's age six years ago.</p>
+      <ol class="options-list" type="a"><li>26</li><li>22</li><li>20</li><li>24</li><li>28</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$Y + 4 = 32 \Rightarrow X + 4 = \frac{7}{8} \times 32 = 28 \Rightarrow X = 24$$
+          $$Z = 1.25 \times 24 = 30$$
+          $$\text{Six years ago } Z = 30 - 6 = 24\text{ years}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 24</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q69 (Set 3)</h3>
+      <p>X is 50% more than Y. Z = average of X and Y. $(Z+5) - (Y-3) = 10$. Find age of X after 6 years.</p>
+      <ol class="options-list" type="a"><li>18</li><li>22</li><li>25</li><li>17</li><li>20</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let $Y = 2k \Rightarrow X = 3k \Rightarrow Z = 2.5k$.</p>
+          $$2.5k + 5 - 2k + 3 = 10 \Rightarrow 0.5k = 2 \Rightarrow k = 4$$
+          $$X = 12 \Rightarrow X + 6 = 18\text{ years}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 18</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q52 (Set 4)</h3>
+      <p>Average age of (X+14) students = X years. Two teachers (sum 64) increase average by 1. Find X.</p>
+      <ol class="options-list" type="a"><li>12</li><li>24</li><li>20</li><li>14</li><li>16</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$(X + 1)(X + 16) = X(X + 14) + 64$$
+          $$X^2 + 17X + 16 = X^2 + 14X + 64 \Rightarrow 3X = 48 \Rightarrow X = 16$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 16</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q56 (Set 4)</h3>
+      <p>Sum of ages of X, Y, Z = 190. Y : Z = 7 : 9. Difference (X &amp; Y) = twice difference (Y &amp; Z). X &lt; Y. Find minimum possible age of X.</p>
+      <ol class="options-list" type="a"><li>30</li><li>40</li><li>36</li><li>25</li><li>Cannot be determined</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let $Y = 7k, Z = 9k \Rightarrow Y - X = 2(2k) = 4k \Rightarrow X = 3k$.</p>
+          $$3k + 7k + 9k = 190 \Rightarrow 19k = 190 \Rightarrow k = 10$$
+          $$X = 30\text{ years}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 30</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q68 (Set 4)</h3>
+      <p>Ten years ago, average age of A and B = 30. Eight years hence, A : B = 5 : 7. C's age 5 years ago = (7/9) of B's age 3 years ago. Find present age of C.</p>
+      <ol class="options-list" type="a"><li>40</li><li>35</li><li>45</li><li>48</li><li>32</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$A + B = 80$$
+          $$\frac{88 - B}{B + 8} = \frac{5}{7} \Rightarrow B = 48$$
+          $$C - 5 = \frac{7}{9}(45) = 35 \Rightarrow C = 40$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 40</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q64 (Set 5)</h3>
+      <p>Present P is 12 less than Q. After 4 years P : Q = 2 : 5. R = 6 + (Q two years ago). Find R − P.</p>
+      <ol class="options-list" type="a"><li>12</li><li>15</li><li>11</li><li>14</li><li>16</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$\frac{Q - 8}{Q + 4} = \frac{2}{5} \Rightarrow Q = 16 \Rightarrow P = 4$$
+          $$R = 14 + 6 = 20 \Rightarrow R - P = 16$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 16</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q64 (Set 6)</h3>
+      <p>Ratio of P to Q (six years ago) = 8 : 7. R = 2Q (present). Six years hence P : R = 11 : 23. Find present age of R.</p>
+      <ol class="options-list" type="a"><li>28</li><li>32</li><li>40</li><li>35</li><li>50</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$P = \frac{8}{7}(Q - 6)$$
+          $$\frac{P + 6}{2Q + 6} = \frac{11}{23} \Rightarrow Q = 20 \Rightarrow R = 40$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) 40</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q61 (Set 7)</h3>
+      <p>Seven years ago A : B = 5 : 3. Four years hence A and three years hence B → ratio 36 : 25. Find present age of B.</p>
+      <ol class="options-list" type="a"><li>22</li><li>28</li><li>25</li><li>20</li><li>16</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          $$\frac{5k + 11}{3k + 10} = \frac{36}{25} \Rightarrow 125k + 275 = 108k + 360 \Rightarrow k = 5$$
+          $$B = 3(5) + 7 = 22$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 22</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §16. NUMBER THEORY                                     -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="number-theory" role="tabpanel">
+    <p class="section-intro">For consecutive sequences, the average = middle term. Use given relations to form a single equation.</p>
+
+    <article class="question-block">
+      <h3>Q66 (Set 4)</h3>
+      <p>Series A: 5 consecutive evens. Series B: 5 consecutive odds. Third of A = Third of B + 3. Sum of first terms = 397. Find sum of third terms.</p>
+      <ol class="options-list" type="a"><li>403</li><li>407</li><li>405</li><li>401</li><li>409</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Let 3rd of B $= n \Rightarrow$ 3rd of A $= n + 3$.</p>
+          <p>1st of B $= n - 4$, 1st of A $= n - 1$.</p>
+          $$(n - 1) + (n - 4) = 397 \Rightarrow 2n = 402 \Rightarrow n = 201$$
+          $$\text{Sum of 3rd terms} = 204 + 201 = 405$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) 405</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q69 (Set 5)</h3>
+      <p>X: 5 consecutive multiples of 3 with average 36. Y: 4 consecutive multiples of 4 where 2nd smallest of Y = 2nd highest of X + 13. Find (smallest of X) + (highest of Y).</p>
+      <ol class="options-list" type="a"><li>84</li><li>96</li><li>80</li><li>90</li><li>72</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>X series: 30, 33, 36, 39, 42 $\Rightarrow$ 2nd highest $= 39$.</p>
+          <p>2nd smallest of Y $= 39 + 13 = 52$.</p>
+          <p>Y series (multiples of 4): 48, 52, 56, 60.</p>
+          $$\text{Smallest X } (30) + \text{Highest Y } (60) = 90$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 90</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q56 (Set 7)</h3>
+      <p>Set A: 3 consecutive multiples of 7. Set B: 5 consecutive odds. Largest A = Smallest B. Average of smallest of A and B = 28. Find difference between 2nd smallest A and 2nd largest B.</p>
+      <ol class="options-list" type="a"><li>11</li><li>9</li><li>13</li><li>15</li><li>21</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p>Set A: $x, x+7, x+14$. Set B: $x+14, x+16, x+18, x+20, x+22$.</p>
+          $$\frac{x + (x + 14)}{2} = 28 \Rightarrow x = 21$$
+          <p>Set A: 21, 28, 35. Set B: 35, 37, 39, 41, 43.</p>
+          $$\text{Difference} = 41 - 28 = 13$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(c) 13</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- §17. BOATS & STREAMS                                   -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section class="topic-section" id="boats-streams" role="tabpanel">
+    <p class="section-intro">For same distance: time ratio is inverse of speed ratio. Downstream: boat + stream. Upstream: boat − stream.</p>
+
+    <article class="question-block">
+      <h3>Q63 (Set 1)</h3>
+      <p>The ratio of the still water speed of boat A and boat B is 4 : 5 respectively. The speed of current is 15 km/hr. Boat A takes 4.5 hours to travel 180 km downstream. Find the time taken by boat B to travel 120 km upstream?</p>
+      <ol class="options-list" type="a"><li>20 hours</li><li>36 hours</li><li>24 hours</li><li>12 hours</li><li>8 hours</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Downstream speed = Still water speed + Stream speed.</p>
+          <p>Boat A's downstream speed:</p>
+          $$\frac{180}{4.5} = 40\text{ km/hr}$$
+          <p>Still water speed of A:</p>
+          $$40 - 15 = 25\text{ km/hr}$$
+          <p>Ratio of still water speeds:</p>
+          $$A : B = 4 : 5$$
+          <p>Boat B's still water speed:</p>
+          $$25 \times \frac{5}{4} = 31.25\text{ km/hr}$$
+          <p>Boat B's upstream speed:</p>
+          $$31.25 - 15 = 16.25\text{ km/hr}$$
+          <p>Required time:</p>
+          $$\frac{120}{16.25} \approx 7.38\text{ hours}$$
+          <p>Since no exact value is available, the intended data appears inconsistent. The nearest option is <strong>8 hours</strong>.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(e) 8 hours</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q57 (Set 3)</h3>
+      <p>The downstream speed of boat A is 21 km/hr. The speed of boat B in still water is 12 km/hr, and the ratio of the speed of boat A to boat B in still water is 5 : 4, respectively. Find the time taken by boat B to cover 81 km upstream (The speed of the stream is the same for both boats).</p>
+      <ol class="options-list" type="a"><li>13.5 hours</li><li>11 hours</li><li>12.5 hours</li><li>10.5 hours</li><li>9 hours</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> First find Boat A's still water speed, then determine the stream speed.</p>
+          <p>Boat A's still water speed:</p>
+          $$12 \times \frac{5}{4} = 15\text{ km/hr}$$
+          <p>Stream speed:</p>
+          $$21 - 15 = 6\text{ km/hr}$$
+          <p>Boat B's upstream speed:</p>
+          $$12 - 6 = 6\text{ km/hr}$$
+          <p>Time taken:</p>
+          $$\frac{81}{6} = 13.5\text{ hours}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(a) 13.5 hours</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q54 (Set 4)</h3>
+      <p>The speed of stream is $16\frac{2}{3}\%$ of downstream speed of the boat and the boat covers 120 km upstream in five hours. If the boat covers $(D-3)$ km downstream and $(D+30)$ km (at speed of boat in still water) in 5.5 hours, then find the value of $D$?</p>
+      <ol class="options-list" type="a"><li>55</li><li>75</li><li>80</li><li>60</li><li>45</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Stream speed is $16\frac{2}{3}\% = \frac{1}{6}$ of downstream speed.</p>
+          <p>Let downstream speed be $x$.</p>
+          $$\text{Stream} = \frac{x}{6}$$
+          $$\text{Still water speed} = x - \frac{x}{6} = \frac{5x}{6}$$
+          $$\text{Upstream speed} = \frac{5x}{6} - \frac{x}{6} = \frac{2x}{3}$$
+          <p>Given upstream speed $= \frac{120}{5} = 24$ km/hr:</p>
+          $$\frac{2x}{3} = 24 \Rightarrow x = 36$$
+          <p>Thus:</p>
+          <p>• Downstream speed $= 36\text{ km/hr}$</p>
+          <p>• Still water speed $= 30\text{ km/hr}$</p>
+          <p>Now:</p>
+          $$\frac{D - 3}{36} + \frac{D + 30}{30} = 5.5$$
+          <p>Multiplying by 180:</p>
+          $$5(D - 3) + 6(D + 30) = 990$$
+          $$11D + 165 = 990$$
+          $$11D = 825 \Rightarrow D = 75$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(b) 75</strong></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q65 (Set 5)</h3>
+      <p>The ratio of time taken by a boat to cover a distance downstream to upstream is 2 : 3. If the boat covers 108 km downstream in $d$ hours and 120 km upstream in $(d+4)$ hours, then find the upstream speed (in km/hr) of the boat.</p>
+      <ol class="options-list" type="a"><li>18</li><li>15</li><li>21</li><li>12</li><li>24</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Method 1 (Distance &amp; Speed Ratio):</strong></p>
+          <p>Downstream time : Upstream time $= 2 : 3$ (for same distance) $\Rightarrow$ Speed ratio $S_d : S_u = 3 : 2$.</p>
+          $$\frac{108}{S_d} : \frac{120}{S_u} = \frac{108}{3} : \frac{120}{2} = 36 : 60 = 3 : 5$$
+          $$d : (d + 4) = 3 : 5 \Rightarrow 5d = 3d + 12 \Rightarrow d = 6$$
+          $$\text{Upstream time} = 6 + 4 = 10\text{ hours} \Rightarrow \text{Upstream speed} = \frac{120}{10} = 12\text{ km/hr}$$
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) 12</strong></p>
+
+          <hr style="margin: 15px 0; border: none; border-top: 1px dashed var(--border-dark);">
+
+          <p><strong>Method 2 (Direct Time Ratio):</strong></p>
+          $$\frac{d}{d + 4} = \frac{2}{3} \Rightarrow 3d = 2d + 8 \Rightarrow d = 8$$
+          $$\text{Upstream time} = 8 + 4 = 12\text{ hours} \Rightarrow \text{Upstream speed} = \frac{120}{12} = 10\text{ km/hr}$$
+          <p><em>Note: Method 1 accounts for different distances (108 km vs 120 km) to match option (d) 12 km/hr.</em></p>
+        </div>
+      </details>
+    </article>
+
+    <article class="question-block">
+      <h3>Q63 (Set 6)</h3>
+      <p>A boat goes from X to Y downstream and comes back from Y to X upstream in total 5 hours. If the speed of the current is 4 km/hr, then find the speed of the boat in still water (in km/hr).</p>
+      <ol class="options-list" type="a"><li>16</li><li>25</li><li>40</li><li>Cannot be determined</li><li>None of these</li></ol>
+      <details class="solution-details">
+        <summary>&#9654; Solution</summary>
+        <div class="solution-body">
+          <p><strong>Observation:</strong> Total time and stream speed alone are insufficient.</p>
+          <p>Let still water speed be $b$ km/hr and distance be $D$ km.</p>
+          $$\frac{D}{b + 4} + \frac{D}{b - 4} = 5$$
+          <p>There are <strong>two unknowns</strong> ($D$ and $b$) but only <strong>one equation</strong>.</p>
+          <p>Hence, the still water speed cannot be uniquely determined.</p>
+          <p class="correct-ans">&#10003; Correct Option: <strong>(d) Cannot be determined</strong></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <hr>
+  <p>Last Updated: 30 July 2026</p>
+  <p><a href="index.html">&#8592; Back to Home</a></p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  var TOPIC_NAMES = {
+    'number-series':      'Number Series',
+    'quadratic':          'Quadratic Equations',
+    'data-sufficiency':   'Data Sufficiency',
+    'quantity-comparison':'Quantity Comparison',
+    'simplification':     'Simplification',
+    'partnership':        'Partnership',
+    'percentage':         'Percentage',
+    'profit-loss':        'Profit & Loss',
+    'si-ci':              'Simple & Compound Interest',
+    'average':            'Average',
+    'mensuration':        'Mensuration',
+    'mixtures':           'Mixtures & Alligation',
+    'time-work':          'Time & Work',
+    'trains-speed':       'Trains & Speed',
+    'ages':               'Ages',
+    'number-theory':      'Number Theory',
+    'boats-streams':      'Boats & Streams'
+  };
+
+  function activateTopic(topicId, pillEl) {
+    document.querySelectorAll('.topic-section').forEach(function(s) {
+      s.classList.remove('active');
+    });
+    var section = document.getElementById(topicId);
+    if (section) section.classList.add('active');
+
+    document.querySelectorAll('.topic-pill').forEach(function(p) {
+      p.classList.remove('active');
+    });
+    var pill = pillEl || document.querySelector('.topic-pill[data-topic="' + topicId + '"]');
+    if (pill) pill.classList.add('active');
+
+    var titleEl = document.getElementById('sectionTitle');
+    if (titleEl) titleEl.textContent = TOPIC_NAMES[topicId] || topicId;
+
+    history.replaceState(null, '', '#' + topicId);
+    syncExpandBtn();
+  }
+
+  function toggleExpandAll() {
+    var activeSection = document.querySelector('.topic-section.active');
+    if (!activeSection) return;
+    var allDetails = activeSection.querySelectorAll('details.solution-details');
+    var allOpen = Array.prototype.every.call(allDetails, function(d) { return d.open; });
+    allDetails.forEach(function(d) { d.open = !allOpen; });
+    syncExpandBtn();
+  }
+
+  function syncExpandBtn() {
+    var activeSection = document.querySelector('.topic-section.active');
+    var btn = document.getElementById('expandAllBtn');
+    if (!btn || !activeSection) return;
+    var allDetails = activeSection.querySelectorAll('details.solution-details');
+    var allOpen = allDetails.length > 0 &&
+      Array.prototype.every.call(allDetails, function(d) { return d.open; });
+    btn.textContent = allOpen ? '\u25b2 Collapse All' : '\u25bc Expand All';
+  }
+
+  document.addEventListener('toggle', function(e) {
+    if (e.target && e.target.classList.contains('solution-details')) {
+      syncExpandBtn();
+    }
+  }, true);
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var hash = window.location.hash.replace('#', '');
+    var validTopic = hash && document.getElementById(hash) && TOPIC_NAMES[hash];
+    activateTopic(validTopic ? hash : 'number-series');
+  });
+</script>
+</body>
+</html>
